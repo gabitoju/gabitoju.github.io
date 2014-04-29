@@ -27,6 +27,7 @@ h4 {
 	background-image: url(../../images/t.jpg);
 	width: 100%;
 	background-position: 0px -130px;
+    padding-bottom: 5px;
 }
 .affix-top {
 	width: 300px;
