@@ -13,6 +13,10 @@ section li {
     margin-left: 50px;
 }
 
+footer a {
+    color: #FFF;
+}
+
 .social {
     text-align: center;
     margin-top: 20px;
