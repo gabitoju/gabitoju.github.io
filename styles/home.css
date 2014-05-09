@@ -16,7 +16,9 @@ section li {
 .social {
     text-align: center;
     margin-top: 20px;
+    padding: 10px;
 }
+
 
 #home-header {
     width: 1280px;
