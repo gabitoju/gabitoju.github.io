@@ -1,7 +1,21 @@
 section {
-    text-align: center;
-    line-height: 250px;
+    margin-top: 50px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;    
+}
 
+section p, li {
+    padding: 5px 10px 5px 10px;
+}
+
+section li {
+    margin-left: 50px;
+}
+
+.social {
+    text-align: center;
+    margin-top: 20px;
 }
 
 #home-header {

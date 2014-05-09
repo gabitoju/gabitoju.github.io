@@ -29,6 +29,9 @@ h4 {
 	background-position: 0px -130px;
     padding-bottom: 5px;
 }
+.page-header a:hover {
+	text-decoration: none;
+}
 .affix-top {
 	width: 300px;
 }            
