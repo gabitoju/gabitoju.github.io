@@ -24,4 +24,10 @@
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>http://gabitoju.uy/datalab/careers.html</loc>
+  <lastmod>2014-04-29T18:43:27+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
 </urlset>
