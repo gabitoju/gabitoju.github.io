@@ -1,0 +1,469 @@
+---
+title: "Las carreras más populares"
+template: article
+order: 2
+---
+
+Ir directo a [Las más populares](#populares) o a [Lo más divertido](#divertido).
+
+La educación es un tema candente en Uruguay y al ser este 2014 un año electoral va a estar presente en todas las 
+agendas y programas de gobiernos de los partidos que se presenten a las elecciones.
+
+Queda claro que sin un sistema educativo que funcione de forma correcta y que atienda a las necesidades estratégicas
+los Estados no podrán asegurar un buen futuro a sus ciudadanos.
+
+Este artículo no pretende hacer ningún diagnostico y mucho menos plantear soluciones para el tema educativo sino
+que pretende mostrar las predilecciones al momento de elegir estudios terciarios por parte de las personas.
+
+Para esto usaré los datos del [Censo 2011](http://www.ine.gub.uy/censos2011/index.html), particularmente los datos de la encuesta de personas
+que refiere al nivel de estudio cursado actualmente (al momento del censo) y la carrera seleccionada.
+
+La población que se va a tomar en cuenta para este estudio tiene las siguientes características:
+
++ Edad comprendida entre los 18 y 25 años (al momento del censo)
++ Respueta a la pregunta "NIVEL QUE CURSA ACTUALMENTE" es "Universidad o Instituto Universitario (Carrera de grado o Licenciatura)"
+
+La primera pregunta que podríamos hacer es: ¿Cuáles son las carreras más populares entre esta población?
+
+### <a id="populares"></a>Las más populares
+
+Lo primero que hay que saber es que el INE identifica varias carreras con un mismo código, por ejemplo, el código _'INFORMÁTICA'_ representa varias
+carreras de informática, por ejemplo, Licenciatura en Sistemas e Ingeniería en Sistemas. Por este motivo los códigos de carrera han sido agrupados
+en grandes conceptos. Al final de este artículo se listan estos agrupamientos con sus respectivas carreras.
+
+Volviendo al tema ¿cuáles son las carreras más populares? La población de 56.080 se divide de esta forma:
+
+<div class="table-responsive">
+	<table class="table table-condensed table-striped">
+		<thead>
+			<th>#</th>
+			<th>Carrera</th>
+			<th>Cantidad de personas</th>
+		</thead>
+		<tbody>
+			<tr><td>1</td><td>CIENCIAS HUMANAS</td><td>10434</td></tr>
+			<tr><td>2</td><td>MEDICINA</td><td>9597</td></tr>
+			<tr><td>3</td><td>ADMINISTRACIÓN</td><td>7034</td></tr>
+			<tr><td>4</td><td>ABOGACIA Y NOTARIADO</td><td>6596</td></tr>
+			<tr><td>5</td><td>INGENIERÍA</td><td>4485</td></tr>
+			<tr><td>6</td><td>ARQUITECTURA</td><td>3261</td></tr>
+			<tr><td>7</td><td>CIENCIAS</td><td>2714</td></tr>
+			<tr><td>8</td><td>INFORMÁTICA</td><td>2636</td></tr>
+			<tr><td>9</td><td>VETERINARIA</td><td>1994</td></tr>
+			<tr><td>10</td><td>AGRONOMÍA</td><td>1726</td></tr>
+			<tr><td>11</td><td>EDUCACIÓN</td><td>1281</td></tr>
+			<tr><td>12</td><td>ARTE</td><td>968</td></tr>
+			<tr><td>13</td><td>TRABAJO SOCIAL</td><td>838</td></tr>
+			<tr><td>14</td><td>HUMANIDADES</td><td>710</td></tr>
+			<tr><td>15</td><td>ELECTRÓNICA/OPTICA/OTROS</td><td>383</td></tr>
+			<tr><td>16</td><td>DISEÑO INDUSTRIAL</td><td>375</td></tr>
+			<tr><td>17</td><td>DISEÑO TEXTIL - INDUMENTARIA</td><td>374</td></tr>
+			<tr><td>18</td><td>COMUNICACIÓN</td><td>235</td></tr>
+			<tr><td>19</td><td>TURISMO Y HOTELERÍA</td><td>138</td></tr>
+			<tr><td>20</td><td>ANTROPOLOGÍA</td><td>118</td></tr>
+			<tr><td>21</td><td>ESTADÍSTICA/LIC MATEMÁTICA</td><td>109</td></tr>
+			<tr><td>22</td><td>SEGURIDAD</td><td>44</td></tr>
+			<tr><td>23</td><td>DERECHO/PROCURADOR</td><td>17</td></tr>
+			<tr><td>24</td><td>RECREACIÓN</td><td>10</td></tr>
+			<tr><td>25</td><td>TEC AGROPECUARIO</td><td>3</td></tr>
+		</tbody>
+	</table>
+</div>
+
+Vamos a limitarnos a las 10 carreras (grupos de carreras en realidad) más populares. Sobre ese grupo nos podemos hacer
+otras preguntas, por ejemplo ¿qué promedio de edad tienen las personas que están realizando esas carreras? ¿Y cuántos
+son hombres y cuántas mujeres?
+
+<div class="table-responsive">
+	<table class="table table-condensed table-striped">
+		<thead>
+			<th>Carrera</th>
+			<th>Promedio de edad</th>
+			<th>Hombres</th>
+			<th>Mujeres</th>
+			<th>Total</th>
+		</thead>
+		<tbody>
+			<tr><td>CIENCIAS HUMANAS</td><td>22</td><td>3420</td><td>7014</td><td>10434</td></tr>
+			<tr><td>MEDICINA</td><td>22</td><td>2020</td><td>7577</td><td>9597</td></tr>
+			<tr><td>ADMINISTRACIÓN</td><td>22</td><td>3009</td><td>4025</td><td>7034</td></tr>
+			<tr><td>ABOGACIA Y NOTARIADO</td><td>22</td><td>2009</td><td>4587</td><td>6596</td></tr>
+			<tr><td>INGENIERÍA</td><td>21</td><td>3176</td><td>1309</td><td>4485</td></tr>
+			<tr><td>ARQUITECTURA</td><td>22</td><td>1265</td><td>1996</td><td>3261</td></tr>
+			<tr><td>CIENCIAS</td><td>21</td><td>848</td><td>1866</td><td>2714</td></tr>
+			<tr><td>INFORMÁTICA</td><td>22</td><td>2233</td><td>403</td><td>2636</td></tr>
+			<tr><td>VETERINARIA</td><td>22</td><td>834</td><td>1160</td><td>1994</td></tr>
+			<tr><td>AGRONOMÍA</td><td>21</td><td>1268</td><td>458</td><td>1726</td></tr>
+		</tbody>
+	</table>
+</div>
+
+¿Se pueden sacar conclusiones con estos datos? Si. Lo primero y más claro es que hay más mujeres (30.395) en estudios universitarios que hombres (20.082).
+Además de eso, estos datos nos dan sustento numérico para una realidad palpable en las distintas facultas de ingeniería: hay más hombres
+que mujeres. Y en informática en particular la diferencia es notoria: solamente el 15% son mujeres mientras que en ingeniería el 30% son mujeres.	
+
+### <a id="divertido"></a>Lo más divertido
+
+Y ahora lo más divertido para el final. 
+
+De estos 10 grupos de carreras ¿cuáles son los más elegidos por departamentos? La siguiente visuzaliación permite ver esto. Para cambiar de
+departamento solo lo tienes que seleccionar en el combo.
+
+<select id="department">	
+	<option value="2" selected>Artigas</option>
+	<option value="3">Canelones</option>
+	<option value="4">Cerro Largo</option>
+	<option value="5">Colonia</option>
+	<option value="6">Durazno</option>
+	<option value="7">Flores</option>
+	<option value="8">Florida</option>
+	<option value="9">Lavalleja</option>
+	<option value="10">Maldonado</option>
+	<option value="1">Montevideo</option>
+	<option value="11">Paysandú</option>
+	<option value="12">Río Negro</option>
+	<option value="13">Rivera</option>
+	<option value="14">Rocha</option>
+	<option value="15">Salto</option>
+	<option value="16">San José</option>
+	<option value="17">Soriano</option>
+	<option value="18">Tacuarembó</option>
+	<option value="19">Treinta y Tres</option>
+	<option value="0">Exterior</option>
+</select>
+<div id="careers_chart" style="width: 800px; height: 480px"></div>
+
+Si te paras sobre cada cuadraro que representa la carrera podrás ver la cantidad de personas optaron por ella. Además, puedes sacar carreras de la gráfica
+dando clic sobre el nombre de ella (en la lista de la derecha). Para volver a verla, da clic nuevamente sobre el nombre.
+
+
+### ¿Alguna conclusión?
+
+Si bien las carreras del área de Ciencias Humanas son las más elegidas en cantidad de personas, las carreas de Medicina son las más seleccionadas a nivel
+departamental.
+
+De 19 departamentos (se excluye el dato de los nacidos en el exterior), 14 tienen a Medicina como la más elegida mientras que en los 5 restantes es Ciencias Humanas.
+
+
++ Canelones
++ Colonia
++ Durazno
++ Maldonado
++ Montevideo
+
+Y la diferencia la hace Montevideo que tiene 5.850 estudiantes de Ciencias Humanas, más que la suma de estudiantes de Medicina del resto del país: 5.538:
+
+
+    Cantidad Medicina Interior = Cantidad Medicina - (Cantidad Medicina Montevideo + Cantidad Medicina Exterior)
+    9.597 - (4.002 + 237) = 5.358
+
+
+### Tecnologías usadas y grupos de carreras
+
+Para generar la visualización se usó el componente TreeMap de la librería [Community Charting Components](http://www.webdetails.pt/ctools/ccc.html) de WebDetails. Es una librería en JavaScript
+muy simple de usar que además es parte de la suite de BI Pentaho.
+
+Los agrupamientos de carrera están disponbles en esta [archivo](data/career_codes.ods).
+
+<link type="text/css" href="/datalab/ccc/tipsy.css" rel="stylesheet" media="screen"/>
+<script type="text/javascript" src="/datalab/ccc/jquery.tipsy.js"></script>
+<script type="text/javascript" src="/datalab/ccc/protovis.js"></script>
+<script type="text/javascript" src="/datalab/ccc/protovis-msie.js"></script>
+<script type="text/javascript" src="/datalab/ccc/tipsy.js"></script>
+<script type="text/javascript" src="/datalab/ccc/def.js"></script>
+<script type="text/javascript" src="/datalab/ccc/pvc-r2.0.js"></script>
+
+<script type="text/javascript">
+	var data = {};
+	var career_data = [];
+	career_data[career_data.length] = ['MEDICINA', 143];	
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 106];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 94];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 65];	
+	career_data[career_data.length] = ['INGENIERÍA', 40];	
+	career_data[career_data.length] = ['VETERINARIA', 37];
+	career_data[career_data.length] = ['AGRONOMÍA', 28];	
+	career_data[career_data.length] = ['INFORMÁTICA', 27];
+	career_data[career_data.length] = ['CIENCIAS', 23];
+	career_data[career_data.length] = ['ARQUITECTURA', 14];
+	data[19] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['MEDICINA', 343];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 193];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 148];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 171];
+	career_data[career_data.length] = ['AGRONOMÍA', 93];
+	career_data[career_data.length] = ['INGENIERÍA', 92];
+	career_data[career_data.length] = ['VETERINARIA', 81];
+	career_data[career_data.length] = ['ARQUITECTURA', 59];
+	career_data[career_data.length] = ['INFORMÁTICA', 56];		
+	career_data[career_data.length] = ['CIENCIAS', 53];
+	data[18] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['MEDICINA', 303];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 220];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 196];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 160];	
+	career_data[career_data.length] = ['INGENIERÍA', 93];
+	career_data[career_data.length] = ['VETERINARIA', 80];
+	career_data[career_data.length] = ['ARQUITECTURA', 62];
+	career_data[career_data.length] = ['AGRONOMÍA', 77];
+	career_data[career_data.length] = ['CIENCIAS', 49];
+	career_data[career_data.length] = ['INFORMÁTICA', 48];			
+	data[17] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 120];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 132];
+	career_data[career_data.length] = ['ARQUITECTURA', 46];
+	career_data[career_data.length] = ['AGRONOMÍA', 39];
+	career_data[career_data.length] = ['INFORMÁTICA', 35];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 222];
+	career_data[career_data.length] = ['MEDICINA', 240];
+	career_data[career_data.length] = ['CIENCIAS', 56];
+	career_data[career_data.length] = ['INGENIERÍA', 65];
+	career_data[career_data.length] = ['VETERINARIA', 27];
+	data[16] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 271];
+	career_data[career_data.length] = ['MEDICINA', 526];
+	career_data[career_data.length] = ['CIENCIAS', 99];
+	career_data[career_data.length] = ['VETERINARIA', 137];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 276];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 223];
+	career_data[career_data.length] = ['INGENIERÍA', 134];
+	career_data[career_data.length] = ['AGRONOMÍA', 127];
+	career_data[career_data.length] = ['INFORMÁTICA', 92];
+	career_data[career_data.length] = ['ARQUITECTURA', 61];
+	data[15] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['VETERINARIA', 63];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 85];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 193];
+	career_data[career_data.length] = ['INFORMÁTICA', 33];
+	career_data[career_data.length] = ['INGENIERÍA', 46];
+	career_data[career_data.length] = ['MEDICINA', 229];
+	career_data[career_data.length] = ['AGRONOMÍA', 33];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 131];
+	career_data[career_data.length] = ['CIENCIAS', 30];
+	career_data[career_data.length] = ['ARQUITECTURA', 36];
+	data[14] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 130];
+	career_data[career_data.length] = ['CIENCIAS', 74];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 105];
+	career_data[career_data.length] = ['ARQUITECTURA', 50];
+	career_data[career_data.length] = ['INFORMÁTICA', 51];
+	career_data[career_data.length] = ['VETERINARIA', 62];
+	career_data[career_data.length] = ['MEDICINA', 334];
+	career_data[career_data.length] = ['AGRONOMÍA', 65];
+	career_data[career_data.length] = ['INGENIERÍA', 69];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 157];
+	data[13] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 105];
+	career_data[career_data.length] = ['CIENCIAS', 23];
+	career_data[career_data.length] = ['INGENIERÍA', 52];
+	career_data[career_data.length] = ['ARQUITECTURA', 24];
+	career_data[career_data.length] = ['MEDICINA', 150];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 87];
+	career_data[career_data.length] = ['INFORMÁTICA', 26];
+	career_data[career_data.length] = ['AGRONOMÍA', 37];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 122];
+	career_data[career_data.length] = ['VETERINARIA', 30];
+	data[12] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['VETERINARIA', 73];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 204];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 209];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 270];
+	career_data[career_data.length] = ['ARQUITECTURA', 84];
+	career_data[career_data.length] = ['INFORMÁTICA', 92];
+	career_data[career_data.length] = ['MEDICINA', 380];
+	career_data[career_data.length] = ['AGRONOMÍA', 125];
+	career_data[career_data.length] = ['CIENCIAS', 96];
+	career_data[career_data.length] = ['INGENIERÍA', 121];
+	data[11] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['MEDICINA', 281];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 213];
+	career_data[career_data.length] = ['INFORMÁTICA', 54];
+	career_data[career_data.length] = ['AGRONOMÍA', 29];
+	career_data[career_data.length] = ['ARQUITECTURA', 109];
+	career_data[career_data.length] = ['INGENIERÍA', 82];
+	career_data[career_data.length] = ['CIENCIAS', 45];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 206];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 289];
+	career_data[career_data.length] = ['VETERINARIA', 51];
+	data[10] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['CIENCIAS', 39];
+	career_data[career_data.length] = ['INFORMÁTICA', 22];
+	career_data[career_data.length] = ['ARQUITECTURA', 37];
+	career_data[career_data.length] = ['INGENIERÍA', 40];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 93];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 137];
+	career_data[career_data.length] = ['VETERINARIA', 57];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 133];
+	career_data[career_data.length] = ['MEDICINA', 226];
+	career_data[career_data.length] = ['AGRONOMÍA', 40];
+	data[9] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ARQUITECTURA', 44];
+	career_data[career_data.length] = ['INGENIERÍA', 67];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 123];
+	career_data[career_data.length] = ['INFORMÁTICA', 46];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 190];
+	career_data[career_data.length] = ['VETERINARIA', 77];
+	career_data[career_data.length] = ['MEDICINA', 250];
+	career_data[career_data.length] = ['AGRONOMÍA', 44];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 190];
+	career_data[career_data.length] = ['CIENCIAS', 52];
+	data[8] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['CIENCIAS', 21];
+	career_data[career_data.length] = ['VETERINARIA', 33];
+	career_data[career_data.length] = ['AGRONOMÍA', 38];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 83];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 69];
+	career_data[career_data.length] = ['INFORMÁTICA', 16];
+	career_data[career_data.length] = ['INGENIERÍA', 23];
+	career_data[career_data.length] = ['MEDICINA', 92];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 62];
+	career_data[career_data.length] = ['ARQUITECTURA', 18];
+	data[7] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 141];
+	career_data[career_data.length] = ['ARQUITECTURA', 54];
+	career_data[career_data.length] = ['VETERINARIA', 64];
+	career_data[career_data.length] = ['MEDICINA', 159];
+	career_data[career_data.length] = ['INGENIERÍA', 57];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 181];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 92];
+	career_data[career_data.length] = ['INFORMÁTICA', 29];
+	career_data[career_data.length] = ['AGRONOMÍA', 44];
+	career_data[career_data.length] = ['CIENCIAS', 28];
+	data[6] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 249];
+	career_data[career_data.length] = ['MEDICINA', 297];
+	career_data[career_data.length] = ['AGRONOMÍA', 88];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 255];
+	career_data[career_data.length] = ['CIENCIAS', 93];
+	career_data[career_data.length] = ['INFORMÁTICA', 106];
+	career_data[career_data.length] = ['ARQUITECTURA', 86];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 316];
+	career_data[career_data.length] = ['VETERINARIA', 81];
+	career_data[career_data.length] = ['INGENIERÍA', 121];
+	data[5] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['INGENIERÍA', 53];
+	career_data[career_data.length] = ['CIENCIAS', 29];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 126];
+	career_data[career_data.length] = ['MEDICINA', 260];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 194];
+	career_data[career_data.length] = ['AGRONOMÍA', 33];
+	career_data[career_data.length] = ['VETERINARIA', 68];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 101];
+	career_data[career_data.length] = ['INFORMÁTICA', 33];
+	career_data[career_data.length] = ['ARQUITECTURA', 46];
+	data[4] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['MEDICINA', 841];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 580];
+	career_data[career_data.length] = ['ARQUITECTURA', 261];
+	career_data[career_data.length] = ['CIENCIAS', 295];
+	career_data[career_data.length] = ['INGENIERÍA', 367];
+	career_data[career_data.length] = ['AGRONOMÍA', 128];
+	career_data[career_data.length] = ['VETERINARIA', 160];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 1022];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 671];
+	career_data[career_data.length] = ['INFORMÁTICA', 231];
+	data[3] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 153];
+	career_data[career_data.length] = ['INGENIERÍA', 56];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 145];
+	career_data[career_data.length] = ['INFORMÁTICA', 49];
+	career_data[career_data.length] = ['AGRONOMÍA', 28];
+	career_data[career_data.length] = ['MEDICINA', 304];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 197];
+	career_data[career_data.length] = ['VETERINARIA', 49];
+	career_data[career_data.length] = ['ARQUITECTURA', 41];
+	career_data[career_data.length] = ['CIENCIAS', 33];
+	data[2] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['MEDICINA', 4002];
+	career_data[career_data.length] = ['CIENCIAS', 1506];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 5850];
+	career_data[career_data.length] = ['INGENIERÍA', 2806];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 3100];
+	career_data[career_data.length] = ['INFORMÁTICA', 1514];
+	career_data[career_data.length] = ['ARQUITECTURA', 2029];
+	career_data[career_data.length] = ['VETERINARIA', 718];
+	career_data[career_data.length] = ['AGRONOMÍA', 606];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 3918];
+	data[1] = career_data;
+	career_data = [];
+	career_data[career_data.length] = ['CIENCIAS HUMANAS', 283];
+	career_data[career_data.length] = ['ADMINISTRACIÓN', 149];
+	career_data[career_data.length] = ['ARQUITECTURA', 100];
+	career_data[career_data.length] = ['CIENCIAS', 70];
+	career_data[career_data.length] = ['INFORMÁTICA', 76];
+	career_data[career_data.length] = ['ABOGACIA Y NOTARIADO', 158];
+	career_data[career_data.length] = ['INGENIERÍA', 101];
+	career_data[career_data.length] = ['AGRONOMÍA', 24];
+	career_data[career_data.length] = ['VETERINARIA', 46];
+	career_data[career_data.length] = ['MEDICINA', 237];
+	data[0] = career_data;
+
+	for (var i = 0; i <= 19; i++) {
+		data[i].sort(function (a, b) {
+			if (a[1] < b [1])
+				return 1;
+			if (a[1] > b [1])
+				return -1;
+			return 0;
+		});
+	}
+
+	career_data = [];
+	
+	$(document).ready(function () {
+		chart(data[2]);
+
+		$('#department').change(function () {
+			chart(data[$(this).val()]);
+		});
+	});
+
+	function chart(data) {
+		chart_data = {
+	        "metadata": [{
+	            "colIndex": 0,
+	            "colType": "String",
+	            "colName": "Carreras"
+	        },
+	        {
+	            "colIndex": 1,
+	            "colType": "Numeric",
+	            "colName": "Cantidad"
+	        }],
+	        "resultset":  data
+	    };
+		new pvc.TreemapChart({
+	                canvas:     'careers_chart',
+	                width:      800,
+	                height:     480,
+	                title:      'Carreras',
+	                titleFont:  'italic 14px sans-serif',
+	                selectable: true,
+	                hoverable:  true,
+	                legend:     true,
+	                legendPosition: 'right',
+	                rootCategoryLabel: 'Carreras',
+	                colorMode:  'bySelf'
+	            })
+	            .setData(chart_data, {crosstabMode: false})
+	            .render();
+	}
+</script>
