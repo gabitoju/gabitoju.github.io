@@ -11,5 +11,6 @@ Esto es un trabajo en progreso, así que a medida que avance el tiempo se van a 
 
 Estas son las visualizaciones disponibles:
 
+* [Carreras más populares](careers.html) ¿Cuáles son las carreras más popualares entre los uruguayos de 18 y 25 años según el Censo 2011?
 <!--* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010.-->
 * [Goleadores Campeonato Uruguayo](uy_top_scorers.html) Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.
