@@ -15,4 +15,4 @@ Estas son las visualizaciones disponibles:
 <!--* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010.-->
 * [Goleadores Campeonato Uruguayo](uy_top_scorers.html) Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.
 
-<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="publisher"></a>
+<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
