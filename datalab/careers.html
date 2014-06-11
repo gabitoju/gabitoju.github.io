@@ -26,13 +26,37 @@
 			</div>					
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
+					<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=279882972107123&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="col-lg-12">
 	<div class="row">
 		<a href="/datalab">Volver a Data Lab</a>
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
 			<h1>Las carreras más populares</h1>
+		</div>
+	</div>
+	<div clas="row">
+		<div class="col-lg-1">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="es">Twittear</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+		<div class="col-lg-1">
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+		</div>
+		<div class="col-lg-1">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lan: es_ES
+			</script>
+			<script type="IN/Share" data-counter="right"></script>
 		</div>
 	</div>
 	<div class="row">
@@ -53,7 +77,7 @@ que refiere al nivel de estudio cursado actualmente (al momento del censo) y la 
 </ul>
 <p>La primera pregunta que podríamos hacer es: ¿Cuáles son las carreras más populares entre esta población?</p>
 <h3><a name="1"></a><a id="populares"></a>Las más populares</h3>
-<p>Lo primero que hay que saber es que el INE identifica varias carreras con un mismo código, por ejemplo, el código <em>'INFORMÁTICA'</em> representa varias
+<p>Lo primero que hay que saber es que el INE identifica varias carreras con un mismo código, por ejemplo, el código <em>55248</em> representa varias
 carreras de informática, por ejemplo, Licenciatura en Sistemas e Ingeniería en Sistemas. Por este motivo los códigos de carrera han sido agrupados
 en grandes conceptos. Al final de este artículo se listan estos agrupamientos con sus respectivas carreras.</p>
 <p>Volviendo al tema ¿cuáles son las carreras más populares? La población de 56.080 se divide de esta forma:</p>
@@ -171,7 +195,151 @@ departamental.</p>
 <h3><a name="4"></a>Tecnologías usadas y grupos de carreras</h3>
 <p>Para generar la visualización se usó el componente TreeMap de la librería <a href="http://www.webdetails.pt/ctools/ccc.html">Community Charting Components</a> de WebDetails. Es una librería en JavaScript
 muy simple de usar que además es parte de la suite de BI Pentaho.</p>
-<p>Los agrupamientos de carrera están disponbles en este <a href="data/career_codes.ods">archivo</a>.</p>
+<p>Los agrupamientos de carrera están disponbles en este <a href="data/career_codes.ods">archivo</a> o los puedes ver en esta tabla:</p>
+<div class="table-responsive">
+    <table id="career_codes" class="table table-condensed table-striped">
+        <thead>
+            <th>Carrera</th>
+            <th>Código INE</th>
+            <th>Agrupamiento</th>
+        </thead>
+        <tbody id="career_codes_body">
+            <tr><td>ELECTRÓNICA</td><td>55000</td><td>ELECTRÓNICA/ÓPTICA/OTROS</td></tr>
+            <tr><td>ÓPTICA</td><td>55000</td><td>ELECTRÓNICA/ÓPTICA/OTROS</td></tr>
+            <tr><td>OTROS</td><td>55000</td><td>ELECTRÓNICA/ÓPTICA/OTROS</td></tr>
+            <tr><td>CIENCIAS DE LA EDUCACIÓN</td><td>55114</td><td>EDUCACIÓN</td></tr>
+            <tr><td>EDUCACIÓN FÍSICA</td><td>55114</td><td>EDUCACIÓN</td></tr>
+            <tr><td>EDUCACIÓN INICIAL</td><td>55114</td><td>EDUCACIÓN</td></tr>
+            <tr><td>BELLAS ARTES</td><td>55121</td><td>ARTE</td></tr>
+            <tr><td>DIBUJO TÉCNICO</td><td>55121</td><td>ARTE</td></tr>
+            <tr><td>DISEÑO</td><td>55121</td><td>ARTE</td></tr>
+            <tr><td>MÚSICA</td><td>55121</td><td>ARTE</td></tr>
+            <tr><td>PUBLICIDAD</td><td>55121</td><td>ARTE</td></tr>
+            <tr><td>HUMANIDADES</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>LIC. FILOSOFÍA</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>LIC. GEOGRAFÍA</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>LIC. HISTORIA</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>LIC. LETRAS</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>LIC. LINGÜÍSTICA</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>TEOLOGÍA</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>TRADUCTOR ADO</td><td>55122</td><td>HUMANIDADES</td></tr>
+            <tr><td>CIENCIAS DE LA COMUNICACIÓN</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>CIENCIAS POLÍTICAS</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>CIENCIAS SOCIALES</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>ECONOMÍA</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>PSICOLOGÍA</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>RELACIONES PUBLICAS</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>SOCIOLOGÍA</td><td>55131</td><td>CIENCIAS HUMANAS</td></tr>
+            <tr><td>BIBLIOTECOLOGÍA</td><td>55132</td><td>COMUNICACIÓN</td></tr>
+            <tr><td>COMUNICACIÓN SOCIAL</td><td>55132</td><td>COMUNICACIÓN</td></tr>
+            <tr><td>DISEÑO DE COMUNICACIÓN SOCIAL</td><td>55132</td><td>COMUNICACIÓN</td></tr>
+            <tr><td>PERIODISMO</td><td>55132</td><td>COMUNICACIÓN</td></tr>
+            <tr><td>ADMINISTRACIÓN</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>ADMINISTRACIÓN SALUD</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>ADMINISTRACIÓN TURISMO</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>CIENCIAS ECONÓMICAS</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>CIENCIAS EMPRESARIALES</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>COMERCIO EXTERIOR</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>CONTABILIDAD</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>CONTADOR</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>DIRECCIÓN DE EMPRESAS</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>FINANZAS</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>GERENCIA</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>GESTIÓN AGROPECUARIA</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>GESTIÓN CULTURAL</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>GESTIÓN UNIVERSITARIA</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>LIC. NEGOCIOS</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>RECURSOS HUMANOS</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>RELACIONES LABORALES</td><td>55134</td><td>ADMINISTRACIÓN</td></tr>
+            <tr><td>ABOGACÍA</td><td>55138</td><td>ABOGACÍA Y NOTARIADO</td></tr>
+            <tr><td>ABOGACÍA Y NOTARIADO</td><td>55138</td><td>ABOGACÍA Y NOTARIADO</td></tr>
+            <tr><td>NOTARIADO</td><td>55138</td><td>ABOGACÍA Y NOTARIADO</td></tr>
+            <tr><td>RELACIONES INTERNACIONALES</td><td>55138</td><td>ABOGACÍA Y NOTARIADO</td></tr>
+            <tr><td>ANTROPOLOGÍA</td><td>55142</td><td>ANTROPOLOGÍA</td></tr>
+            <tr><td>ARQUEOLOGÍA</td><td>55142</td><td>ANTROPOLOGÍA</td></tr>
+            <tr><td>ASTRONOMÍA - ASTROFÍSICA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>BIOLOGÍA HUMANA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>BIOLOGÍA MARINA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>BIOQUÍMICA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>BIOTECNOLOGÍA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>CIENCIAS</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>CIENCIAS BIOLÓGICAS</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>GENÉTICA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>GEOLOGÍA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>GESTIÓN AMBIENTAL Y RECURSOS NATURALES</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>LIC. FÍSICA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>METEOROLOGÍA - CS DE LA ATMOSFERA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>OCEANOGRAFÍA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>QUÍMICA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>QUÍMICA FARMACÉUTICA</td><td>55144</td><td>CIENCIAS</td></tr>
+            <tr><td>ESTADÍSTICA</td><td>55146</td><td>ESTADÍSTICA/LIC. MATEMÁTICA</td></tr>
+            <tr><td>LIC. MATEMÁTICA</td><td>55146</td><td>ESTADÍSTICA/LIC. MATEMÁTICA</td></tr>
+            <tr><td>INGENIERÍA</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA CIVIL</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA ELÉCTRICA</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA EN ALIMENTOS</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA EN TELECOMUNICACIONES</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA INDUSTRIAL MECÁNICA</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA NAVAL O AERONÁUTICA</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERÍA QUÍMICA</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>INGENIERO AGRIMENSOR</td><td>55152</td><td>INGENIERÍA</td></tr>
+            <tr><td>DISEÑO TEXTIL - INDUMENTARIA</td><td>55154</td><td>DISEÑO TEXTIL - INDUMENTARIA</td></tr>
+            <tr><td>ARQUITECTURA</td><td>55158</td><td>ARQUITECTURA</td></tr>
+            <tr><td>CONSTRUCCIÓN</td><td>55158</td><td>ARQUITECTURA</td></tr>
+            <tr><td>DISEÑO INTERIORES - PAISAJES</td><td>55158</td><td>ARQUITECTURA</td></tr>
+            <tr><td>AGRONOMÍA</td><td>55162</td><td>AGRONOMÍA</td></tr>
+            <tr><td>ENOLOGÍA</td><td>55162</td><td>AGRONOMÍA</td></tr>
+            <tr><td>PERITO AGRÓNOMO</td><td>55162</td><td>AGRONOMÍA</td></tr>
+            <tr><td>VETERINARIA</td><td>55164</td><td>VETERINARIA</td></tr>
+            <tr><td>ANATOMÍA PATOLÓGICA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>ASISTENTE ODONTOLOGÍA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>COSMETOLOGÍA MEDICA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>ENFERMERÍA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>FONOAUDIOLOGÍA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>HEMOTERAPIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>INSTRUMENTACIÓN QUIRÚRGICA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LABORATORIO CLINICO</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. ENFERMERÍA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. FISIOTERAPIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. IMAGENOLOGIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. NUTRICION</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. OBSTETRICIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. OFTALMOLOGIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. PSICOMOTRICIDAD</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>LIC. PSICOPEDAGOGIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>MEDICINA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>NEUMOCARDIOLOGIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>NEUROFISIOLOGIA CLINICA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>ODONTOLOGÍA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>PODOLOGIA MEDICA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>RADIOISOTOPOS</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>RADIOLOGIA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>REGISTROS MEDICOS</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>SALUD</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>SALUD OCUPACIONAL</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>TECNOLOGIA MEDICA</td><td>55172</td><td>MEDICINA</td></tr>
+            <tr><td>TRABAJO SOCIAL</td><td>55176</td><td>TRABAJO SOCIAL</td></tr>
+            <tr><td>TURISMO Y HOTELERIA</td><td>55181</td><td>TURISMO Y HOTELERIA</td></tr>
+            <tr><td>LIC. DESARROLLO</td><td>55186</td><td>SEGURIDAD</td></tr>
+            <tr><td>LIC. ESTUDIOS MILITARES</td><td>55186</td><td>SEGURIDAD</td></tr>
+            <tr><td>SEGURIDAD PUBLICA</td><td>55186</td><td>SEGURIDAD</td></tr>
+            <tr><td>DISEÑO INDUSTRIAL</td><td>55221</td><td>DISEÑO INDUSTRIAL</td></tr>
+            <tr><td>DERECHO</td><td>55238</td><td>DERECHO/PROCURADOR</td></tr>
+            <tr><td>PROCURADOR</td><td>55238</td><td>DERECHO/PROCURADOR</td></tr>
+            <tr><td>ANALISTA DE SISTEMAS</td><td>55248</td><td>INFORMATICA</td></tr>
+            <tr><td>DISEÑO MULTIMEDIA</td><td>55248</td><td>INFORMATICA</td></tr>
+            <tr><td>INFORMATICA</td><td>55248</td><td>INFORMATICA</td></tr>
+            <tr><td>INGENIERÍA EN SISTEMAS</td><td>55248</td><td>INFORMATICA</td></tr>
+            <tr><td>LIC. SISTEMAS</td><td>55248</td><td>INFORMATICA</td></tr>
+            <tr><td>MARKETING</td><td>55334</td><td>MARKETING</td></tr>
+            <tr><td>DISEÑO GRAFICO</td><td>55348</td><td>DISEÑO GRAFICO</td></tr>
+            <tr><td>TEC AGROPECUARIO</td><td>55362</td><td>TEC AGROPECUARIO</td></tr>
+            <tr><td>RECREACION</td><td>55381</td><td>RECREACION</td></tr>
+            <tr><td>IGNORADO</td><td>55999</td><td>IGNORADO</td></tr>           
+        </tbody>
+    </table>
+</div>
+
 <p><link type="text/css" href="/datalab/ccc/tipsy.css" rel="stylesheet" media="screen"/>
 <script type="text/javascript" src="/datalab/ccc/jquery.tipsy.js"></script>
 <script type="text/javascript" src="/datalab/ccc/protovis.js"></script>
