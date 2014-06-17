@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Tweets Uruguay - Costa Rica</title>		
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.min.js"></script>        
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<div class="container">
+					<div class="row">
+						<a href="/"><h1>gabitoju</h1></a>
+					</div>
+				</div>
+			</div>					
+			<div class="container">
+				<div class="row">
+					<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=279882972107123&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="col-lg-12">
+	<div class="row">
+		<a href="/datalab">Volver a Data Lab</a>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Tweets Uruguay - Costa Rica</h1>
+		</div>
+	</div>
+	<div clas="row">
+		<div class="col-lg-1">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="es">Twittear</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+		<div class="col-lg-1">
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
+		<div class="col-lg-1">
+			<div class="g-plus" data-action="share" data-annotation="none"></div>
+			<script type="text/javascript">
+			  window.___gcfg = {lang: 'es-419'};
+
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/platform.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>	
+		</div>
+		<div class="col-lg-2">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lan: es_ES
+			</script>
+			<script type="IN/Share" data-counter="right"></script>
+		</div>		
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+		<p>¿Cuántos tweets se generaron durante el partido con el hashtag <a href="https://twitter.com/search?q=%23URU&amp;src=typd">#URU</a>? ¿Cuántos de ellos fueron durante el primero tiempo y cuántos durante el segundo? ¿Qué usuarios fueron los que generaron más contenido? ¿Qué pasó cuándo explusaron al "Mono" Pereira?</p>
+<p>Usando la Streaming API de Twitter, ejecuté un script que buscaba y almacenaba todos los tweets con mención al hashtag #URU para luego responder las preguntas que me planeto más arriba. El script se puede descargar de <a href="scripts/tweets.py">acá</a>. Este script depende de <a href="https://github.com/tweepy/tweepy">Tweepy</a> y almacena los tweets en MongoDB usando <a href="https://pypi.python.org/pypi/pymongo/">PyMongo</a> y está basdo en <a href="http://willsimm.co.uk/saving-tweepy-output-to-mongodb/">éste</a>. El rango de tiempo fue desde las 16:00 (inicio del partido) hasta las 18:06 (algunos minutos luego del fin para tener un universo más interesante de tweets).  </p>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-4 text-left">
+            <h2>Generales</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+            <h2>Por Hora</h2>
+        </div>
+        <div class="col-lg-4 text-right">
+            <h2>Por período</h2>
+        </div>                
+    </div>    
+    <div class="row">
+        <div class="col-lg-4 text-left">
+            <h1>220.148 tweets</h1>
+            <h2>1.747 por minuto</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+            <svg id="hourly_tweets"></svg>
+        </div>
+        <div class="col-lg-4 text-right">
+            <svg id="per_time_tweets"></svg>
+        </div>                
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Minuto a minuto</h2>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="tweets_per_minute"  style='width: 100%; height: 500px;'></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Jugadores con más de 1.000 menciones</h2>
+        </div>
+        <div class="col-lg-6">
+            <h2>Usuarios más activos</h2>
+        </div>        
+    </div>    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="table-responsive">
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <th>Jugador</th>
+                        <th>País</th>
+                        <th>Menciones</th>
+                    </thead>
+                    <tbody> 
+                        <tr><td>Edinson Cavani</td><td><img src="img/uy.png"></td><td>19.206</td></tr>
+                        <tr><td>Joel Campbell</td><td><img src="img/crc.png"></td><td>16.061</td></tr>
+                        <tr><td>Oscar Duate</td><td><img src="img/crc.png"></td><td>9.287</td></tr>
+                        <tr><td>Luis Suarez</td><td><img src="img/uy.png"></td><td>6.972</td></tr>
+                        <tr><td>Maximiliano Pereira</td><td><img src="img/uy.png"></td><td>3.644</td></tr>
+                        <tr><td>Diego Lugano</td><td><img src="img/uy.png"></td><td>2.817</td></tr>
+                        <tr><td>Fernando Muslera</td><td><img src="img/uy.png"></td><td>2.252</td></tr>
+                        <tr><td>Cristian Rodríguez</td><td><img src="img/uy.png"></td><td>2.204</td></tr>
+                        <tr><td>Diego Forlán</td><td><img src="img/uy.png"></td><td>2.175</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="table-responsive">
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <th>Usuario</th>
+                        <th>Cantidad</th>
+                    </thead>
+                    <tbody> 
+                        <tr><td><a href="http://twitter.com/kendrick_amaya" target="_blank">@kendrick_amaya</a></td><td>109</td></tr>
+                        <tr><td><a href="http://twitter.com/CaroGonzalez44" target="_blank">@CaroGonzalez44</a></td><td>108</td></tr>
+                        <tr><td><a href="http://twitter.com/ELNEGROZEIN" target="_blank">@ELNEGROZEIN</a></td><td>95</td></tr>
+                        <tr><td><a href="http://twitter.com/rupear" target="_blank">@rupear</a></td><td>93</td></tr>
+                        <tr><td><a href="http://twitter.com/pedalante" target="_blank">@pedalante</a></td><td>92</td></tr>
+                        <tr><td><a href="http://twitter.com/new_shuttle" target="_blank">@new_shuttle</a></td><td>89</td></tr>
+                        <tr><td><a href="http://twitter.com/InuArandia" target="_blank">@InuArandia</a></td><td>83</td></tr>
+                        <tr><td><a href="http://twitter.com/xeudeportes" target="_blank">@xeudeportes</a></td><td>78</td></tr>
+                        <tr><td><a href="http://twitter.com/roll_your_own" target="_blank">@roll_your_own</a></td><td>76</td></tr>
+                    </tbody>
+                </table>
+            </div>            
+        </div>        
+    </div>
+</div>
+
+<h3><a name="1"></a>Tecnologías y datos</h3>
+<p>Los datos se obtuvieron gracias a la Streaming API de Twitter y las gráficas fueron generadas usando <a href="http://d3js.org/">D3</a> y <a href="https://developers.google.com/chart/interactive/docs/gallery/annotationchart">Google Annotation Chart</a>.</p>
+<p>Los íconos usados se descargaron de estas fuentes:</p>
+<ul>
+<li><a href="https://www.iconfinder.com/iconsets/vector_social_media_icons">Vector Social Media Icons</a></li>
+<li><a href="https://www.iconfinder.com/iconsets/ledicons">Ledicons</a></li>
+<li><a href="https://www.iconfinder.com/iconsets/fatcow">Fatcow</a></li>
+<li><a href="https://www.iconfinder.com/iconsets/finalflags">Final Flags</a></li>
+</ul>
+<style>
+
+#hourly_tweets rect {
+  fill: steelblue;
+  width: 420px;
+}
+
+#hourly_tweets, #per_time_tweets text {
+  font-size: 14px;
+  text-anchor: end;
+}
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 70px;                  
+  height: 35px;                 
+  padding: 5px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+</style>
+
+<p><link type="text/css" href="/datalab/ccc/tipsy.css" rel="stylesheet" media="screen"/>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/datalab/ccc/jquery.tipsy.js"></script>
+<script type="text/javascript" src="/datalab/ccc/protovis.js"></script>
+<script type="text/javascript" src="/datalab/ccc/protovis-msie.js"></script>
+<script type="text/javascript" src="/datalab/ccc/tipsy.js"></script>
+<script type="text/javascript" src="/datalab/ccc/def.js"></script>
+<script type="text/javascript" src="/datalab/ccc/pvc-r2.0.js"></script></p>
+<script type="text/javascript">
+
+    var hour_data = [
+        { hour: '16', total: 82639 },
+        { hour: '17', total: 127212 },
+        { hour: '18', total: 10297 }
+    ];
+
+    var time_data = [
+        {ev: 'Primer Tiempo', total: 69586},
+        {ev: 'Entretiempo', total: 14025},
+        {ev: 'Segundo Tiempo', total: 94880},
+        {ev: 'Post Partido', total: 41657}
+    ];
+
+    $(document).ready(function () {
+        var width = 340,
+            barHeight = 40;
+
+        var x = d3.scale.linear().domain([0, d3.max(hour_data, function (d) { return  d.total; } )]).range([0, width]);
+
+        var chart = d3.select('#hourly_tweets')
+            .attr('width', width)
+            .attr('height', barHeight * hour_data.length);
+
+        var bar = chart.selectAll('g')
+            .data(hour_data)
+                .enter().append('g')
+                .attr('transform', function(d, i) { return 'translate(0,' + i * barHeight + ')'; });
+
+        bar.append('rect')            
+            .attr('width', function (d) { return x(d.total); })
+            .attr('height', barHeight - 1)
+            .attr('x', 90);
+
+        bar.append('text')
+            .attr('x', 90)
+            .attr('y', barHeight / 2)
+            .attr('dy', '.35em')
+            .text(function(d) { return d.hour + 'hs: ' + d.total.toLocaleString(); });
+
+        var twidth = 250,
+            theight = 250,
+            radius = Math.min(twidth, theight) / 2;
+
+        var color = d3.scale.ordinal()
+            .range(['#4682B4', '#1E4667 ', '#2272B4', '#093D67']);
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(radius - 70);
+
+        var pie = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d.total; });
+
+        var svg = d3.select('#per_time_tweets')
+            .attr('width', twidth)
+            .attr('height', theight)
+          .append('g')
+            .attr('transform', 'translate(' + twidth / 2 + ',' + theight / 2 + ')');
+
+
+        var div = d3.select('body').append('div')   
+            .attr('class', 'tooltip')
+            .style('opacity', 0);
+          var g = svg.selectAll('.arc')
+              .data(pie(time_data))
+            .enter().append('g')
+              .attr('class', 'arc');
+
+          g.append('path')
+              .attr('d', arc)
+              .style('fill', function(d) { return color(d.data.ev); }).on('mouseover', function(d) {      
+            div.transition()        
+                .duration(200)      
+                .style('opacity', .9);      
+            div .html(d.data.total + ' tweets')  
+                .style('left', (d3.event.pageX) + 'px')     
+                .style('top', (d3.event.pageY - 28) + 'px');
+            })                  
+        .on('mouseout', function(d) {       
+            div.transition()        
+                .duration(500)      
+                .style('opacity', 0);   
+        });
+
+          g.append('text')
+              .attr('transform', function(d) { return 'translate(' + arc.centroid(d) + ')'; })
+              .attr('dy', '.35em')
+              .style('text-anchor', 'middle')
+              .text(function(d) { return d.data.ev; });
+
+        var top_players = [        
+            { "_id" : "Edinson Cavani", "country": "UY","total" : 19206 },
+            { "_id" : "Joel Campbell", "country": "CRC", "total" : 16061 },         
+            { "_id" : "Oscar Duate", "country": "CRC", "total" : 9287 },
+            { "_id" : "Luis Suarez", "country": "UY","total" : 6972 },            
+            { "_id" : "Maximiliano Pereira", "country": "UY","total" : 3644 },
+            { "_id" : "Diego Lugano", "country": "UY","total" : 2817 },
+            { "_id" : "Fernando Muslera", "country": "UY","total" : 2252 },
+            { "_id" : "Cristian Rodríguez", "country": "UY","total" : 2204 },
+            { "_id" : "Diego Forlán", "country": "UY","total" : 2175 }
+        ];
+
+
+    });
+</script>
+
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+
+<script type="text/javascript">
+
+    google.load('visualization', '1.1', {'packages':['annotationchart']});
+    google.setOnLoadCallback(tweets_per_minute);
+
+    function tweets_per_minute() {
+        var line = new google.visualization.DataTable();
+        line.addColumn('date', 'Fecha');
+        line.addColumn('number', 'Tweets');
+        line.addColumn('string', 'Evento');
+
+        line.addRows([
+            [new Date(2014, 6, 14, 16, 0 ), 1748, '<img src="img/whistle.png" />Inicio del partido'],
+            [new Date(2014, 6, 14, 16, 1 ), 3086, undefined],
+            [new Date(2014, 6, 14, 16, 2 ), 2517, undefined],
+            [new Date(2014, 6, 14, 16, 3 ), 1993, undefined],
+            [new Date(2014, 6, 14, 16, 4 ), 1727, undefined],
+            [new Date(2014, 6, 14, 16, 5 ), 1432, undefined],
+            [new Date(2014, 6, 14, 16, 6 ), 1193, undefined],
+            [new Date(2014, 6, 14, 16, 7 ), 1194, undefined],
+            [new Date(2014, 6, 14, 16, 8 ), 1065, undefined],
+            [new Date(2014, 6, 14, 16, 9 ), 1016, undefined],
+            [new Date(2014, 6, 14, 16, 10 ), 932, undefined],
+            [new Date(2014, 6, 14, 16, 11 ), 1029, undefined],
+            [new Date(2014, 6, 14, 16, 12 ), 1001, undefined],
+            [new Date(2014, 6, 14, 16, 13 ), 926, undefined],
+            [new Date(2014, 6, 14, 16, 14 ), 901, undefined],
+            [new Date(2014, 6, 14, 16, 15 ), 832, undefined],
+            [new Date(2014, 6, 14, 16, 16 ), 1445, undefined],
+            [new Date(2014, 6, 14, 16, 17 ), 1273, undefined],
+            [new Date(2014, 6, 14, 16, 18 ), 955, undefined],
+            [new Date(2014, 6, 14, 16, 19 ), 849, undefined],
+            [new Date(2014, 6, 14, 16, 20 ), 731, undefined],
+            [new Date(2014, 6, 14, 16, 21 ), 766, undefined],
+            [new Date(2014, 6, 14, 16, 22 ), 696, undefined],
+            [new Date(2014, 6, 14, 16, 23 ), 2211, undefined],
+            [new Date(2014, 6, 14, 16, 24 ), 6643, '<img src="img/sport_soccer.png"/>24\': Gol de Cavani (UY)'],
+            [new Date(2014, 6, 14, 16, 25 ), 7542, undefined],
+            [new Date(2014, 6, 14, 16, 26 ), 4056, undefined],
+            [new Date(2014, 6, 14, 16, 27 ), 2474, undefined],
+            [new Date(2014, 6, 14, 16, 28 ), 1902, undefined],
+            [new Date(2014, 6, 14, 16, 29 ), 1457, undefined],
+            [new Date(2014, 6, 14, 16, 30 ), 1296, undefined],
+            [new Date(2014, 6, 14, 16, 31 ), 1033, undefined],
+            [new Date(2014, 6, 14, 16, 32 ), 1025, undefined],
+            [new Date(2014, 6, 14, 16, 33 ), 934, undefined],
+            [new Date(2014, 6, 14, 16, 34 ), 860, undefined],
+            [new Date(2014, 6, 14, 16, 35 ), 773, undefined],
+            [new Date(2014, 6, 14, 16, 36 ), 771, undefined],
+            [new Date(2014, 6, 14, 16, 37 ), 664, undefined],
+            [new Date(2014, 6, 14, 16, 38 ), 765, undefined],
+            [new Date(2014, 6, 14, 16, 39 ), 707, undefined],
+            [new Date(2014, 6, 14, 16, 40 ), 616, undefined],
+            [new Date(2014, 6, 14, 16, 41 ), 686, undefined],
+            [new Date(2014, 6, 14, 16, 42 ), 762, undefined],
+            [new Date(2014, 6, 14, 16, 43 ), 662, undefined],
+            [new Date(2014, 6, 14, 16, 44 ), 734, undefined],
+            [new Date(2014, 6, 14, 16, 45 ), 900, undefined],
+            [new Date(2014, 6, 14, 16, 46 ), 793, undefined],
+            [new Date(2014, 6, 14, 16, 47 ), 596, '<img src="img/whistle.png" />47\': Fin del primer tiempo'],
+            [new Date(2014, 6, 14, 16, 48 ), 1818, undefined],
+            [new Date(2014, 6, 14, 16, 49 ), 2142, undefined],
+            [new Date(2014, 6, 14, 16, 50 ), 1581, undefined],
+            [new Date(2014, 6, 14, 16, 51 ), 1069, undefined],
+            [new Date(2014, 6, 14, 16, 52 ), 967, undefined],
+            [new Date(2014, 6, 14, 16, 53 ), 886, undefined],
+            [new Date(2014, 6, 14, 16, 54 ), 760, undefined],
+            [new Date(2014, 6, 14, 16, 55 ), 742, undefined],
+            [new Date(2014, 6, 14, 16, 56 ), 625, undefined],
+            [new Date(2014, 6, 14, 16, 57 ), 722, undefined],
+            [new Date(2014, 6, 14, 16, 58 ), 686, undefined],
+            [new Date(2014, 6, 14, 16, 59 ), 472, undefined],
+            [new Date(2014, 6, 14, 17, 0 ), 504, undefined],
+            [new Date(2014, 6, 14, 17, 1 ), 463, undefined],
+            [new Date(2014, 6, 14, 17, 2 ), 503, undefined],
+            [new Date(2014, 6, 14, 17, 3 ), 480, undefined],
+            [new Date(2014, 6, 14, 17, 4 ), 804, undefined],
+            [new Date(2014, 6, 14, 17, 5 ), 1065, '<img src="img/whistle.png" />Comienzo del segundo tiempo'],
+            [new Date(2014, 6, 14, 17, 6 ), 745, undefined],
+            [new Date(2014, 6, 14, 17, 7 ), 675, undefined],
+            [new Date(2014, 6, 14, 17, 8 ), 548, undefined],
+            [new Date(2014, 6, 14, 17, 9 ), 625, undefined],
+            [new Date(2014, 6, 14, 17, 10 ), 779, '<img src="img/button-yellow.png" />50\': Amarilla para Lugano (UY)'],
+            [new Date(2014, 6, 14, 17, 11 ), 601, undefined],
+            [new Date(2014, 6, 14, 17, 12 ), 494, undefined],
+            [new Date(2014, 6, 14, 17, 13 ), 1506, undefined],
+            [new Date(2014, 6, 14, 17, 14 ), 3996, '<img src="img/sport_soccer.png" />54\': Gol de Campbell (CRC)'], 
+            [new Date(2014, 6, 14, 17, 15 ), 3173, undefined],
+            [new Date(2014, 6, 14, 17, 16 ), 2741, '<img src="img/button-yellow.png" />56\': Amarilla para Gargano (UY)'],
+            [new Date(2014, 6, 14, 17, 17 ), 6544, '<img src="img/sport_soccer.png" />57\': Gol de Duarte (CRC)'],
+            [new Date(2014, 6, 14, 17, 18 ), 5967, undefined],
+            [new Date(2014, 6, 14, 17, 19 ), 4049, undefined],
+            [new Date(2014, 6, 14, 17, 20 ), 2778, '<img src="img/arrow_refresh.png" />60\': Cambios: Lodeiro por Forlan y González por Gargano (UY)'],
+            [new Date(2014, 6, 14, 17, 21 ), 2464, undefined],
+            [new Date(2014, 6, 14, 17, 22 ), 2172, undefined],
+            [new Date(2014, 6, 14, 17, 23 ), 1821, undefined],
+            [new Date(2014, 6, 14, 17, 24 ), 1681, undefined],
+            [new Date(2014, 6, 14, 17, 25 ), 1479, undefined],
+            [new Date(2014, 6, 14, 17, 26 ), 1268, undefined],
+            [new Date(2014, 6, 14, 17, 27 ), 1217, undefined],
+            [new Date(2014, 6, 14, 17, 28 ), 1082, undefined],
+            [new Date(2014, 6, 14, 17, 29 ), 1210, undefined],
+            [new Date(2014, 6, 14, 17, 30 ), 1153, undefined],
+            [new Date(2014, 6, 14, 17, 31 ), 907, undefined],
+            [new Date(2014, 6, 14, 17, 32 ), 868, undefined],
+            [new Date(2014, 6, 14, 17, 33 ), 833, undefined],
+            [new Date(2014, 6, 14, 17, 34 ), 918, undefined],
+            [new Date(2014, 6, 14, 17, 35 ), 1076, '<img src="img/arrow_refresh.png" />74\': Cambio: Cubero por Tejeda (CRC)'],
+            [new Date(2014, 6, 14, 17, 36 ), 1104, undefined],
+            [new Date(2014, 6, 14, 17, 37 ), 922, '<img src="img/arrow_refresh.png" />76\': Cambio: Hernández por Rodríguez (UY)'],
+            [new Date(2014, 6, 14, 17, 38 ), 775, undefined],
+            [new Date(2014, 6, 14, 17, 39 ), 759, undefined],
+            [new Date(2014, 6, 14, 17, 40 ), 922, undefined],
+            [new Date(2014, 6, 14, 17, 41 ), 1027, '<img src="img/button-yellow.png" />81\': Amarilla para Cáceres (UY)'],
+            [new Date(2014, 6, 14, 17, 42 ), 852, undefined],
+            [new Date(2014, 6, 14, 17, 43 ), 1058, '<img src="img/arrow_refresh.png" />83\': Cambio: Ureña por Ruíz (CRC)'],
+            [new Date(2014, 6, 14, 17, 44 ), 6976, '<img src="img/sport_soccer.png" />84\': Gol de Ureña (CRC)'],
+            [new Date(2014, 6, 14, 17, 45 ), 6205, undefined],
+            [new Date(2014, 6, 14, 17, 46 ), 4420, undefined],
+            [new Date(2014, 6, 14, 17, 47 ), 3430, undefined],
+            [new Date(2014, 6, 14, 17, 48 ), 2589, undefined],
+            [new Date(2014, 6, 14, 17, 49 ), 2028, '<img src="img/arrow_refresh.png" />89\': Cambio: Barrantes por Bolaños (CRC)'],
+            [new Date(2014, 6, 14, 17, 50 ), 1926, undefined],
+            [new Date(2014, 6, 14, 17, 51 ), 1648, undefined],
+            [new Date(2014, 6, 14, 17, 52 ), 1527, undefined],
+            [new Date(2014, 6, 14, 17, 53 ), 1422, undefined],
+            [new Date(2014, 6, 14, 17, 54 ), 4283, '<img src="img/button-red.png" />94\': Roja para Pereira (UY)'],
+            [new Date(2014, 6, 14, 17, 55 ), 7464, '<img src="img/whistle.png" />95\': Fin del segundo tiempo'],
+            [new Date(2014, 6, 14, 17, 56 ), 6126, undefined],
+            [new Date(2014, 6, 14, 17, 57 ), 4612, undefined],
+            [new Date(2014, 6, 14, 17, 58 ), 3226, undefined],
+            [new Date(2014, 6, 14, 17, 59 ), 2722, undefined],
+            [new Date(2014, 6, 14, 18, 0 ), 2204, undefined],
+            [new Date(2014, 6, 14, 18, 1 ), 2033, undefined],
+            [new Date(2014, 6, 14, 18, 2 ), 1854, undefined],
+            [new Date(2014, 6, 14, 18, 3 ), 1467, undefined],
+            [new Date(2014, 6, 14, 18, 4 ), 1309, undefined],
+            [new Date(2014, 6, 14, 18, 5 ), 1247, undefined],
+            [new Date(2014, 6, 14, 18, 6 ), 183, undefined]
+        ]);
+
+        var chart = new google.visualization.AnnotationChart(document.getElementById('tweets_per_minute'));
+
+        var options = {
+          displayAnnotations: true,
+          allowHtml: true,
+          displayZoomButtons: false,
+          annotationsWidth: 20,
+          displayRangeSelector: false,
+          dateFormat: '',
+          displayDateBarSeparator: false
+        };
+
+        chart.draw(line, options);        
+    }
+</script>
+		</div>
+	</div>
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'gabitoju'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>				
+				</div>
+			</div>
+		</div>		    
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript">
+	        
+	          var _gaq = _gaq || [];
+	          _gaq.push(['_setAccount', 'UA-33409917-1']);
+	          _gaq.push(['_trackPageview']);
+	        
+	          (function() {
+	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	          })();
+	        
+	    </script>        
+		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+	</body>
+</html>
