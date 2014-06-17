@@ -210,7 +210,7 @@ div.tooltip {
 </style>
 
 <p><link type="text/css" href="/datalab/ccc/tipsy.css" rel="stylesheet" media="screen"/>
-<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/datalab/js/d3.layout.cloud.js"></script>
 <script type="text/javascript" src="/datalab/ccc/jquery.tipsy.js"></script>
 <script type="text/javascript" src="/datalab/ccc/protovis.js"></script>
@@ -233,7 +233,7 @@ div.tooltip {
         {ev: 'Post Partido', total: 41657}
     ];
 
-    $(document).ready(function () {
+    //$(document).ready(function () {
         var width = 340,
             barHeight = 40;
 
@@ -471,14 +471,12 @@ div.tooltip {
         });
   }
 
-    });
+    //});
 </script>
 
-<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type="text/javascript" src='http://www.google.com/jsapi?autoload={"modules": [{"name": "visualization", "version": "1", "packages": ["annotationchart"]}]}'></script>
 
-<script type="text/javascript">
-
-    google.load('visualization', '1.1', {'packages':['annotationchart']});
+<script type="text/javascript">    
     google.setOnLoadCallback(tweets_per_minute);
 
     function tweets_per_minute() {
