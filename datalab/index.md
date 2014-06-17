@@ -2,6 +2,8 @@
 title: "Data Lab"
 template: data_home
 order: 0
+url: datalab
+description: "Data Lab es un espacio de experimentación en análisis y visualización de datos"
 ---
 
 *Data Lab* es un espacio de experimentación en análisis y visualización de datos. La idea es usar distintas técnicas y librerias

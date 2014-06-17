@@ -2,6 +2,8 @@
 title: "Goleadores del Campeonato Uruguayo"
 template: article
 order: 2
+url: datalab/uy_top_scorers.html
+description: "Esta visualización muestra los goleadores por año, torneo y equipo de los campeonatos uruguayos de fútbol jugados entre los años 2008 y 2013."
 ---
 
 Esta visualización muestra los goleadores por año, torneo y equipo de los campeonatos uruguayos de fútbol jugados entre los años 2008 y 2013.  
