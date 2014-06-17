@@ -33,7 +33,7 @@ tweets = db.tweets
 class CustomStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         dict_status = json.loads(status.json)
-        dict_status['match'] = 1
+        dict_status['match'] = 2
         tweets.insert(dict_status)
 
     def on_error(self, status_code):
