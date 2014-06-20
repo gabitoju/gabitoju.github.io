@@ -205,41 +205,416 @@ div.tooltip {
 <script type="text/javascript" src="/datalab/js/d3.layout.cloud.js"></script>
 
 <script type="text/javascript">
-var hour_data=[{hour:"16",total:82639},{hour:"17",total:127212},{hour:"18",total:10297}];var time_data=[{ev:"Primer Tiempo",total:69586},{ev:"Entretiempo",total:14025},{ev:"Segundo Tiempo",total:94880},{ev:"Post Partido",total:41657}];var width=340,barHeight=40;var x=d3.scale.linear().domain([0,d3.max(hour_data,function(d){return d.total})]).range([0,width]);var chart=d3.select("#hourly_tweets").attr("width",width).attr("height",barHeight*hour_data.length);
-var bar=chart.selectAll("g").data(hour_data).enter().append("g").attr("transform",function(d,i){return"translate(0,"+i*barHeight+")"});bar.append("rect").attr("width",function(d){return x(d.total)}).attr("height",barHeight-1).attr("x",90);bar.append("text").attr("x",90).attr("y",barHeight/2).attr("dy",".35em").text(function(d){return d.hour+"hs: "+d.total.toLocaleString()});var twidth=250,theight=250,radius=Math.min(twidth,theight)/2;
-var color=d3.scale.ordinal().range(["#4682B4","#1E4667 ","#2272B4","#093D67"]);var arc=d3.svg.arc().outerRadius(radius-10).innerRadius(radius-70);var pie=d3.layout.pie().sort(null).value(function(d){return d.total});var svg=d3.select("#per_time_tweets").attr("width",twidth).attr("height",theight).append("g").attr("transform","translate("+twidth/2+","+theight/2+")");var div=d3.select("body").append("div").attr("class","tooltip").style("opacity",0);
-var g=svg.selectAll(".arc").data(pie(time_data)).enter().append("g").attr("class","arc");g.append("path").attr("d",arc).style("fill",function(d){return color(d.data.ev)}).on("mouseover",function(d){div.transition().duration(200).style("opacity",.9);div.html(d.data.total+" tweets").style("left",d3.event.pageX+"px").style("top",d3.event.pageY-28+"px")}).on("mouseout",function(d){div.transition().duration(500).style("opacity",0)});
-g.append("text").attr("transform",function(d){return"translate("+arc.centroid(d)+")"}).attr("dy",".35em").style("text-anchor","middle").text(function(d){return d.data.ev});
-var top_players=[{"_id":"Edinson Cavani","country":"UY","total":19206},{"_id":"Joel Campbell","country":"CRC","total":16061},{"_id":"Oscar Duate","country":"CRC","total":9287},{"_id":"Luis Suarez","country":"UY","total":6972},{"_id":"Maximiliano Pereira","country":"UY","total":3644},{"_id":"Diego Lugano","country":"UY","total":2817},{"_id":"Fernando Muslera","country":"UY","total":2252},{"_id":"Cristian Rodr\u00edguez","country":"UY","total":2204},{"_id":"Diego Forl\u00e1n","country":"UY","total":2175}];
-var hashtags=[{"_id":"#yosoysele","total":147},{"_id":"#apaixonadostd","total":149},{"_id":"#fortaleza","total":150},{"_id":"#fra","total":153},{"_id":"#urena","total":154},{"_id":"#ecu","total":158},{"_id":"#mundialfmcenter","total":159},{"_id":"#bairristanacopa","total":161},{"_id":"#goool","total":164},{"_id":"#aztecarioca","total":164},{"_id":"#aquihayseleccion","total":166},{"_id":"#gha","total":169},{"_id":"#urucri","total":172},{"_id":"#vivabrasil","total":173},{"_id":"#brasil","total":174},
-{"_id":"#brasil24horas","total":177},{"_id":"#puravida","total":179},{"_id":"#uruguaycostarica","total":191},{"_id":"#mundialxlatele","total":193},{"_id":"#beinbresil","total":195},{"_id":"#mundialtelefenoticias","total":199},{"_id":"#duarte","total":201},{"_id":"#ticos","total":206},{"_id":"#uruguayvscostarica","total":210},{"_id":"#cmr","total":216},{"_id":"#laceleste","total":221},{"_id":"#forlan","total":229},{"_id":"#costaricazo","total":229},{"_id":"#nhk","total":234},{"_id":"#brasilxespn",
-"total":240},{"_id":"#celeste","total":251},{"_id":"#tycmundial","total":254},{"_id":"#cri","total":260},{"_id":"#gvconelmundial","total":268},{"_id":"#campbell","total":271},{"_id":"#vamosuruguay","total":276},{"_id":"#\u0447\u043c2014","total":293},{"_id":"#lafiestadelgol","total":296},{"_id":"#cr","total":299},{"_id":"#suarez","total":313},{"_id":"#lasele","total":315},{"_id":"#brazilnuts","total":316},{"_id":"#manofthematch","total":339},{"_id":"#soycelestesouspfc","total":350},{"_id":"#lfc",
-"total":360},{"_id":"#aus","total":363},{"_id":"#1cavani","total":392},{"_id":"#ger","total":403},{"_id":"#uru#crc","total":412},{"_id":"#mundial","total":413},{"_id":"#mex","total":414},{"_id":"#concacaf","total":434},{"_id":"#cro","total":453},{"_id":"#wm2014","total":473},{"_id":"#brazil2014","total":522},{"_id":"#grupod","total":549},{"_id":"#chi","total":551},{"_id":"#mundialtn","total":577},{"_id":"#arg","total":579},{"_id":"#fifaworldcup","total":598},{"_id":"#civ","total":612},{"_id":"#jpn",
-"total":625},{"_id":"#wc2014","total":671},{"_id":"#ned","total":697},{"_id":"#cm2014","total":723},{"_id":"#cdm2014","total":755},{"_id":"#elmundialenmarca","total":766},{"_id":"#urucos","total":794},{"_id":"#cavani","total":842},{"_id":"#bra","total":888},{"_id":"#crc's","total":951},{"_id":"#lfcworldcup","total":1006},{"_id":"#col","total":1008},{"_id":"#gre","total":1054},{"_id":"#copa2014","total":1106},{"_id":"#udmundial","total":1293},{"_id":"#esp","total":1367},{"_id":"#evospeed","total":1485},
-{"_id":"#uruguay","total":1567},{"_id":"#cos","total":1681},{"_id":"#costarica","total":1785},{"_id":"#directvcopamundial","total":2117},{"_id":"#ita","total":2596},{"_id":"#mundialbrasil2014","total":2797},{"_id":"#eng","total":3012},{"_id":"#mundial2014","total":4891},{"_id":"#worldcup2014","total":5210},{"_id":"#uruvscrc","total":7065},{"_id":"#joinin","total":7537},{"_id":"#brasil2014","total":10833},{"_id":"#urucrc","total":12041},{"_id":"#worldcup","total":25205},{"_id":"#crc","total":134539},
-{"_id":"#uru","total":208486}];var fill=d3.scale.category20();var fontSize=d3.scale.linear().domain([147,208486]).range([14,90]);d3.layout.cloud().size([900,300]).words(hashtags).padding(5).rotate(0).font("Impact").fontSize(function(d){return fontSize(d.total)}).on("end",draw).start();
-function draw(words){d3.select("#hashtags").attr("width","100%").attr("height",350).append("g").attr("transform","translate(350,200)").selectAll("text").data(hashtags).enter().append("text").style("font-size",function(d){return fontSize(d.total)+"px"}).style("font-family","Impact").style("fill",function(d,i){return fill(i)}).attr("text-anchor","middle").attr("transform",function(d){return"translate("+[d.x,d.y]+")rotate("+d.rotate+")"}).text(function(d){return d._id}).on("mouseover",function(d){div.transition().duration(200).style("opacity",
-.9);div.html(d._id+"<br />"+d.total).style("left",d3.event.pageX+"px").style("top",d3.event.pageY-28+"px").style("width","120px")}).on("mouseout",function(d){div.transition().duration(500).style("opacity",0)})};
+
+    var hour_data = [
+        { hour: '16', total: 82639 },
+        { hour: '17', total: 127212 },
+        { hour: '18', total: 10297 }
+    ];
+
+    var time_data = [
+        {ev: 'Primer Tiempo', total: 69586},
+        {ev: 'Entretiempo', total: 14025},
+        {ev: 'Segundo Tiempo', total: 94880},
+        {ev: 'Post Partido', total: 41657}
+    ];
+
+    //$(document).ready(function () {
+        var width = 340,
+            barHeight = 40;
+
+        var x = d3.scale.linear().domain([0, d3.max(hour_data, function (d) { return  d.total; } )]).range([0, width]);
+
+        var chart = d3.select('#hourly_tweets')
+            .attr('width', width)
+            .attr('height', barHeight * hour_data.length);
+
+        var bar = chart.selectAll('g')
+            .data(hour_data)
+                .enter().append('g')
+                .attr('transform', function(d, i) { return 'translate(0,' + i * barHeight + ')'; });
+
+        bar.append('rect')            
+            .attr('width', function (d) { return x(d.total); })
+            .attr('height', barHeight - 1)
+            .attr('x', 90);
+
+        bar.append('text')
+            .attr('x', 90)
+            .attr('y', barHeight / 2)
+            .attr('dy', '.35em')
+            .text(function(d) { return d.hour + 'hs: ' + d.total.toLocaleString(); });
+
+        var twidth = 250,
+            theight = 250,
+            radius = Math.min(twidth, theight) / 2;
+
+        var color = d3.scale.ordinal()
+            .range(['#4682B4', '#1E4667 ', '#2272B4', '#093D67']);
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(radius - 70);
+
+        var pie = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d.total; });
+
+        var svg = d3.select('#per_time_tweets')
+            .attr('width', twidth)
+            .attr('height', theight)
+          .append('g')
+            .attr('transform', 'translate(' + twidth / 2 + ',' + theight / 2 + ')');
+
+
+        var div = d3.select('body').append('div')   
+            .attr('class', 'tooltip')
+            .style('opacity', 0);
+          var g = svg.selectAll('.arc')
+              .data(pie(time_data))
+            .enter().append('g')
+              .attr('class', 'arc');
+
+          g.append('path')
+              .attr('d', arc)
+              .style('fill', function(d) { return color(d.data.ev); }).on('mouseover', function(d) {      
+            div.transition()        
+                .duration(200)      
+                .style('opacity', .9);      
+            div .html(d.data.total + ' tweets')  
+                .style('left', (d3.event.pageX) + 'px')     
+                .style('top', (d3.event.pageY - 28) + 'px');
+            })                  
+        .on('mouseout', function(d) {       
+            div.transition()        
+                .duration(500)      
+                .style('opacity', 0);   
+        });
+
+          g.append('text')
+              .attr('transform', function(d) { return 'translate(' + arc.centroid(d) + ')'; })
+              .attr('dy', '.35em')
+              .style('text-anchor', 'middle')
+              .text(function(d) { return d.data.ev; });
+
+        var top_players = [        
+            { "_id" : "Edinson Cavani", "country": "UY","total" : 19206 },
+            { "_id" : "Joel Campbell", "country": "CRC", "total" : 16061 },         
+            { "_id" : "Oscar Duate", "country": "CRC", "total" : 9287 },
+            { "_id" : "Luis Suarez", "country": "UY","total" : 6972 },            
+            { "_id" : "Maximiliano Pereira", "country": "UY","total" : 3644 },
+            { "_id" : "Diego Lugano", "country": "UY","total" : 2817 },
+            { "_id" : "Fernando Muslera", "country": "UY","total" : 2252 },
+            { "_id" : "Cristian Rodríguez", "country": "UY","total" : 2204 },
+            { "_id" : "Diego Forlán", "country": "UY","total" : 2175 }
+        ];
+
+        var hashtags = [
+            { "_id" : "#yosoysele", "total" : 147 },
+            { "_id" : "#apaixonadostd", "total" : 149 },
+            { "_id" : "#fortaleza", "total" : 150 },
+            { "_id" : "#fra", "total" : 153 },
+            { "_id" : "#urena", "total" : 154 },
+            { "_id" : "#ecu", "total" : 158 },
+            { "_id" : "#mundialfmcenter", "total" : 159 },
+            { "_id" : "#bairristanacopa", "total" : 161 },
+            { "_id" : "#goool", "total" : 164 },
+            { "_id" : "#aztecarioca", "total" : 164 },
+            { "_id" : "#aquihayseleccion", "total" : 166 },
+            { "_id" : "#gha", "total" : 169 },
+            { "_id" : "#urucri", "total" : 172 },
+            { "_id" : "#vivabrasil", "total" : 173 },
+            { "_id" : "#brasil", "total" : 174 },
+            { "_id" : "#brasil24horas", "total" : 177 },
+            { "_id" : "#puravida", "total" : 179 },
+            { "_id" : "#uruguaycostarica", "total" : 191 },
+            { "_id" : "#mundialxlatele", "total" : 193 },
+            { "_id" : "#beinbresil", "total" : 195 },
+            { "_id" : "#mundialtelefenoticias", "total" : 199 },
+            { "_id" : "#duarte", "total" : 201 },
+            { "_id" : "#ticos", "total" : 206 },
+            { "_id" : "#uruguayvscostarica", "total" : 210 },
+            { "_id" : "#cmr", "total" : 216 },
+            { "_id" : "#laceleste", "total" : 221 },
+            { "_id" : "#forlan", "total" : 229 },
+            { "_id" : "#costaricazo", "total" : 229 },
+            { "_id" : "#nhk", "total" : 234 },
+            { "_id" : "#brasilxespn", "total" : 240 },
+            { "_id" : "#celeste", "total" : 251 },
+            { "_id" : "#tycmundial", "total" : 254 },
+            { "_id" : "#cri", "total" : 260 },
+            { "_id" : "#gvconelmundial", "total" : 268 },
+            { "_id" : "#campbell", "total" : 271 },
+            { "_id" : "#vamosuruguay", "total" : 276 },
+            { "_id" : "#чм2014", "total" : 293 },
+            { "_id" : "#lafiestadelgol", "total" : 296 },
+            { "_id" : "#cr", "total" : 299 },
+            { "_id" : "#suarez", "total" : 313 },
+            { "_id" : "#lasele", "total" : 315 },
+            { "_id" : "#brazilnuts", "total" : 316 },
+            { "_id" : "#manofthematch", "total" : 339 },
+            { "_id" : "#soycelestesouspfc", "total" : 350 },
+            { "_id" : "#lfc", "total" : 360 },
+            { "_id" : "#aus", "total" : 363 },
+            { "_id" : "#1cavani", "total" : 392 },
+            { "_id" : "#ger", "total" : 403 },
+            { "_id" : "#uru#crc", "total" : 412 },
+            { "_id" : "#mundial", "total" : 413 },
+            { "_id" : "#mex", "total" : 414 },
+            { "_id" : "#concacaf", "total" : 434 },
+            { "_id" : "#cro", "total" : 453 },
+            { "_id" : "#wm2014", "total" : 473 },
+            { "_id" : "#brazil2014", "total" : 522 },
+            { "_id" : "#grupod", "total" : 549 },
+            { "_id" : "#chi", "total" : 551 },
+            { "_id" : "#mundialtn", "total" : 577 },
+            { "_id" : "#arg", "total" : 579 },
+            { "_id" : "#fifaworldcup", "total" : 598 },
+            { "_id" : "#civ", "total" : 612 },
+            { "_id" : "#jpn", "total" : 625 },
+            { "_id" : "#wc2014", "total" : 671 },        
+            { "_id" : "#ned", "total" : 697 },
+            { "_id" : "#cm2014", "total" : 723 },
+            { "_id" : "#cdm2014", "total" : 755 },
+            { "_id" : "#elmundialenmarca", "total" : 766 },
+            { "_id" : "#urucos", "total" : 794 },
+            { "_id" : "#cavani", "total" : 842 },
+            { "_id" : "#bra", "total" : 888 },
+            { "_id" : "#crc's", "total" : 951 },
+            { "_id" : "#lfcworldcup", "total" : 1006 },
+            { "_id" : "#col", "total" : 1008 },
+            { "_id" : "#gre", "total" : 1054 },
+            { "_id" : "#copa2014", "total" : 1106 },
+            { "_id" : "#udmundial", "total" : 1293 },
+            { "_id" : "#esp", "total" : 1367 },
+            { "_id" : "#evospeed", "total" : 1485 },
+            { "_id" : "#uruguay", "total" : 1567 },
+            { "_id" : "#cos", "total" : 1681 },
+            { "_id" : "#costarica", "total" : 1785 },
+            { "_id" : "#directvcopamundial", "total" : 2117 },
+            { "_id" : "#ita", "total" : 2596 },
+            { "_id" : "#mundialbrasil2014", "total" : 2797 },
+            { "_id" : "#eng", "total" : 3012 },
+            { "_id" : "#mundial2014", "total" : 4891 },
+            { "_id" : "#worldcup2014", "total" : 5210 },
+            { "_id" : "#uruvscrc", "total" : 7065 },
+            { "_id" : "#joinin", "total" : 7537 },
+            { "_id" : "#brasil2014", "total" : 10833 },
+            { "_id" : "#urucrc", "total" : 12041 },
+            { "_id" : "#worldcup", "total" : 25205 },
+            { "_id" : "#crc", "total" : 134539 },
+            { "_id" : "#uru", "total" : 208486 }
+        ];
+
+
+    var fill = d3.scale.category20();
+
+
+    var fontSize = d3.scale.linear().domain([147, 208486]).range([14, 90]);
+
+  d3.layout.cloud().size([900, 300])
+      .words(hashtags)
+      .padding(5)
+      .rotate(0)
+      .font("Impact")
+      .fontSize(function(d) { 
+        return fontSize(d.total);
+       })
+      .on("end", draw)
+      .start();
+
+  function draw(words) {
+    d3.select("#hashtags")
+        .attr("width", '100%')
+        .attr("height", 350)
+      .append("g")
+        .attr("transform", "translate(350,200)")
+      .selectAll("text")
+        .data(hashtags)
+      .enter().append("text")
+        .style("font-size", function(d) { 
+              return fontSize(d.total) + 'px';          
+        })
+        .style("font-family", "Impact")
+        .style("fill", function(d, i) { return fill(i); })
+        .attr("text-anchor", "middle")
+        .attr("transform", function(d) {
+          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        })
+        .text(function(d) { return d._id; }).on('mouseover', function(d) {      
+            div.transition()        
+                .duration(200)      
+                .style('opacity', .9);      
+            div .html(d._id + '<br />' + d.total)  
+                .style('left', (d3.event.pageX) + 'px')     
+                .style('top', (d3.event.pageY - 28) + 'px')
+                .style('width', '120px');
+            })                  
+        .on('mouseout', function(d) {       
+            div.transition()        
+                .duration(500)      
+                .style('opacity', 0);   
+        });
+  }
+
+    //});
 </script>
 
 <script type="text/javascript" src='http://www.google.com/jsapi?autoload={"modules": [{"name": "visualization", "version": "1", "packages": ["annotationchart"]}]}'></script>
 
 <script type="text/javascript">    
     google.setOnLoadCallback(tweets_per_minute);
-function tweets_per_minute(){var line=new google.visualization.DataTable;line.addColumn("date","Fecha");line.addColumn("number","Tweets");line.addColumn("string","Evento");line.addRows([[new Date(2014,6,14,16,0),1748,'<img src="img/whistle.png" />Inicio del partido'],[new Date(2014,6,14,16,1),3086,undefined],[new Date(2014,6,14,16,2),2517,undefined],[new Date(2014,6,14,16,3),1993,undefined],[new Date(2014,6,14,16,4),1727,undefined],[new Date(2014,6,14,16,5),1432,undefined],[new Date(2014,6,14,16,
-6),1193,undefined],[new Date(2014,6,14,16,7),1194,undefined],[new Date(2014,6,14,16,8),1065,undefined],[new Date(2014,6,14,16,9),1016,undefined],[new Date(2014,6,14,16,10),932,undefined],[new Date(2014,6,14,16,11),1029,undefined],[new Date(2014,6,14,16,12),1001,undefined],[new Date(2014,6,14,16,13),926,undefined],[new Date(2014,6,14,16,14),901,undefined],[new Date(2014,6,14,16,15),832,undefined],[new Date(2014,6,14,16,16),1445,undefined],[new Date(2014,6,14,16,17),1273,undefined],[new Date(2014,6,
-14,16,18),955,undefined],[new Date(2014,6,14,16,19),849,undefined],[new Date(2014,6,14,16,20),731,undefined],[new Date(2014,6,14,16,21),766,undefined],[new Date(2014,6,14,16,22),696,undefined],[new Date(2014,6,14,16,23),2211,undefined],[new Date(2014,6,14,16,24),6643,'<img src="img/sport_soccer.png"/>24\': Gol de Cavani (UY)'],[new Date(2014,6,14,16,25),7542,undefined],[new Date(2014,6,14,16,26),4056,undefined],[new Date(2014,6,14,16,27),2474,undefined],[new Date(2014,6,14,16,28),1902,undefined],
-[new Date(2014,6,14,16,29),1457,undefined],[new Date(2014,6,14,16,30),1296,undefined],[new Date(2014,6,14,16,31),1033,undefined],[new Date(2014,6,14,16,32),1025,undefined],[new Date(2014,6,14,16,33),934,undefined],[new Date(2014,6,14,16,34),860,undefined],[new Date(2014,6,14,16,35),773,undefined],[new Date(2014,6,14,16,36),771,undefined],[new Date(2014,6,14,16,37),664,undefined],[new Date(2014,6,14,16,38),765,undefined],[new Date(2014,6,14,16,39),707,undefined],[new Date(2014,6,14,16,40),616,undefined],
-[new Date(2014,6,14,16,41),686,undefined],[new Date(2014,6,14,16,42),762,undefined],[new Date(2014,6,14,16,43),662,undefined],[new Date(2014,6,14,16,44),734,undefined],[new Date(2014,6,14,16,45),900,undefined],[new Date(2014,6,14,16,46),793,undefined],[new Date(2014,6,14,16,47),596,'<img src="img/whistle.png" />47\': Fin del primer tiempo'],[new Date(2014,6,14,16,48),1818,undefined],[new Date(2014,6,14,16,49),2142,undefined],[new Date(2014,6,14,16,50),1581,undefined],[new Date(2014,6,14,16,51),1069,
-undefined],[new Date(2014,6,14,16,52),967,undefined],[new Date(2014,6,14,16,53),886,undefined],[new Date(2014,6,14,16,54),760,undefined],[new Date(2014,6,14,16,55),742,undefined],[new Date(2014,6,14,16,56),625,undefined],[new Date(2014,6,14,16,57),722,undefined],[new Date(2014,6,14,16,58),686,undefined],[new Date(2014,6,14,16,59),472,undefined],[new Date(2014,6,14,17,0),504,undefined],[new Date(2014,6,14,17,1),463,undefined],[new Date(2014,6,14,17,2),503,undefined],[new Date(2014,6,14,17,3),480,undefined],
-[new Date(2014,6,14,17,4),804,undefined],[new Date(2014,6,14,17,5),1065,'<img src="img/whistle.png" />Comienzo del segundo tiempo'],[new Date(2014,6,14,17,6),745,undefined],[new Date(2014,6,14,17,7),675,undefined],[new Date(2014,6,14,17,8),548,undefined],[new Date(2014,6,14,17,9),625,undefined],[new Date(2014,6,14,17,10),779,'<img src="img/button-yellow.png" />50\': Amarilla para Lugano (UY)'],[new Date(2014,6,14,17,11),601,undefined],[new Date(2014,6,14,17,12),494,undefined],[new Date(2014,6,14,
-17,13),1506,undefined],[new Date(2014,6,14,17,14),3996,'<img src="img/sport_soccer.png" />54\': Gol de Campbell (CRC)'],[new Date(2014,6,14,17,15),3173,undefined],[new Date(2014,6,14,17,16),2741,'<img src="img/button-yellow.png" />56\': Amarilla para Gargano (UY)'],[new Date(2014,6,14,17,17),6544,'<img src="img/sport_soccer.png" />57\': Gol de Duarte (CRC)'],[new Date(2014,6,14,17,18),5967,undefined],[new Date(2014,6,14,17,19),4049,undefined],[new Date(2014,6,14,17,20),2778,'<img src="img/arrow_refresh.png" />60\': Cambios: Lodeiro por Forlan y Gonz\u00e1lez por Gargano (UY)'],
-[new Date(2014,6,14,17,21),2464,undefined],[new Date(2014,6,14,17,22),2172,undefined],[new Date(2014,6,14,17,23),1821,undefined],[new Date(2014,6,14,17,24),1681,undefined],[new Date(2014,6,14,17,25),1479,undefined],[new Date(2014,6,14,17,26),1268,undefined],[new Date(2014,6,14,17,27),1217,undefined],[new Date(2014,6,14,17,28),1082,undefined],[new Date(2014,6,14,17,29),1210,undefined],[new Date(2014,6,14,17,30),1153,undefined],[new Date(2014,6,14,17,31),907,undefined],[new Date(2014,6,14,17,32),868,
-undefined],[new Date(2014,6,14,17,33),833,undefined],[new Date(2014,6,14,17,34),918,undefined],[new Date(2014,6,14,17,35),1076,'<img src="img/arrow_refresh.png" />74\': Cambio: Cubero por Tejeda (CRC)'],[new Date(2014,6,14,17,36),1104,undefined],[new Date(2014,6,14,17,37),922,'<img src="img/arrow_refresh.png" />76\': Cambio: Hern\u00e1ndez por Rodr\u00edguez (UY)'],[new Date(2014,6,14,17,38),775,undefined],[new Date(2014,6,14,17,39),759,undefined],[new Date(2014,6,14,17,40),922,undefined],[new Date(2014,
-6,14,17,41),1027,'<img src="img/button-yellow.png" />81\': Amarilla para C\u00e1ceres (UY)'],[new Date(2014,6,14,17,42),852,undefined],[new Date(2014,6,14,17,43),1058,'<img src="img/arrow_refresh.png" />83\': Cambio: Ure\u00f1a por Ru\u00edz (CRC)'],[new Date(2014,6,14,17,44),6976,'<img src="img/sport_soccer.png" />84\': Gol de Ure\u00f1a (CRC)'],[new Date(2014,6,14,17,45),6205,undefined],[new Date(2014,6,14,17,46),4420,undefined],[new Date(2014,6,14,17,47),3430,undefined],[new Date(2014,6,14,17,
-48),2589,undefined],[new Date(2014,6,14,17,49),2028,'<img src="img/arrow_refresh.png" />89\': Cambio: Barrantes por Bola\u00f1os (CRC)'],[new Date(2014,6,14,17,50),1926,undefined],[new Date(2014,6,14,17,51),1648,undefined],[new Date(2014,6,14,17,52),1527,undefined],[new Date(2014,6,14,17,53),1422,undefined],[new Date(2014,6,14,17,54),4283,'<img src="img/button-red.png" />94\': Roja para Pereira (UY)'],[new Date(2014,6,14,17,55),7464,'<img src="img/whistle.png" />95\': Fin del segundo tiempo'],[new Date(2014,
-6,14,17,56),6126,undefined],[new Date(2014,6,14,17,57),4612,undefined],[new Date(2014,6,14,17,58),3226,undefined],[new Date(2014,6,14,17,59),2722,undefined],[new Date(2014,6,14,18,0),2204,undefined],[new Date(2014,6,14,18,1),2033,undefined],[new Date(2014,6,14,18,2),1854,undefined],[new Date(2014,6,14,18,3),1467,undefined],[new Date(2014,6,14,18,4),1309,undefined],[new Date(2014,6,14,18,5),1247,undefined],[new Date(2014,6,14,18,6),183,undefined]]);var chart=new google.visualization.AnnotationChart(document.getElementById("tweets_per_minute"));
-var options={displayAnnotations:true,allowHtml:true,displayZoomButtons:false,annotationsWidth:20,displayRangeSelector:false,dateFormat:"",displayDateBarSeparator:false};chart.draw(line,options)};
+
+    function tweets_per_minute() {
+        var line = new google.visualization.DataTable();
+        line.addColumn('date', 'Fecha');
+        line.addColumn('number', 'Tweets');
+        line.addColumn('string', 'Evento');
+
+        line.addRows([
+            [new Date(2014, 6, 14, 16, 0 ), 1748, '<img src="img/whistle.png" />Inicio del partido'],
+            [new Date(2014, 6, 14, 16, 1 ), 3086, undefined],
+            [new Date(2014, 6, 14, 16, 2 ), 2517, undefined],
+            [new Date(2014, 6, 14, 16, 3 ), 1993, undefined],
+            [new Date(2014, 6, 14, 16, 4 ), 1727, undefined],
+            [new Date(2014, 6, 14, 16, 5 ), 1432, undefined],
+            [new Date(2014, 6, 14, 16, 6 ), 1193, undefined],
+            [new Date(2014, 6, 14, 16, 7 ), 1194, undefined],
+            [new Date(2014, 6, 14, 16, 8 ), 1065, undefined],
+            [new Date(2014, 6, 14, 16, 9 ), 1016, undefined],
+            [new Date(2014, 6, 14, 16, 10 ), 932, undefined],
+            [new Date(2014, 6, 14, 16, 11 ), 1029, undefined],
+            [new Date(2014, 6, 14, 16, 12 ), 1001, undefined],
+            [new Date(2014, 6, 14, 16, 13 ), 926, undefined],
+            [new Date(2014, 6, 14, 16, 14 ), 901, undefined],
+            [new Date(2014, 6, 14, 16, 15 ), 832, undefined],
+            [new Date(2014, 6, 14, 16, 16 ), 1445, undefined],
+            [new Date(2014, 6, 14, 16, 17 ), 1273, undefined],
+            [new Date(2014, 6, 14, 16, 18 ), 955, undefined],
+            [new Date(2014, 6, 14, 16, 19 ), 849, undefined],
+            [new Date(2014, 6, 14, 16, 20 ), 731, undefined],
+            [new Date(2014, 6, 14, 16, 21 ), 766, undefined],
+            [new Date(2014, 6, 14, 16, 22 ), 696, undefined],
+            [new Date(2014, 6, 14, 16, 23 ), 2211, undefined],
+            [new Date(2014, 6, 14, 16, 24 ), 6643, '<img src="img/sport_soccer.png"/>24\': Gol de Cavani (UY)'],
+            [new Date(2014, 6, 14, 16, 25 ), 7542, undefined],
+            [new Date(2014, 6, 14, 16, 26 ), 4056, undefined],
+            [new Date(2014, 6, 14, 16, 27 ), 2474, undefined],
+            [new Date(2014, 6, 14, 16, 28 ), 1902, undefined],
+            [new Date(2014, 6, 14, 16, 29 ), 1457, undefined],
+            [new Date(2014, 6, 14, 16, 30 ), 1296, undefined],
+            [new Date(2014, 6, 14, 16, 31 ), 1033, undefined],
+            [new Date(2014, 6, 14, 16, 32 ), 1025, undefined],
+            [new Date(2014, 6, 14, 16, 33 ), 934, undefined],
+            [new Date(2014, 6, 14, 16, 34 ), 860, undefined],
+            [new Date(2014, 6, 14, 16, 35 ), 773, undefined],
+            [new Date(2014, 6, 14, 16, 36 ), 771, undefined],
+            [new Date(2014, 6, 14, 16, 37 ), 664, undefined],
+            [new Date(2014, 6, 14, 16, 38 ), 765, undefined],
+            [new Date(2014, 6, 14, 16, 39 ), 707, undefined],
+            [new Date(2014, 6, 14, 16, 40 ), 616, undefined],
+            [new Date(2014, 6, 14, 16, 41 ), 686, undefined],
+            [new Date(2014, 6, 14, 16, 42 ), 762, undefined],
+            [new Date(2014, 6, 14, 16, 43 ), 662, undefined],
+            [new Date(2014, 6, 14, 16, 44 ), 734, undefined],
+            [new Date(2014, 6, 14, 16, 45 ), 900, undefined],
+            [new Date(2014, 6, 14, 16, 46 ), 793, undefined],
+            [new Date(2014, 6, 14, 16, 47 ), 596, '<img src="img/whistle.png" />47\': Fin del primer tiempo'],
+            [new Date(2014, 6, 14, 16, 48 ), 1818, undefined],
+            [new Date(2014, 6, 14, 16, 49 ), 2142, undefined],
+            [new Date(2014, 6, 14, 16, 50 ), 1581, undefined],
+            [new Date(2014, 6, 14, 16, 51 ), 1069, undefined],
+            [new Date(2014, 6, 14, 16, 52 ), 967, undefined],
+            [new Date(2014, 6, 14, 16, 53 ), 886, undefined],
+            [new Date(2014, 6, 14, 16, 54 ), 760, undefined],
+            [new Date(2014, 6, 14, 16, 55 ), 742, undefined],
+            [new Date(2014, 6, 14, 16, 56 ), 625, undefined],
+            [new Date(2014, 6, 14, 16, 57 ), 722, undefined],
+            [new Date(2014, 6, 14, 16, 58 ), 686, undefined],
+            [new Date(2014, 6, 14, 16, 59 ), 472, undefined],
+            [new Date(2014, 6, 14, 17, 0 ), 504, undefined],
+            [new Date(2014, 6, 14, 17, 1 ), 463, undefined],
+            [new Date(2014, 6, 14, 17, 2 ), 503, undefined],
+            [new Date(2014, 6, 14, 17, 3 ), 480, undefined],
+            [new Date(2014, 6, 14, 17, 4 ), 804, undefined],
+            [new Date(2014, 6, 14, 17, 5 ), 1065, '<img src="img/whistle.png" />Comienzo del segundo tiempo'],
+            [new Date(2014, 6, 14, 17, 6 ), 745, undefined],
+            [new Date(2014, 6, 14, 17, 7 ), 675, undefined],
+            [new Date(2014, 6, 14, 17, 8 ), 548, undefined],
+            [new Date(2014, 6, 14, 17, 9 ), 625, undefined],
+            [new Date(2014, 6, 14, 17, 10 ), 779, '<img src="img/button-yellow.png" />50\': Amarilla para Lugano (UY)'],
+            [new Date(2014, 6, 14, 17, 11 ), 601, undefined],
+            [new Date(2014, 6, 14, 17, 12 ), 494, undefined],
+            [new Date(2014, 6, 14, 17, 13 ), 1506, undefined],
+            [new Date(2014, 6, 14, 17, 14 ), 3996, '<img src="img/sport_soccer.png" />54\': Gol de Campbell (CRC)'], 
+            [new Date(2014, 6, 14, 17, 15 ), 3173, undefined],
+            [new Date(2014, 6, 14, 17, 16 ), 2741, '<img src="img/button-yellow.png" />56\': Amarilla para Gargano (UY)'],
+            [new Date(2014, 6, 14, 17, 17 ), 6544, '<img src="img/sport_soccer.png" />57\': Gol de Duarte (CRC)'],
+            [new Date(2014, 6, 14, 17, 18 ), 5967, undefined],
+            [new Date(2014, 6, 14, 17, 19 ), 4049, undefined],
+            [new Date(2014, 6, 14, 17, 20 ), 2778, '<img src="img/arrow_refresh.png" />60\': Cambios: Lodeiro por Forlan y González por Gargano (UY)'],
+            [new Date(2014, 6, 14, 17, 21 ), 2464, undefined],
+            [new Date(2014, 6, 14, 17, 22 ), 2172, undefined],
+            [new Date(2014, 6, 14, 17, 23 ), 1821, undefined],
+            [new Date(2014, 6, 14, 17, 24 ), 1681, undefined],
+            [new Date(2014, 6, 14, 17, 25 ), 1479, undefined],
+            [new Date(2014, 6, 14, 17, 26 ), 1268, undefined],
+            [new Date(2014, 6, 14, 17, 27 ), 1217, undefined],
+            [new Date(2014, 6, 14, 17, 28 ), 1082, undefined],
+            [new Date(2014, 6, 14, 17, 29 ), 1210, undefined],
+            [new Date(2014, 6, 14, 17, 30 ), 1153, undefined],
+            [new Date(2014, 6, 14, 17, 31 ), 907, undefined],
+            [new Date(2014, 6, 14, 17, 32 ), 868, undefined],
+            [new Date(2014, 6, 14, 17, 33 ), 833, undefined],
+            [new Date(2014, 6, 14, 17, 34 ), 918, undefined],
+            [new Date(2014, 6, 14, 17, 35 ), 1076, '<img src="img/arrow_refresh.png" />74\': Cambio: Cubero por Tejeda (CRC)'],
+            [new Date(2014, 6, 14, 17, 36 ), 1104, undefined],
+            [new Date(2014, 6, 14, 17, 37 ), 922, '<img src="img/arrow_refresh.png" />76\': Cambio: Hernández por Rodríguez (UY)'],
+            [new Date(2014, 6, 14, 17, 38 ), 775, undefined],
+            [new Date(2014, 6, 14, 17, 39 ), 759, undefined],
+            [new Date(2014, 6, 14, 17, 40 ), 922, undefined],
+            [new Date(2014, 6, 14, 17, 41 ), 1027, '<img src="img/button-yellow.png" />81\': Amarilla para Cáceres (UY)'],
+            [new Date(2014, 6, 14, 17, 42 ), 852, undefined],
+            [new Date(2014, 6, 14, 17, 43 ), 1058, '<img src="img/arrow_refresh.png" />83\': Cambio: Ureña por Ruíz (CRC)'],
+            [new Date(2014, 6, 14, 17, 44 ), 6976, '<img src="img/sport_soccer.png" />84\': Gol de Ureña (CRC)'],
+            [new Date(2014, 6, 14, 17, 45 ), 6205, undefined],
+            [new Date(2014, 6, 14, 17, 46 ), 4420, undefined],
+            [new Date(2014, 6, 14, 17, 47 ), 3430, undefined],
+            [new Date(2014, 6, 14, 17, 48 ), 2589, undefined],
+            [new Date(2014, 6, 14, 17, 49 ), 2028, '<img src="img/arrow_refresh.png" />89\': Cambio: Barrantes por Bolaños (CRC)'],
+            [new Date(2014, 6, 14, 17, 50 ), 1926, undefined],
+            [new Date(2014, 6, 14, 17, 51 ), 1648, undefined],
+            [new Date(2014, 6, 14, 17, 52 ), 1527, undefined],
+            [new Date(2014, 6, 14, 17, 53 ), 1422, undefined],
+            [new Date(2014, 6, 14, 17, 54 ), 4283, '<img src="img/button-red.png" />94\': Roja para Pereira (UY)'],
+            [new Date(2014, 6, 14, 17, 55 ), 7464, '<img src="img/whistle.png" />95\': Fin del segundo tiempo'],
+            [new Date(2014, 6, 14, 17, 56 ), 6126, undefined],
+            [new Date(2014, 6, 14, 17, 57 ), 4612, undefined],
+            [new Date(2014, 6, 14, 17, 58 ), 3226, undefined],
+            [new Date(2014, 6, 14, 17, 59 ), 2722, undefined],
+            [new Date(2014, 6, 14, 18, 0 ), 2204, undefined],
+            [new Date(2014, 6, 14, 18, 1 ), 2033, undefined],
+            [new Date(2014, 6, 14, 18, 2 ), 1854, undefined],
+            [new Date(2014, 6, 14, 18, 3 ), 1467, undefined],
+            [new Date(2014, 6, 14, 18, 4 ), 1309, undefined],
+            [new Date(2014, 6, 14, 18, 5 ), 1247, undefined],
+            [new Date(2014, 6, 14, 18, 6 ), 183, undefined]
+        ]);
+
+        var chart = new google.visualization.AnnotationChart(document.getElementById('tweets_per_minute'));
+
+        var options = {
+          displayAnnotations: true,
+          allowHtml: true,
+          displayZoomButtons: false,
+          annotationsWidth: 20,
+          displayRangeSelector: false,
+          dateFormat: '',
+          displayDateBarSeparator: false
+        };
+
+        chart.draw(line, options);        
+    }
 </script>
 		</div>
 	</div>
