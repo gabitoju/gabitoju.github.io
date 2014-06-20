@@ -230,7 +230,7 @@ div.tooltip {
         var width = 340,
             barHeight = 40;
 
-        var x = d3.scale.linear().domain([0, d3.max(hour_data, function (d) { return  d.total; } )]).range([0, width]);
+        var x = d3.scale.linear().domain([0, d3.max(hour_data, function (d) { return  d.total; } )]).range([0, width - 90]);
 
         var chart = d3.select('#hourly_tweets')
             .attr('width', width)
