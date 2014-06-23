@@ -858,7 +858,7 @@
       aggregators: aggregators,
       renderers: renderers,
       hiddenAttributes: [],
-      menuLimit: 200,
+      menuLimit: 800,
       cols: [],
       rows: [],
       vals: [],
@@ -1021,9 +1021,10 @@
         };
         $("<p>").appendTo(valueList).append($("<button>").text("OK").bind("click", updateFilter));
         showFilterList = function(e) {
+          var pos = $(this).position();
           valueList.css({
-            left: e.pageX,
-            top: e.pageY
+            left: pos.left,
+            top: pos.top
           }).toggle();
           $('.pvtSearch').val('');
           return $('label').show();

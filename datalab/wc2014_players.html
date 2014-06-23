@@ -87,7 +87,11 @@
                     rendererName: ['Barras Apiladas'],
                     localeStrings: {
                         'totals': 'Totales',
-                        'by': 'por'
+                        'by': 'por',
+              'selectAll': 'Todos',
+              'selectNone': 'Ninguno',
+              'tooMany': 'Demasiados registros para mostrar',
+              'menuLimit': 736
                     }           
                  });
           $('#pivot').find('h3').hide();
@@ -108,7 +112,7 @@
         background: steelblue;
     }
     text {
-      font-size: 11px;
+      font-size: 12px;
     }
 </style>
 
@@ -116,7 +120,33 @@
 <h3><a name="1"></a>Cargando...</h3>
 </div>
 
-<h3><a name="2"></a>Tecnologías y datos</h3>
+<h3><a name="2"></a>Estadísticas generales</h3>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-4 text-left">
+            <h2>736 jugadores</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+            <h2>65% NO juega en un equipo local</h2>
+        </div>
+        <div class="col-lg-4 text-right">
+            <h2>62% juega en su continente</h2>
+        </div>                
+    </div>
+    <div class="row">
+        <div class="col-lg-4 text-left">            
+          <h2>1 solo europeo no juega en Europa</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+          <h2>El 12% de los africanos juegan en África</h2>
+        </div>
+        <div class="col-lg-4 text-right">
+          <h2>562 militan en el fútol europero</h2>
+        </div>                
+    </div>    
+</div>
+
+<h3><a name="3"></a>Tecnologías y datos</h3>
 <p>Los datos fueron descargados desde el sitio web de <a href="http://www.fifa.com">FIFA</a> y están disponibles como un <a href="/datalab/data/wc2014_players_data.csv">CSV</a>. Para la visualización se usa la fantástica librería <a href="https://github.com/nicolaskruchten/pivottable">PivotTable.js</a>.</p>
 <p>Para consumir los datos de FIFA se uso <a href="https://github.com/gabitoju/gabitoju.github.io/blob/master/datalab/scripts/wc2014_players/wc_players.js">este script</a> de nodejs.</p>
 <script type="text/javascript" src='http://www.google.com/jsapi?autoload={"modules": [{"name": "visualization", "version": "1", "packages": ["corechart", "charteditor"]}]}'></script>
