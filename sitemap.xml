@@ -8,38 +8,37 @@
 
 <url>
   <loc>http://gabitoju.uy/</loc>
-  <lastmod>2014-04-29T18:43:27+00:00</lastmod>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/</loc>
-  <lastmod>2014-04-29T18:43:27+00:00</lastmod>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/uy_top_scorers.html</loc>
-  <lastmod>2014-04-29T18:43:27+00:00</lastmod>
+  <loc>http://gabitoju.uy/datalab/wc2014_players.html</loc>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://gabitoju.uy/datalab/careers.html</loc>
-  <lastmod>2014-06-19T18:43:27+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://gabitoju.uy/datalab/uruguay_costarica.html</loc>
-  <lastmod>2014-06-19T18:43:27+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/uruguay_england.html</loc>
-  <lastmod>2014-06-19T18:43:27+00:00</lastmod>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://gabitoju.uy/datalab/uruguay_costarica.html</loc>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://gabitoju.uy/datalab/careers.html</loc>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://gabitoju.uy/datalab/uy_top_scorers.html</loc>
+  <lastmod>2014-06-23T20:27:18+00:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>
