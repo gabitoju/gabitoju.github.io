@@ -874,8 +874,8 @@
         renderError: "An error occurred rendering the PivotTable results.",
         computeError: "An error occurred computing the PivotTable results.",
         uiRenderError: "An error occurred rendering the PivotTable UI.",
-        selectAll: "Select All",
-        selectNone: "Select None",
+        selectAll: "Todos",
+        selectNone: "Ninguno",
         tooMany: "(too many to list)",
         filterResults: "Filter results"
       }
