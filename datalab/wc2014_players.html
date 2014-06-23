@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>¿Dónde juegan?</title>		
+		
+		<meta name="twitter:card" value="summary">
+		<meta name="twitter:image" content="http://gabitoju.uy/datalab/img/wc2014.png">
+		<meta name="twitter:creator" content="@gabitoju"> 
+		<meta name="twitter:site" content="@gabitoju"> 
+		<meta property="og:title" content="¿Dónde juegan?" /> 
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://gabitoju.uy/datalab/wc2014_players.html" />
+		<meta property="og:image" content="http://gabitoju.uy/datalab/img/wc2014.png" />
+		<meta property="og:description" content="¿Dónde juegan las estrellas de Brasil 2014? ¿Cuál es el único país que no tiene jugadores en el extranjero? ¡Con esta visualización interactiva podrás descrubir esto y mucho más!" />
+		
+
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<div class="container">
+					<div class="row">
+						<a href="/"><h1>gabitoju</h1></a>
+					</div>
+				</div>
+			</div>					
+			<div class="container">
+				<div class="row">
+					<div id="fb-root"></div>
+<div class="col-lg-12">
+	<div class="row">
+		<a href="/datalab">Volver a Data Lab</a>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>¿Dónde juegan?</h1>
+		</div>
+	</div>
+	<div clas="row">
+		<div class="col-lg-1">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="es">Twittear</a>
+		</div>
+		<div class="col-lg-1">
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
+		<div class="col-lg-1">
+			<div class="g-plus" data-action="share" data-annotation="none"></div>
+		</div>
+		<div class="col-lg-2">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+			</script>
+			<script type="IN/Share" data-counter="right"></script>
+		</div>		
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+		<p>¿Sabías que Rusia es el único país cuyos 23 jugadores juegan en la liga local? ¿Y qué la liga que más jugadores mundialistas tiene es la Premier League inglesa? Otro dato interesante, los dos clubes que más mundialistas tienen son el Manchester United y el Bayern Munich con 14 jugadores cada uno.</p>
+<p>Esta visualización permite explorar de forma intereactiva dónde y en qué equipos juegan las estrellas de Brasil 2014; conocer quienes juegan en sus países de orígen o en otro país... o en otro continente!</p>
+<p>Ahora estás viendo por continente la cantidad de jugadores que juegan en su país. Tu mismo puedes armar tus estadísticas arrastrando los ítems de están en el área gris (Jugador, País, Equipo, etc) al área celeste. También puedes cambiar la forma en que se muestran seleccionando una de las opciones del como que está a la izquierda.</p>
+<p><link rel="stylesheet" type="text/css" href="/datalab/pivot/pivot.css">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/datalab/pivot/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="/datalab/pivot/pivot.js"></script>
+<script type="text/javascript" src="/datalab/pivot/d3_renderers.js"></script>
+<script type="text/javascript" src="/datalab/pivot/gchart_renderers.js"></script></p>
+<script type="text/javascript">
+    $(function(){
+        var derivers = $.pivotUtilities.derivers;
+        var renderers = $.extend($.pivotUtilities.renderers, 
+            $.pivotUtilities.d3_renderers, $.pivotUtilities.gchart_renderers);
+
+        d3.csv('/datalab/data/wc2014_players_data.csv', function (data) { 
+            $('#pivot').pivotUI(data, {
+                renderers: renderers,
+                rows: ['Continente', ],
+                cols: ['¿Mismo país?'],
+                rendererName: ['Barras Apiladas'],
+                localeStrings: {
+                    'totals': 'Totales',
+                    'by': 'por'
+                }           
+            });
+        });
+     });
+</script>
+
+<style>
+    .node {
+      border: solid 1px white;
+      font: 10px sans-serif;
+      line-height: 12px;
+      overflow: hidden;
+      position: absolute;
+      text-indent: 2px;
+    }
+    .pvtRows, .pvtCols { 
+        background: steelblue;
+    }
+</style>
+
+<div id="pivot"></div>
+
+<h3><a name="1"></a>Tecnologías y datos</h3>
+<p>Los datos fueron descargados desde el sitio web de <a href="http://www.fifa.com">FIFA</a> y están disponibles como un <a href="/datalab/data/wc2014_players_data.csv">CSV</a>. Para la visualización se usa la fantástica librería <a href="https://github.com/nicolaskruchten/pivottable">PivotTable.js</a>.</p>
+<p>Para consumir los datos de FIFA se uso <a href="">este script</a> de nodejs.</p>
+<script type="text/javascript" src='http://www.google.com/jsapi?autoload={"modules": [{"name": "visualization", "version": "1", "packages": ["corechart", "charteditor"]}]}'></script>
+		</div>
+	</div>
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'gabitoju'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
+<script>
+    $(window).bind("load", function() {
+       $.getScript('js/social.js', function() {});
+    });
+</script>				
+				</div>
+			</div>
+		</div>		    
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript">
+	        
+	          var _gaq = _gaq || [];
+	          _gaq.push(['_setAccount', 'UA-33409917-1']);
+	          _gaq.push(['_trackPageview']);
+	        
+	          (function() {
+	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	          })();
+	        
+	    </script>        
+		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+	</body>
+</html>

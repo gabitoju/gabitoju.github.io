@@ -14,6 +14,7 @@ Esto es un trabajo en progreso, así que a medida que avance el tiempo se van a 
 Estas son las visualizaciones disponibles:
 
 <!--* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010. -->
+* [¿Dónde juegan?](wc2014_players.html) ¿En dónde juegan las estrellas de la Copa del Mundo Brasil 2014?
 * [Tweets en Uruguay - Inglaterra Brasil 2014](uruguay_england.html) Visualización de los tweets generados durante el segundo partido de Uruguay por la Copa del Mundo Brasil 2014.
 * [Tweets en Uruguay - Costa Rica Brasil 2014](uruguay_costarica.html) Visualización de los tweets generados durante el primer partido de Uruguay por la Copa del Mundo Brasil 2014.
 * [Carreras más populares](careers.html) ¿Cuáles son las carreras más popualares entre los uruguayos de 18 y 25 años según el Censo 2011?
