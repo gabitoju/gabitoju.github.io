@@ -66,7 +66,7 @@
 		<div class="col-lg-12">
 		<p>¿Sabías que Rusia es el único país cuyos 23 jugadores juegan en la liga local? ¿Y qué la liga que más jugadores mundialistas tiene es la Premier League inglesa? Otro dato interesante, los dos clubes que más mundialistas tienen son el Manchester United y el Bayern Munich con 14 jugadores cada uno.</p>
 <p>Esta visualización permite explorar de forma intereactiva dónde y en qué equipos juegan las estrellas de Brasil 2014; conocer quienes juegan en sus países de orígen o en otro país... o en otro continente!</p>
-<p>Ahora estás viendo por continente la cantidad de jugadores que juegan en su país. Tu mismo puedes armar tus estadísticas arrastrando los ítems de están en el área gris (Jugador, País, Equipo, etc) al área celeste. También puedes cambiar la forma en que se muestran seleccionando una de las opciones del como que está a la izquierda.</p>
+<p>Ahora estás viendo por continente la cantidad de jugadores que juegan en su país. Tu mismo puedes armar tus estadísticas arrastrando los ítems de están en el área gris (Jugador, País, Equipo, etc) al área celeste. También puedes cambiar la forma en que se muestran seleccionando una de las opciones del como que está a la izquierda. Y si das clic en las flechitas al costado de cada ítem para poder filtrar.</p>
 <p><link rel="stylesheet" type="text/css" href="/datalab/pivot/pivot.css">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/datalab/pivot/jquery-ui-1.9.2.custom.min.js"></script>
@@ -107,9 +107,12 @@
     .pvtRows, .pvtCols { 
         background: steelblue;
     }
+    text {
+      font-size: 12px;
+    }
 </style>
 
-<div id="pivot">
+<div id="pivot" style="margin-left: -60px">
 <h3><a name="1"></a>Cargando...</h3>
 </div>
 
