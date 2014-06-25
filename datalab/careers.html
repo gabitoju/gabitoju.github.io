@@ -351,298 +351,32 @@ muy simple de usar que además es parte de la suite de BI Pentaho.</p>
 <script type="text/javascript" src="/datalab/ccc/def.js"></script>
 <script type="text/javascript" src="/datalab/ccc/pvc-r2.0.js"></script></p>
 <script type="text/javascript">
-    var data = {};
-    var career_data = [];
-    career_data[career_data.length] = ['MEDICINA', 143];    
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 106];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 94];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 65];   
-    career_data[career_data.length] = ['INGENIERÍA', 40];   
-    career_data[career_data.length] = ['VETERINARIA', 37];
-    career_data[career_data.length] = ['AGRONOMÍA', 28];    
-    career_data[career_data.length] = ['INFORMÁTICA', 27];
-    career_data[career_data.length] = ['CIENCIAS', 23];
-    career_data[career_data.length] = ['ARQUITECTURA', 14];
-    data[19] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['MEDICINA', 343];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 193];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 148];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 171];
-    career_data[career_data.length] = ['AGRONOMÍA', 93];
-    career_data[career_data.length] = ['INGENIERÍA', 92];
-    career_data[career_data.length] = ['VETERINARIA', 81];
-    career_data[career_data.length] = ['ARQUITECTURA', 59];
-    career_data[career_data.length] = ['INFORMÁTICA', 56];      
-    career_data[career_data.length] = ['CIENCIAS', 53];
-    data[18] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['MEDICINA', 303];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 220];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 196];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 160];    
-    career_data[career_data.length] = ['INGENIERÍA', 93];
-    career_data[career_data.length] = ['VETERINARIA', 80];
-    career_data[career_data.length] = ['ARQUITECTURA', 62];
-    career_data[career_data.length] = ['AGRONOMÍA', 77];
-    career_data[career_data.length] = ['CIENCIAS', 49];
-    career_data[career_data.length] = ['INFORMÁTICA', 48];          
-    data[17] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 120];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 132];
-    career_data[career_data.length] = ['ARQUITECTURA', 46];
-    career_data[career_data.length] = ['AGRONOMÍA', 39];
-    career_data[career_data.length] = ['INFORMÁTICA', 35];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 222];
-    career_data[career_data.length] = ['MEDICINA', 240];
-    career_data[career_data.length] = ['CIENCIAS', 56];
-    career_data[career_data.length] = ['INGENIERÍA', 65];
-    career_data[career_data.length] = ['VETERINARIA', 27];
-    data[16] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 271];
-    career_data[career_data.length] = ['MEDICINA', 526];
-    career_data[career_data.length] = ['CIENCIAS', 99];
-    career_data[career_data.length] = ['VETERINARIA', 137];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 276];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 223];
-    career_data[career_data.length] = ['INGENIERÍA', 134];
-    career_data[career_data.length] = ['AGRONOMÍA', 127];
-    career_data[career_data.length] = ['INFORMÁTICA', 92];
-    career_data[career_data.length] = ['ARQUITECTURA', 61];
-    data[15] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['VETERINARIA', 63];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 85];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 193];
-    career_data[career_data.length] = ['INFORMÁTICA', 33];
-    career_data[career_data.length] = ['INGENIERÍA', 46];
-    career_data[career_data.length] = ['MEDICINA', 229];
-    career_data[career_data.length] = ['AGRONOMÍA', 33];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 131];
-    career_data[career_data.length] = ['CIENCIAS', 30];
-    career_data[career_data.length] = ['ARQUITECTURA', 36];
-    data[14] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 130];
-    career_data[career_data.length] = ['CIENCIAS', 74];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 105];
-    career_data[career_data.length] = ['ARQUITECTURA', 50];
-    career_data[career_data.length] = ['INFORMÁTICA', 51];
-    career_data[career_data.length] = ['VETERINARIA', 62];
-    career_data[career_data.length] = ['MEDICINA', 334];
-    career_data[career_data.length] = ['AGRONOMÍA', 65];
-    career_data[career_data.length] = ['INGENIERÍA', 69];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 157];
-    data[13] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 105];
-    career_data[career_data.length] = ['CIENCIAS', 23];
-    career_data[career_data.length] = ['INGENIERÍA', 52];
-    career_data[career_data.length] = ['ARQUITECTURA', 24];
-    career_data[career_data.length] = ['MEDICINA', 150];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 87];
-    career_data[career_data.length] = ['INFORMÁTICA', 26];
-    career_data[career_data.length] = ['AGRONOMÍA', 37];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 122];
-    career_data[career_data.length] = ['VETERINARIA', 30];
-    data[12] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['VETERINARIA', 73];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 204];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 209];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 270];
-    career_data[career_data.length] = ['ARQUITECTURA', 84];
-    career_data[career_data.length] = ['INFORMÁTICA', 92];
-    career_data[career_data.length] = ['MEDICINA', 380];
-    career_data[career_data.length] = ['AGRONOMÍA', 125];
-    career_data[career_data.length] = ['CIENCIAS', 96];
-    career_data[career_data.length] = ['INGENIERÍA', 121];
-    data[11] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['MEDICINA', 281];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 213];
-    career_data[career_data.length] = ['INFORMÁTICA', 54];
-    career_data[career_data.length] = ['AGRONOMÍA', 29];
-    career_data[career_data.length] = ['ARQUITECTURA', 109];
-    career_data[career_data.length] = ['INGENIERÍA', 82];
-    career_data[career_data.length] = ['CIENCIAS', 45];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 206];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 289];
-    career_data[career_data.length] = ['VETERINARIA', 51];
-    data[10] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['CIENCIAS', 39];
-    career_data[career_data.length] = ['INFORMÁTICA', 22];
-    career_data[career_data.length] = ['ARQUITECTURA', 37];
-    career_data[career_data.length] = ['INGENIERÍA', 40];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 93];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 137];
-    career_data[career_data.length] = ['VETERINARIA', 57];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 133];
-    career_data[career_data.length] = ['MEDICINA', 226];
-    career_data[career_data.length] = ['AGRONOMÍA', 40];
-    data[9] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ARQUITECTURA', 44];
-    career_data[career_data.length] = ['INGENIERÍA', 67];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 123];
-    career_data[career_data.length] = ['INFORMÁTICA', 46];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 190];
-    career_data[career_data.length] = ['VETERINARIA', 77];
-    career_data[career_data.length] = ['MEDICINA', 250];
-    career_data[career_data.length] = ['AGRONOMÍA', 44];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 190];
-    career_data[career_data.length] = ['CIENCIAS', 52];
-    data[8] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['CIENCIAS', 21];
-    career_data[career_data.length] = ['VETERINARIA', 33];
-    career_data[career_data.length] = ['AGRONOMÍA', 38];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 83];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 69];
-    career_data[career_data.length] = ['INFORMÁTICA', 16];
-    career_data[career_data.length] = ['INGENIERÍA', 23];
-    career_data[career_data.length] = ['MEDICINA', 92];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 62];
-    career_data[career_data.length] = ['ARQUITECTURA', 18];
-    data[7] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 141];
-    career_data[career_data.length] = ['ARQUITECTURA', 54];
-    career_data[career_data.length] = ['VETERINARIA', 64];
-    career_data[career_data.length] = ['MEDICINA', 159];
-    career_data[career_data.length] = ['INGENIERÍA', 57];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 181];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 92];
-    career_data[career_data.length] = ['INFORMÁTICA', 29];
-    career_data[career_data.length] = ['AGRONOMÍA', 44];
-    career_data[career_data.length] = ['CIENCIAS', 28];
-    data[6] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 249];
-    career_data[career_data.length] = ['MEDICINA', 297];
-    career_data[career_data.length] = ['AGRONOMÍA', 88];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 255];
-    career_data[career_data.length] = ['CIENCIAS', 93];
-    career_data[career_data.length] = ['INFORMÁTICA', 106];
-    career_data[career_data.length] = ['ARQUITECTURA', 86];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 316];
-    career_data[career_data.length] = ['VETERINARIA', 81];
-    career_data[career_data.length] = ['INGENIERÍA', 121];
-    data[5] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['INGENIERÍA', 53];
-    career_data[career_data.length] = ['CIENCIAS', 29];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 126];
-    career_data[career_data.length] = ['MEDICINA', 260];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 194];
-    career_data[career_data.length] = ['AGRONOMÍA', 33];
-    career_data[career_data.length] = ['VETERINARIA', 68];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 101];
-    career_data[career_data.length] = ['INFORMÁTICA', 33];
-    career_data[career_data.length] = ['ARQUITECTURA', 46];
-    data[4] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['MEDICINA', 841];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 580];
-    career_data[career_data.length] = ['ARQUITECTURA', 261];
-    career_data[career_data.length] = ['CIENCIAS', 295];
-    career_data[career_data.length] = ['INGENIERÍA', 367];
-    career_data[career_data.length] = ['AGRONOMÍA', 128];
-    career_data[career_data.length] = ['VETERINARIA', 160];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 1022];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 671];
-    career_data[career_data.length] = ['INFORMÁTICA', 231];
-    data[3] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 153];
-    career_data[career_data.length] = ['INGENIERÍA', 56];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 145];
-    career_data[career_data.length] = ['INFORMÁTICA', 49];
-    career_data[career_data.length] = ['AGRONOMÍA', 28];
-    career_data[career_data.length] = ['MEDICINA', 304];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 197];
-    career_data[career_data.length] = ['VETERINARIA', 49];
-    career_data[career_data.length] = ['ARQUITECTURA', 41];
-    career_data[career_data.length] = ['CIENCIAS', 33];
-    data[2] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['MEDICINA', 4002];
-    career_data[career_data.length] = ['CIENCIAS', 1506];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 5850];
-    career_data[career_data.length] = ['INGENIERÍA', 2806];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 3100];
-    career_data[career_data.length] = ['INFORMÁTICA', 1514];
-    career_data[career_data.length] = ['ARQUITECTURA', 2029];
-    career_data[career_data.length] = ['VETERINARIA', 718];
-    career_data[career_data.length] = ['AGRONOMÍA', 606];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 3918];
-    data[1] = career_data;
-    career_data = [];
-    career_data[career_data.length] = ['CIENCIAS HUMANAS', 283];
-    career_data[career_data.length] = ['ADMINISTRACIÓN', 149];
-    career_data[career_data.length] = ['ARQUITECTURA', 100];
-    career_data[career_data.length] = ['CIENCIAS', 70];
-    career_data[career_data.length] = ['INFORMÁTICA', 76];
-    career_data[career_data.length] = ['ABOGACÍA Y NOTARIADO', 158];
-    career_data[career_data.length] = ['INGENIERÍA', 101];
-    career_data[career_data.length] = ['AGRONOMÍA', 24];
-    career_data[career_data.length] = ['VETERINARIA', 46];
-    career_data[career_data.length] = ['MEDICINA', 237];
-    data[0] = career_data;
-
-    for (var i = 0; i <= 19; i++) {
-        data[i].sort(function (a, b) {
-            if (a[1] < b [1])
-                return 1;
-            if (a[1] > b [1])
-                return -1;
-            return 0;
-        });
-    }
-
-    career_data = [];
-
-    $(document).ready(function () {
-        chart(data[2]);
-
-        $('#department').change(function () {
-            chart(data[$(this).val()]);
-        });
-    });
-
-    function chart(data) {
-        chart_data = {
-            "metadata": [{
-                "colIndex": 0,
-                "colType": "String",
-                "colName": "Carreras"
-            },
-            {
-                "colIndex": 1,
-                "colType": "Numeric",
-                "colName": "Cantidad"
-            }],
-            "resultset":  data
-        };
-        new pvc.TreemapChart({
-                    canvas:     'careers_chart',
-                    width:      800,
-                    height:     480,
-                    title:      'Carreras',
-                    titleFont:  'italic 14px sans-serif',
-                    selectable: true,
-                    hoverable:  true,
-                    legend:     true,
-                    legendPosition: 'right',
-                    rootCategoryLabel: 'Carreras',
-                    colorMode:  'bySelf'
-                })
-                .setData(chart_data, {crosstabMode: false})
-                .render();
-    }
+    var data={};var career_data=[];career_data[career_data.length]=["MEDICINA",143];career_data[career_data.length]=["CIENCIAS HUMANAS",106];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",94];career_data[career_data.length]=["ADMINISTRACI\u00d3N",65];career_data[career_data.length]=["INGENIER\u00cdA",40];career_data[career_data.length]=["VETERINARIA",37];career_data[career_data.length]=["AGRONOM\u00cdA",28];career_data[career_data.length]=["INFORM\u00c1TICA",27];
+career_data[career_data.length]=["CIENCIAS",23];career_data[career_data.length]=["ARQUITECTURA",14];data[19]=career_data;career_data=[];career_data[career_data.length]=["MEDICINA",343];career_data[career_data.length]=["CIENCIAS HUMANAS",193];career_data[career_data.length]=["ADMINISTRACI\u00d3N",148];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",171];career_data[career_data.length]=["AGRONOM\u00cdA",93];career_data[career_data.length]=["INGENIER\u00cdA",92];
+career_data[career_data.length]=["VETERINARIA",81];career_data[career_data.length]=["ARQUITECTURA",59];career_data[career_data.length]=["INFORM\u00c1TICA",56];career_data[career_data.length]=["CIENCIAS",53];data[18]=career_data;career_data=[];career_data[career_data.length]=["MEDICINA",303];career_data[career_data.length]=["CIENCIAS HUMANAS",220];career_data[career_data.length]=["ADMINISTRACI\u00d3N",196];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",160];
+career_data[career_data.length]=["INGENIER\u00cdA",93];career_data[career_data.length]=["VETERINARIA",80];career_data[career_data.length]=["ARQUITECTURA",62];career_data[career_data.length]=["AGRONOM\u00cdA",77];career_data[career_data.length]=["CIENCIAS",49];career_data[career_data.length]=["INFORM\u00c1TICA",48];data[17]=career_data;career_data=[];career_data[career_data.length]=["ADMINISTRACI\u00d3N",120];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",132];
+career_data[career_data.length]=["ARQUITECTURA",46];career_data[career_data.length]=["AGRONOM\u00cdA",39];career_data[career_data.length]=["INFORM\u00c1TICA",35];career_data[career_data.length]=["CIENCIAS HUMANAS",222];career_data[career_data.length]=["MEDICINA",240];career_data[career_data.length]=["CIENCIAS",56];career_data[career_data.length]=["INGENIER\u00cdA",65];career_data[career_data.length]=["VETERINARIA",27];data[16]=career_data;career_data=[];
+career_data[career_data.length]=["CIENCIAS HUMANAS",271];career_data[career_data.length]=["MEDICINA",526];career_data[career_data.length]=["CIENCIAS",99];career_data[career_data.length]=["VETERINARIA",137];career_data[career_data.length]=["ADMINISTRACI\u00d3N",276];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",223];career_data[career_data.length]=["INGENIER\u00cdA",134];career_data[career_data.length]=["AGRONOM\u00cdA",127];career_data[career_data.length]=["INFORM\u00c1TICA",92];
+career_data[career_data.length]=["ARQUITECTURA",61];data[15]=career_data;career_data=[];career_data[career_data.length]=["VETERINARIA",63];career_data[career_data.length]=["ADMINISTRACI\u00d3N",85];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",193];career_data[career_data.length]=["INFORM\u00c1TICA",33];career_data[career_data.length]=["INGENIER\u00cdA",46];career_data[career_data.length]=["MEDICINA",229];career_data[career_data.length]=["AGRONOM\u00cdA",33];
+career_data[career_data.length]=["CIENCIAS HUMANAS",131];career_data[career_data.length]=["CIENCIAS",30];career_data[career_data.length]=["ARQUITECTURA",36];data[14]=career_data;career_data=[];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",130];career_data[career_data.length]=["CIENCIAS",74];career_data[career_data.length]=["ADMINISTRACI\u00d3N",105];career_data[career_data.length]=["ARQUITECTURA",50];career_data[career_data.length]=["INFORM\u00c1TICA",51];
+career_data[career_data.length]=["VETERINARIA",62];career_data[career_data.length]=["MEDICINA",334];career_data[career_data.length]=["AGRONOM\u00cdA",65];career_data[career_data.length]=["INGENIER\u00cdA",69];career_data[career_data.length]=["CIENCIAS HUMANAS",157];data[13]=career_data;career_data=[];career_data[career_data.length]=["ADMINISTRACI\u00d3N",105];career_data[career_data.length]=["CIENCIAS",23];career_data[career_data.length]=["INGENIER\u00cdA",52];
+career_data[career_data.length]=["ARQUITECTURA",24];career_data[career_data.length]=["MEDICINA",150];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",87];career_data[career_data.length]=["INFORM\u00c1TICA",26];career_data[career_data.length]=["AGRONOM\u00cdA",37];career_data[career_data.length]=["CIENCIAS HUMANAS",122];career_data[career_data.length]=["VETERINARIA",30];data[12]=career_data;career_data=[];career_data[career_data.length]=["VETERINARIA",73];
+career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",204];career_data[career_data.length]=["ADMINISTRACI\u00d3N",209];career_data[career_data.length]=["CIENCIAS HUMANAS",270];career_data[career_data.length]=["ARQUITECTURA",84];career_data[career_data.length]=["INFORM\u00c1TICA",92];career_data[career_data.length]=["MEDICINA",380];career_data[career_data.length]=["AGRONOM\u00cdA",125];career_data[career_data.length]=["CIENCIAS",96];career_data[career_data.length]=["INGENIER\u00cdA",121];
+data[11]=career_data;career_data=[];career_data[career_data.length]=["MEDICINA",281];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",213];career_data[career_data.length]=["INFORM\u00c1TICA",54];career_data[career_data.length]=["AGRONOM\u00cdA",29];career_data[career_data.length]=["ARQUITECTURA",109];career_data[career_data.length]=["INGENIER\u00cdA",82];career_data[career_data.length]=["CIENCIAS",45];career_data[career_data.length]=["ADMINISTRACI\u00d3N",206];
+career_data[career_data.length]=["CIENCIAS HUMANAS",289];career_data[career_data.length]=["VETERINARIA",51];data[10]=career_data;career_data=[];career_data[career_data.length]=["CIENCIAS",39];career_data[career_data.length]=["INFORM\u00c1TICA",22];career_data[career_data.length]=["ARQUITECTURA",37];career_data[career_data.length]=["INGENIER\u00cdA",40];career_data[career_data.length]=["ADMINISTRACI\u00d3N",93];career_data[career_data.length]=["CIENCIAS HUMANAS",137];
+career_data[career_data.length]=["VETERINARIA",57];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",133];career_data[career_data.length]=["MEDICINA",226];career_data[career_data.length]=["AGRONOM\u00cdA",40];data[9]=career_data;career_data=[];career_data[career_data.length]=["ARQUITECTURA",44];career_data[career_data.length]=["INGENIER\u00cdA",67];career_data[career_data.length]=["ADMINISTRACI\u00d3N",123];career_data[career_data.length]=["INFORM\u00c1TICA",46];
+career_data[career_data.length]=["CIENCIAS HUMANAS",190];career_data[career_data.length]=["VETERINARIA",77];career_data[career_data.length]=["MEDICINA",250];career_data[career_data.length]=["AGRONOM\u00cdA",44];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",190];career_data[career_data.length]=["CIENCIAS",52];data[8]=career_data;career_data=[];career_data[career_data.length]=["CIENCIAS",21];career_data[career_data.length]=["VETERINARIA",33];
+career_data[career_data.length]=["AGRONOM\u00cdA",38];career_data[career_data.length]=["CIENCIAS HUMANAS",83];career_data[career_data.length]=["ADMINISTRACI\u00d3N",69];career_data[career_data.length]=["INFORM\u00c1TICA",16];career_data[career_data.length]=["INGENIER\u00cdA",23];career_data[career_data.length]=["MEDICINA",92];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",62];career_data[career_data.length]=["ARQUITECTURA",18];data[7]=career_data;career_data=[];
+career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",141];career_data[career_data.length]=["ARQUITECTURA",54];career_data[career_data.length]=["VETERINARIA",64];career_data[career_data.length]=["MEDICINA",159];career_data[career_data.length]=["INGENIER\u00cdA",57];career_data[career_data.length]=["CIENCIAS HUMANAS",181];career_data[career_data.length]=["ADMINISTRACI\u00d3N",92];career_data[career_data.length]=["INFORM\u00c1TICA",29];career_data[career_data.length]=["AGRONOM\u00cdA",44];
+career_data[career_data.length]=["CIENCIAS",28];data[6]=career_data;career_data=[];career_data[career_data.length]=["ADMINISTRACI\u00d3N",249];career_data[career_data.length]=["MEDICINA",297];career_data[career_data.length]=["AGRONOM\u00cdA",88];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",255];career_data[career_data.length]=["CIENCIAS",93];career_data[career_data.length]=["INFORM\u00c1TICA",106];career_data[career_data.length]=["ARQUITECTURA",86];
+career_data[career_data.length]=["CIENCIAS HUMANAS",316];career_data[career_data.length]=["VETERINARIA",81];career_data[career_data.length]=["INGENIER\u00cdA",121];data[5]=career_data;career_data=[];career_data[career_data.length]=["INGENIER\u00cdA",53];career_data[career_data.length]=["CIENCIAS",29];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",126];career_data[career_data.length]=["MEDICINA",260];career_data[career_data.length]=["CIENCIAS HUMANAS",194];
+career_data[career_data.length]=["AGRONOM\u00cdA",33];career_data[career_data.length]=["VETERINARIA",68];career_data[career_data.length]=["ADMINISTRACI\u00d3N",101];career_data[career_data.length]=["INFORM\u00c1TICA",33];career_data[career_data.length]=["ARQUITECTURA",46];data[4]=career_data;career_data=[];career_data[career_data.length]=["MEDICINA",841];career_data[career_data.length]=["ADMINISTRACI\u00d3N",580];career_data[career_data.length]=["ARQUITECTURA",261];
+career_data[career_data.length]=["CIENCIAS",295];career_data[career_data.length]=["INGENIER\u00cdA",367];career_data[career_data.length]=["AGRONOM\u00cdA",128];career_data[career_data.length]=["VETERINARIA",160];career_data[career_data.length]=["CIENCIAS HUMANAS",1022];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",671];career_data[career_data.length]=["INFORM\u00c1TICA",231];data[3]=career_data;career_data=[];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",153];
+career_data[career_data.length]=["INGENIER\u00cdA",56];career_data[career_data.length]=["ADMINISTRACI\u00d3N",145];career_data[career_data.length]=["INFORM\u00c1TICA",49];career_data[career_data.length]=["AGRONOM\u00cdA",28];career_data[career_data.length]=["MEDICINA",304];career_data[career_data.length]=["CIENCIAS HUMANAS",197];career_data[career_data.length]=["VETERINARIA",49];career_data[career_data.length]=["ARQUITECTURA",41];career_data[career_data.length]=["CIENCIAS",33];data[2]=career_data;
+career_data=[];career_data[career_data.length]=["MEDICINA",4002];career_data[career_data.length]=["CIENCIAS",1506];career_data[career_data.length]=["CIENCIAS HUMANAS",5850];career_data[career_data.length]=["INGENIER\u00cdA",2806];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",3100];career_data[career_data.length]=["INFORM\u00c1TICA",1514];career_data[career_data.length]=["ARQUITECTURA",2029];career_data[career_data.length]=["VETERINARIA",718];
+career_data[career_data.length]=["AGRONOM\u00cdA",606];career_data[career_data.length]=["ADMINISTRACI\u00d3N",3918];data[1]=career_data;career_data=[];career_data[career_data.length]=["CIENCIAS HUMANAS",283];career_data[career_data.length]=["ADMINISTRACI\u00d3N",149];career_data[career_data.length]=["ARQUITECTURA",100];career_data[career_data.length]=["CIENCIAS",70];career_data[career_data.length]=["INFORM\u00c1TICA",76];career_data[career_data.length]=["ABOGAC\u00cdA Y NOTARIADO",158];
+career_data[career_data.length]=["INGENIER\u00cdA",101];career_data[career_data.length]=["AGRONOM\u00cdA",24];career_data[career_data.length]=["VETERINARIA",46];career_data[career_data.length]=["MEDICINA",237];data[0]=career_data;for(var i=0;i<=19;i++)data[i].sort(function(a,b){if(a[1]<b[1])return 1;if(a[1]>b[1])return-1;return 0});career_data=[];chart(data[2]);$("#department").change(function(){chart(data[$(this).val()])});
+function chart(data){chart_data={"metadata":[{"colIndex":0,"colType":"String","colName":"Carreras"},{"colIndex":1,"colType":"Numeric","colName":"Cantidad"}],"resultset":data};(new pvc.TreemapChart({canvas:"careers_chart",width:800,height:480,title:"Carreras",titleFont:"italic 14px sans-serif",selectable:true,hoverable:true,legend:true,legendPosition:"right",rootCategoryLabel:"Carreras",colorMode:"bySelf"})).setData(chart_data,{crosstabMode:false}).render()};
 </script>
 		</div>
 	</div>
