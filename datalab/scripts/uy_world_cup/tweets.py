@@ -4,13 +4,13 @@ import tweepy
 import json
 from pymongo import MongoClient
 import datetime
+import sys
 
-
-consumer_key = ''
-consumer_secret = ''
-access_key = ''
-access_secret = ''
-MATCH = 3
+consumer_key = 'ZQpI2bONoEHejn2oI6CHz9Hn1'
+consumer_secret = '6kkfuwMCm7zXZpbOqL0KX3f38q5SAzlWZhgQikKpoZTNk2e6rw'
+access_key = '62409525-Jux8Upvu7tzYF2z1duMEzVKiICuo4sTW7ddjZETII'
+access_secret = 'rbkMLYgvRwWqmZL6SsYDfjRc78DyxfShhtKpuneRgenHV'
+MATCH = 4
 
 
 @classmethod
@@ -45,5 +45,9 @@ class CustomStreamListener(tweepy.StreamListener):
         print >> sys.stderr, 'Timeout...'
         return True  # Don't kill the stream
 
-sapi = tweepy.streaming.Stream(auth, CustomStreamListener())
-sapi.filter(track=['#URU'])
+while 1 == 1:
+    try:
+        sapi = tweepy.streaming.Stream(auth, CustomStreamListener())
+        sapi.filter(track=['#URU'])
+    except:
+        pass
