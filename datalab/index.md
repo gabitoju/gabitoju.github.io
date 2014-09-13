@@ -14,6 +14,7 @@ Esto es un trabajo en progreso, así que a medida que avance el tiempo se van a 
 Estas son las visualizaciones disponibles:
 
 <!--* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010. -->
+* [Los años perdidos](lost_years.html) ¿Cuántos años se perdieron entre todos los fallecimientos por accidentes de transito en Uruguay entre el 2012 y 2013?
 * [Tweets en Uruguay - Colombia Brasil 2014](uruguay_colombia.html) Visualización de los tweets generados durante el último partido de Uruguay por la Copa del Mundo Brasil 2014.
 * [Tweets en Uruguay - Italia Brasil 2014](uruguay_italy.html) Visualización de los tweets generados durante el tercer partido de Uruguay por la Copa del Mundo Brasil 2014. Último partido por la fase de grupos y agónica clasificación celeste.
 * [¿Dónde juegan?](wc2014_players.html) ¿En dónde juegan las estrellas de la Copa del Mundo Brasil 2014?
