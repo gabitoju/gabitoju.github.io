@@ -86,6 +86,7 @@ su "Estado Actual" es "Soltero/a (nunca se casó ni vivió en unión libre)".</p
 <script type="text/javascript" src="/datalab/ccc/def.js"></script>
 <script type="text/javascript" src="/datalab/ccc/pvc-r2.0.js"></script></p>
 <script type="text/javascript">
+    var width = $('.container').width();
     var chart_options = {    
         canvas: 'chart_montevideo',
         title: 'Casados vs Solteros en Montevideo',
@@ -101,7 +102,7 @@ su "Estado Actual" es "Soltero/a (nunca se casó ni vivió en unión libre)".</p
         plotFrameVisible: false,
         orthoAxisMinorTicks: false,
         colors: ['#1f77b4','#aec7e8','#D0373A','#F3B5A8'],
-        width: 944,
+        width: width,
         height: 342,
         extensionPoints: {'xAxisLabel_textAngle':-1.5707963267948966,'xAxisLabel_textAlign':'right','xAxisLabel_textBaseline':'middle'},
         hoverable: true
