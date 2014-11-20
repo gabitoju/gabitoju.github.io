@@ -8,74 +8,67 @@
 
 <url>
   <loc>http://gabitoju.uy/</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>http://gabitoju.uy/datalab/gnr.html</loc>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>http://gabitoju.uy/datalab/unions.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/national_elections.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/lost_years.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/uruguay_colombia.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/uruguay_italy.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/wc2014_players.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/uruguay_england.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/uruguay_costarica.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/careers.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://gabitoju.uy/datalab/uy_top_scorers.html</loc>
-  <lastmod>2014-11-18T17:03:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-11-20T13:41:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 </urlset>
