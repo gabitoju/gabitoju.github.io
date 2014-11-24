@@ -27,12 +27,14 @@ with open('../../data/gnr_songs.json') as json_data:
     # Search for song with greatest lexical diversity
     m_song = None
     value = -1.0
+    songs_div = []
     for song in songs:
         s_words = tokenizer.tokenize(song['lyrics'])
 
         if 1.0*len(set(s_words)) / len(words) > value:
             value = 1.0*len(set(s_words)) / len(words)
             m_song = song['song']
+        songs_div.append({'song': song['song'], 'diversity': 1.0*len(set(s_words)) / len(s_words)})
     print m_song
     print value*100.0
 
@@ -57,3 +59,6 @@ with open('../../data/gnr_songs.json') as json_data:
 
     print [w for w in set(words) if len(w) > 13]
 
+    sorted_songs = sorted(songs_div, key=lambda k : k['diversity']*-1)
+    for s in sorted_songs:
+        print s
