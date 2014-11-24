@@ -1,4 +1,5 @@
 ---
+lang: es
 title: "Goleadores del Campeonato Uruguayo"
 template: article
 order: 2

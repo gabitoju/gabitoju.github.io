@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,400italic|Open+Sans);
 body {
 	padding-bottom: 40px;
+	font-family: 'Open Sans', sans-serif;
+
 }			
 #menu-left {
 	border-style: solid;
@@ -28,6 +30,8 @@ h4 {
 	width: 100%;
 	background-position: 0px -130px;
     padding-bottom: 5px;
+    font-weight: none;
+    padding-top: 0px;:
 }
 .page-header a:hover {
 	text-decoration: none;
@@ -41,12 +45,26 @@ h4 {
     width: 300px;
 }   
 p {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Ubuntu', Segoe UI Light, Segoe UI, Tahoma, sans-serif !important;
+	font-family: 'Ubuntu', Segoe UI Light, Segoe UI, Tahoma, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 38px;
+    padding-bottom: 10px;
+}
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 20px;
 }
 /**/

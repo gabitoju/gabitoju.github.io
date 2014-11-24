@@ -1,10 +1,13 @@
 ---
+lang: es
 title: "Data Lab"
 template: data_home
 order: 0
 url: datalab
 description: "Data Lab es un espacio de experimentación en análisis y visualización de datos"
 ---
+
+[Go to English version](index_en.html)
 
 *Data Lab* es un espacio de experimentación en análisis y visualización de datos. La idea es usar distintas técnicas y librerias
 como [D3](http://d3js.org) para visualizar datos de una forma simple e intuitiva, buscando siempre usar la mejor técnica.
@@ -18,7 +21,7 @@ Estas son las visualizaciones disponibles:
 <div class="col-md-9" markdown="1">
 
 * [Appetite for Stats: Insights on the world's most dangerous band](gnr.html) \(En inglés\)  <span class="label label-danger">Nuevo!</span>  
-Estadísticas y vusualizaciones de los temas de la discografía de Guns N' Roses entre 1987 y 1993. ¿Cuánto duran las canciones? ¿Cuáles son las palabras más usadas? ¿Cuántas palabras se usan en promedio por canción?
+Estadísticas y visualizaciones de los temas de la discografía de Guns N' Roses entre 1987 y 1993. ¿Cuánto duran las canciones? ¿Cuáles son las palabras más usadas? ¿Cuántas palabras se usan en promedio por canción?
 * [Casados vs Solteros](unions.html)  
 ¿Cómo van evolucionando las relaciones de las personas en sus 20 y 30? Con los datos de estado civil y tipo de unión del Censo 2011 se crea esta visualización para responder esta y otras preguntas.
 * [Elecciones Nacionales en Uruguay 1984-2014](national_elections.html)  
@@ -47,6 +50,7 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.
 </div>
 
 <a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
+
 <style>
     ul {
         list-style: none;  
@@ -57,4 +61,5 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.
     li  a {
         font-weight: bold;
     }
-<style>
+</style>
+

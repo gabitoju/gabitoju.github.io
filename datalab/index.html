@@ -18,9 +18,9 @@
 		<meta property="og:image" content="http://gabitoju.uy/datalab/img/${img}" />
 		<meta property="og:description" content="Data Lab es un espacio de experimentación en análisis y visualización de datos" />		
 		<link rel="canonical" href="http://gabitoju.uy/datalab" />
-		<link href="css/style.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
 	</head>
@@ -29,7 +29,10 @@
 			<div class="page-header">
 				<div class="container">
 					<div class="row">
-						<a href="/"><h1>gabitoju</h1></a>
+                        <div class="col-md-3">
+                            <h1 style="background:none"><span class="pull-left"><a id="bckdl" href="/datalab" style="color: #eee;">Data Lab</a></span></h1>
+                        </div>                        
+                        <h1><a href="/" style="color:#242E35;">gabitoju</a></h1>                        
 					</div>
 				</div>
 			</div>					
@@ -44,7 +47,7 @@
 	<div class="row">
 		<div class="col-lg-10">
 		<p><a href="index_en.html">Go to English version</a></p>
-		<p><em>Data Lab</em> es un espacio de experimentación en análisis y visualización de datos. La idea es usar distintas técnicas y librerias
+<p><em>Data Lab</em> es un espacio de experimentación en análisis y visualización de datos. La idea es usar distintas técnicas y librerias
 como <a href="http://d3js.org">D3</a> para visualizar datos de una forma simple e intuitiva, buscando siempre usar la mejor técnica.</p>
 <p>Esto es un trabajo en progreso, así que a medida que avance el tiempo se van a ir agregando nuevas visualizaciones.</p>
 <p>Estas son las visualizaciones disponibles:</p>
@@ -53,7 +56,7 @@ como <a href="http://d3js.org">D3</a> para visualizar datos de una forma simple 
 <div class="col-md-9" markdown="1"></p>
 <ul>
 <li><a href="gnr.html">Appetite for Stats: Insights on the world's most dangerous band</a> (En inglés)  <span class="label label-danger">Nuevo!</span><br>
-Estadísticas y vusualizaciones de los temas de la discografía de Guns N' Roses entre 1987 y 1993. ¿Cuánto duran las canciones? ¿Cuáles son las palabras más usadas? ¿Cuántas palabras se usan en promedio por canción?</li>
+Estadísticas y visualizaciones de los temas de la discografía de Guns N' Roses entre 1987 y 1993. ¿Cuánto duran las canciones? ¿Cuáles son las palabras más usadas? ¿Cuántas palabras se usan en promedio por canción?</li>
 <li><a href="unions.html">Casados vs Solteros</a><br>
 ¿Cómo van evolucionando las relaciones de las personas en sus 20 y 30? Con los datos de estado civil y tipo de unión del Censo 2011 se crea esta visualización para responder esta y otras preguntas.</li>
 <li><a href="national_elections.html">Elecciones Nacionales en Uruguay 1984-2014</a><br>
@@ -81,10 +84,10 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.</li>
 
 </div>
 
-<p><a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
+<p><a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a></p>
 <style>
     ul {
-        list-style: none;<br>
+        list-style: none;  
     }
     li {
         padding-bottom: 10px;
@@ -92,7 +95,7 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.</li>
     li  a {
         font-weight: bold;
     }
-<style></p>
+</style>
 		</div>
 	</div>
 </div>				
@@ -100,6 +103,11 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.</li>
 			</div>
 		</div>		    
 		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <script>            
+            if ($('html').attr('lang') == 'en') {
+                $('#bckdl').attr('href', 'index_en.html');
+            }
+        </script>
 
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	    <script type="text/javascript">

@@ -14,13 +14,13 @@
 		<meta name="twitter:site" content="@gabitoju"> 
 		<meta property="og:title" content="Data Lab" /> 
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="http://gabitoju.uy/datalab" />
+		<meta property="og:url" content="http://gabitoju.uy/datalab/index_en.html" />
 		<meta property="og:image" content="http://gabitoju.uy/datalab/img/${img}" />
 		<meta property="og:description" content="Data Lab is an experimental space in analysis and data visualization" />		
-		<link rel="canonical" href="http://gabitoju.uy/datalab" />
-		<link href="css/style.css" rel="stylesheet">
+		<link rel="canonical" href="http://gabitoju.uy/datalab/index_en.html" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
 	</head>
@@ -29,7 +29,10 @@
 			<div class="page-header">
 				<div class="container">
 					<div class="row">
-						<a href="/"><h1>gabitoju</h1></a>
+                        <div class="col-md-3">
+                            <h1 style="background:none"><span class="pull-left"><a id="bckdl" href="/datalab" style="color: #eee;">Data Lab</a></span></h1>
+                        </div>                        
+                        <h1><a href="/" style="color:#242E35;">gabitoju</a></h1>                        
 					</div>
 				</div>
 			</div>					
@@ -43,26 +46,26 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-10">
-		<p><a href="/datalab">Ir a versión en Español</a></p>
-		<p><em>Data Lab</em> is an experimental space in analysis and data visualization. The idea is to use different 
-		techniques and libraries such as <a href="http://d3js.org">D3</a> to display data in a simple and intuitive way, always seeking to use the best technique.</p>
+		<p><a href="/datalab/">Ir a versión en Español</a></p>
+<p><em>Data Lab</em>  is an experimental space in analysis and data visualization. The idea is to use different techniques and libraries 
+such as <a href="http://d3js.org">D3</a> to display data in a simple and intuitive way, always seeking to use the best technique.</p>
 <p>This is a work in progress, so as time goes on I'm going to be adding new visualizations and analysis.</p>
 <p>This are the available visualization and analysis:</p>
 <div class="row">
 <p><div class="col-md-1"></div>
 <div class="col-md-9" markdown="1"></p>
 <ul>
-<li><a href="lost_years_en.html">The Lost Years</a> <span class="label label-danger">New!</span><br>
+<li><a href="lost_years_en.html">The Lost Years</a>  <span class="label label-danger">New!</span><br>
 How many years have been lost in traffic accidents in Uruguay between 2012 and 2013?</li>
-<li><a href="gnr.html">Appetite for Stats: Insights on the world's most dangerous band</a> <br>
+<li><a href="gnr.html">Appetite for Stats: Insights on the world's most dangerous band</a><br>
 Visualizations, insights and stats on Guns N' Roses songs from the Live Era period (1987-1993).</li>
 </ul>
 </div>
 <div class="col-md-1"></div>
+
 </div>
 
-<p>In this site I also have other visualizations that you can <a href="/datalab">check out here</a>.</p>
-
+<p>In this site I also have other visualizations that you can <a href="datalab/">check out here</a>.</p>
 <p><a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
 <style>
     ul {
@@ -74,7 +77,7 @@ Visualizations, insights and stats on Guns N' Roses songs from the Live Era peri
     li  a {
         font-weight: bold;
     }
-<style></p>
+</style></p>
 		</div>
 	</div>
 </div>				
@@ -82,6 +85,11 @@ Visualizations, insights and stats on Guns N' Roses songs from the Live Era peri
 			</div>
 		</div>		    
 		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <script>            
+            if ($('html').attr('lang') == 'en') {
+                $('#bckdl').attr('href', 'index_en.html');
+            }
+        </script>
 
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	    <script type="text/javascript">
