@@ -104,11 +104,7 @@
 
 
     d3.csv("data/lost_years.csv", function(data) {
-		data[1].metadata[0].colName = 'Age';
-		data[1].metadata[1].colName = 'Men ~ Married';
-		data[1].metadata[2].colName = 'Men ~ Single';
-		data[1].metadata[3].colName = 'Women ~ Married';
-		data[1].metadata[4].colName = 'Women ~ Single';
+
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + 0 + ")")
