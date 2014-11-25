@@ -126,6 +126,11 @@ in Montevideo. The 55,9% are single.</p>
     };
 
     d3.json('data/unions.json', function (data) {
+		data[0].metadata[0].colName = 'Age';
+		data[0].metadata[1].colName = 'Men ~ Married';
+		data[0].metadata[2].colName = 'Men ~ Single';
+		data[0].metadata[3].colName = 'Women ~ Married';
+		data[0].metadata[4].colName = 'Women ~ Single';	
 		data[1].metadata[0].colName = 'Age';
 		data[1].metadata[1].colName = 'Men ~ Married';
 		data[1].metadata[2].colName = 'Men ~ Single';
