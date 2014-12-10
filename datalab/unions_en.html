@@ -42,12 +42,11 @@
 <div class="col-lg-12">
 	<div class="row">
         <div class="col-md-6">
-             <span class="pull-left"></span>  		
+            <span class="pull-left"></span>
         </div>
         <div class="col-md-6">
             <span class="pull-right"><a class="previous" href="lost_years_en.html">The Lost Years >></a></span>
         </div>
-
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
@@ -56,10 +55,7 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-		<p>
-			How relationships of people in their 20s and 30s evolve? Are there more married women than men? 
-			People tend to marry less in Montevideo, the capital of Uruguay?
-		</p>
+		<p>How relationships of people in their 20s and 30s evolve? Are there more married women than men? People tend to marry less in Montevideo, the capital of Uruguay?</p>
 <p>To answer this questions I used data from the <a href="http://www.ine.gub.uy/censos2011/index.html">National Census 2011</a>, 
 in particular the survey related to the relationship status for people between 20 and 39 years old.</p>
 <p>These are the big numbers:</p>
@@ -69,29 +65,23 @@ in particular the survey related to the relationship status for people between 2
 <li>149.550 singles</li>
 </ul>
 </li>
-<li>Rest of the country<ul>
+<li>Interior<ul>
 <li>122.572 married</li>
 <li>155.240 singles</li>
 </ul>
 </li>
-<li>Total married: 194.263</li>
-<li>Total singles: 304.790</li>
-<li>Total: 499.053</li>
 </ul>
 <div id="chart_montevideo"></div>
 
 <div id="chart_interior"></div>
 
-<p>
-You can see that 32,4% of surveyed people in Montevideo are married while
-67,6% are single.
-</p>
+<p>You can see that 32,4% of surveyed people in Montevideo are married while
+67,6% are single.</p>
 <p>In the rest of the country the married people represent 44,1% of the surveyed people, that is, 11,7 percentage points more than
 in Montevideo. The 55,9% are single.</p>
 <p>For Montevideo, most of the married women have 38 years while in the rest of the country most of the married women have 36 years. In the case of men, the age is the same: 39 years old.</p>
 <h3><a name="1"></a>Used technologies</h3>
-<p>The charts were generated with the NormalizedBarChart component
- of WebDetails's <a href="http://www.webdetails.pt/ctools/ccc.html">Community Charting Components</a>.</p>
+<p>The charts were generated with the NormalizedBarChart component of WebDetails's <a href="http://www.webdetails.pt/ctools/ccc.html">Community Charting Components</a>.</p>
 <p><a href="http://d3js.org">D3</a> was also used for data handling.</p>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js" charset="utf-8"></script>
 
@@ -104,7 +94,7 @@ in Montevideo. The 55,9% are single.</p>
 <script type="text/javascript" src="/datalab/ccc/pvc-r2.0.js"></script></p>
 <script type="text/javascript">
     var width = $('.container').width();
-    var chart_options = {    
+    var chart_options = {
         canvas: 'chart_montevideo',
         title: 'Married vs Singles in Montevideo',
         animate: false,
@@ -126,17 +116,17 @@ in Montevideo. The 55,9% are single.</p>
     };
 
     d3.json('data/unions.json', function (data) {
-		data[0].metadata[0].colName = 'Age';
-		data[0].metadata[1].colName = 'Men ~ Married';
-		data[0].metadata[2].colName = 'Men ~ Single';
-		data[0].metadata[3].colName = 'Women ~ Married';
-		data[0].metadata[4].colName = 'Women ~ Single';	
-		data[1].metadata[0].colName = 'Age';
-		data[1].metadata[1].colName = 'Men ~ Married';
-		data[1].metadata[2].colName = 'Men ~ Single';
-		data[1].metadata[3].colName = 'Women ~ Married';
-		data[1].metadata[4].colName = 'Women ~ Single';	
-	
+        data[0].metadata[0].colName = 'Age';
+        data[0].metadata[1].colName = 'Men ~ Married';
+        data[0].metadata[2].colName = 'Men ~ Single';
+        data[0].metadata[3].colName = 'Women ~ Married';
+        data[0].metadata[4].colName = 'Women ~ Single'; 
+        data[1].metadata[0].colName = 'Age';
+        data[1].metadata[1].colName = 'Men ~ Married';
+        data[1].metadata[2].colName = 'Men ~ Single';
+        data[1].metadata[3].colName = 'Women ~ Married';
+        data[1].metadata[4].colName = 'Women ~ Single'; 
+
         var chart = new pvc['NormalizedBarChart'](chart_options);
 
         chart.setData(data[0], {
@@ -162,7 +152,7 @@ in Montevideo. The 55,9% are single.</p>
 	</div>
 	<div clas="row">
 		<div class="col-lg-1">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="en">Twittear</a>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="en">Tweet</a>
 		</div>
 		<div class="col-lg-2">
 			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
@@ -172,7 +162,7 @@ in Montevideo. The 55,9% are single.</p>
 		</div>
 		<div class="col-lg-2">
 			<script src="//platform.linkedin.com/in.js" type="text/javascript">
-					lang: es_ES
+					lang: en_EN
 			</script>
 			<script type="IN/Share" data-counter="right"></script>
 		</div>		
@@ -195,6 +185,7 @@ in Montevideo. The 55,9% are single.</p>
     
 </div>
 <a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
+
 <script>
     $(window).bind("load", function() {
        $.getScript('js/social_en.js', function() {});
