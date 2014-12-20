@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Appetite for Stats: It's so Lexical</title>		
+		
+		<meta name="twitter:card" value="summary_large_image">
+		<meta name="twitter:image" content="http://gabitoju.uy/datalab/img/gnr.jpg">
+		<meta name="twitter:creator" content="@gabitoju"> 
+		<meta name="twitter:site" content="@gabitoju"> 
+		<meta property="og:title" content="Appetite for Stats: It's so Lexical" /> 
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://gabitoju.uy/datalab/gnr2.html" />
+		<meta property="og:image" content="http://gabitoju.uy/datalab/img/gnr.jpg" />
+		<meta property="og:description" content="Visualizations, insights and stats on Guns N' Roses songs from the Live Era period (1987-1993)" />		
+		<link rel="canonical" href="http://gabitoju.uy/datalab/gnr2.html" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<div class="container">
+					<div class="row">
+                        <div class="col-md-3">
+                            <h1 style="background:none"><span class="pull-left"><a id="bckdl" href="/datalab" style="color: #eee;">Data Lab</a></span></h1>
+                        </div>                        
+                        <h1><a href="/" style="color:#242E35;">gabitoju</a></h1>                        
+					</div>
+				</div>
+			</div>					
+			<div class="container">
+				<div class="row">
+					<div id="fb-root"></div>
+<div class="col-lg-12">
+	<div class="row">
+        <div class="col-md-6">
+            <span class="pull-left"></span>
+        </div>
+        <div class="col-md-6">
+            <span class="pull-right"><a class="previous" href="unions_en.html">Married vs Singles: The Last Stand >></a></span>
+        </div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Appetite for Stats: It's so Lexical</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+		<p>This is a follow up to my previous article "<a href="gnr.html">Appetite for Stats: Insights on the world's most dangerous band</a>" and is based on the second point of <a href="http://www.reddit.com/r/dataisbeautiful/comments/2mwh1t/appetite_for_stats_insights_on_the_worlds_most/cm8d9d4">this comment</a> by Renaissir on Reddit's Data is Beatiful.</p>
+<p>The 44 songs from Appetite for Destruction, GN'R Lies and Use Your Illusion I and II had a lexical diversity of 12%, that is, about 39 unique words per song.</p>
+<p>So what I'm doing now is analyzing the lexical diversity for each one of those songs as <code>Unique words per song / Total words per song</code> and comparing that value to that global 12%. And just for the sake of comparing old to new GnR, I also analyze the lexical diversity of the songs from Chinese Democracy!</p>
+<p>So here are the results:</p>
+<table class="table">
+<thead>
+<th>Album</th>
+<th>Song</th>
+<th>Lexical Diversity %</th>
+</thead>
+<tbody>
+<tr><td>Appetite for Destruction</td><td>Welcome to the Jungle</td><td>36.9</td></tr>
+<tr><td>Appetite for Destruction</td><td>It's So Easy</td><td>38.81</td></tr>
+<tr><td>Appetite for Destruction</td><td>Nightrain</td><td>38.84</td></tr>
+<tr><td>Appetite for Destruction</td><td>Out ta Get Me</td><td>41.67</td></tr>
+<tr><td>Appetite for Destruction</td><td>Mr. Brownstone</td><td>45.25</td></tr>
+<tr><td>Appetite for Destruction</td><td>Paradise City</td><td>50.38</td></tr>
+<tr><td>Appetite for Destruction</td><td>My Michelle</td><td>53.23</td></tr>
+<tr><td>Appetite for Destruction</td><td>Think About You</td><td>35.45</td></tr>
+<tr><td>Appetite for Destruction</td><td>Sweet Child o' Mine</td><td>56.25</td></tr>
+<tr><td>Appetite for Destruction</td><td>You're Crazy</td><td>35.29</td></tr>
+<tr><td>Appetite for Destruction</td><td>Anything Goes</td><td>67.05</td></tr>
+<tr><td>Appetite for Destruction</td><td>Rocket Queen</td><td>45.45</td></tr>
+<tr><td>GN'R Lies</td><td>Patience</td><td>46.11</td></tr>
+<tr><td>GN'R Lies</td><td>Used to Love Her</td><td>27.01</td></tr>
+<tr><td>GN'R Lies</td><td>One in a Million</td><td>39.07</td></tr>
+<tr><td>Use Your Illusion I</td><td>Right Next Door To Hell</td><td>53.94</td></tr>
+<tr><td>Use Your Illusion I</td><td>Dust N' Bones</td><td>47.87</td></tr>
+<tr><td>Use Your Illusion I</td><td>Don't Cry</td><td>33.33</td></tr>
+<tr><td>Use Your Illusion I</td><td>Perfect Crime</td><td>51.15</td></tr>
+<tr><td>Use Your Illusion I</td><td>You Ain't The First</td><td>67.12</td></tr>
+<tr><td>Use Your Illusion I</td><td>Bad Obsession</td><td>28.13</td></tr>
+<tr><td>Use Your Illusion I</td><td>Back OFF Bitch</td><td>39.73</td></tr>
+<tr><td>Use Your Illusion I</td><td>Double Talking Jive</td><td>61.54</td></tr>
+<tr><td>Use Your Illusion I</td><td>November Rain</td><td>45.45</td></tr>
+<tr><td>Use Your Illusion I</td><td>The Garden</td><td>50.36</td></tr>
+<tr><td>Use Your Illusion I</td><td>Garden Of Eden</td><td>42.17</td></tr>
+<tr><td>Use Your Illusion I</td><td>Don't Damn Me</td><td>39.44</td></tr>
+<tr><td>Use Your Illusion I</td><td>Bad Apples</td><td>38.31</td></tr>
+<tr><td>Use Your Illusion I</td><td>Dead Horse</td><td>42.29</td></tr>
+<tr><td>Use Your Illusion I</td><td>Coma</td><td>45.89</td></tr>
+<tr><td>Use Your Illusion II</td><td>Civil War</td><td>43.96</td></tr>
+<tr><td>Use Your Illusion II</td><td>14 Years</td><td>44.48</td></tr>
+<tr><td>Use Your Illusion II</td><td>Yesterdays</td><td>42.46</td></tr>
+<tr><td>Use Your Illusion II</td><td>Get In The Ring</td><td>58.11</td></tr>
+<tr><td>Use Your Illusion II</td><td>Shotgun Blues</td><td>38.63</td></tr>
+<tr><td>Use Your Illusion II</td><td>Breakdown</td><td>53.33</td></tr>
+<tr><td>Use Your Illusion II</td><td>Pretty Tied Up</td><td>44.6</td></tr>
+<tr><td>Use Your Illusion II</td><td>Locomotive</td><td>38.91</td></tr>
+<tr><td>Use Your Illusion II</td><td>So Fine</td><td>35.67</td></tr>
+<tr><td>Use Your Illusion II</td><td>Estranged</td><td>44.47</td></tr>
+<tr><td>Use Your Illusion II</td><td>You Could Be Mine</td><td>49.21</td></tr>
+<tr><td>Use Your Illusion II</td><td>Don't Cry (Alt)</td><td>40.48</td></tr>
+<tr><td>Use Your Illusion II</td><td>My World</td><td>70.48</td></tr>
+</tbody>
+</table>
+
+<p>So, what does all of this mean? You can see that the lexical diversity for each song it's actually pretty high in
+most case, that means that those songs dont't repeat words that much. But, what about that global 12% (total unique words in ALL Gnr songs / total words in ALL Gnr songs). Well, we can conclude that, even though each song lexical divesity is bigger than 12%, in the overall, words tend to repeat from song to song.</p>
+<h3><a name="1"></a>Chinese Democracy</h3>
+		</div>
+	</div>
+	<div clas="row">
+		<div class="col-lg-1">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="en">Tweet</a>
+		</div>
+		<div class="col-lg-2">
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
+		<div class="col-lg-1">
+			<div class="g-plus" data-action="share" data-annotation="none"></div>
+		</div>
+		<div class="col-lg-2">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: en_EN
+			</script>
+			<script type="IN/Share" data-counter="right"></script>
+		</div>		
+	</div>
+
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'gabitoju'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
+
+<script>
+    $(window).bind("load", function() {
+       $.getScript('js/social_en.js', function() {});
+     });
+</script>
+				
+				</div>
+			</div>
+		</div>		    
+		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <script>            
+            if ($('html').attr('lang') == 'en') {
+                $('#bckdl').attr('href', 'index_en.html');
+            }
+        </script>
+
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript">
+	        
+	          var _gaq = _gaq || [];
+	          _gaq.push(['_setAccount', 'UA-33409917-1']);
+	          _gaq.push(['_trackPageview']);
+	        
+	          (function() {
+	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	          })();	        
+	    </script>        
+
+	</body>
+</html>

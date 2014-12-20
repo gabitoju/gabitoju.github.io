@@ -34,7 +34,7 @@ with open('../../data/gnr_songs.json') as json_data:
         if 1.0*len(set(s_words)) / len(words) > value:
             value = 1.0*len(set(s_words)) / len(words)
             m_song = song['song']
-        songs_div.append({'song': song['song'], 'diversity': 1.0*len(set(s_words)) / len(s_words)})
+        songs_div.append({'album': song['album'], 'song': song['song'], 'diversity': 100.0*len(set(s_words)) / len(s_words)})
     print m_song
     print value*100.0
 
@@ -60,5 +60,7 @@ with open('../../data/gnr_songs.json') as json_data:
     print [w for w in set(words) if len(w) > 13]
 
     sorted_songs = sorted(songs_div, key=lambda k : k['diversity']*-1)
-    for s in sorted_songs:
-        print s
+    for s in songs_div:
+#        print '{0};{1};{2}'.format(s['album'], s['song'], round(s['diversity'], 2))
+        print '<tr><td>{0}</td><td>{1}</td><td>{2}</td></tr>'.format(s['album'], s['song'], round(s['diversity'], 2))
+
