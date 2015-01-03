@@ -9,14 +9,14 @@
 		<title>Appetite for Stats: It's so Lexical</title>		
 		
 		<meta name="twitter:card" value="summary_large_image">
-		<meta name="twitter:image" content="http://gabitoju.uy/datalab/img/gnr.jpg">
+		<meta name="twitter:image" content="http://gabitoju.uy/datalab/img/tgnr2.jpg">
 		<meta name="twitter:creator" content="@gabitoju"> 
 		<meta name="twitter:site" content="@gabitoju"> 
 		<meta property="og:title" content="Appetite for Stats: It's so Lexical" /> 
 		<meta property="og:type" content="article" />
 		<meta property="og:url" content="http://gabitoju.uy/datalab/gnr2.html" />
-		<meta property="og:image" content="http://gabitoju.uy/datalab/img/gnr.jpg" />
-		<meta property="og:description" content="Visualizations, insights and stats on Guns N' Roses songs from the Live Era period (1987-1993)" />		
+		<meta property="og:image" content="http://gabitoju.uy/datalab/img/tgnr2.jpg" />
+		<meta property="og:description" content="Insights and stats on Guns N' Roses songs from the classic line up VS the Chinese Democracy line up" />		
 		<link rel="canonical" href="http://gabitoju.uy/datalab/gnr2.html" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
@@ -55,11 +55,11 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-		<p>This is a follow up to my previous article "<a href="gnr.html">Appetite for Stats: Insights on the world's most dangerous band</a>" and is based on the second point of <a href="http://www.reddit.com/r/dataisbeautiful/comments/2mwh1t/appetite_for_stats_insights_on_the_worlds_most/cm8d9d4">this comment</a> by Renaissir on Reddit's Data is Beatiful.</p>
+		<p>This is a follow up to my previous article "<a href="gnr.html">Appetite for Stats: Insights on the world's most dangerous band</a>" and is based on the second point of <a href="http://www.reddit.com/r/dataisbeautiful/comments/2mwh1t/appetite_for_stats_insights_on_the_worlds_most/cm8d9d4">this comment</a> by Renaissir on Reddit's Data is Beautiful.</p>
 <p>The 44 songs from Appetite for Destruction, GN'R Lies and Use Your Illusion I and II had a lexical diversity of 12%, that is, about 39 unique words per song.</p>
-<p>So what I'm doing now is analyzing the lexical diversity for each one of those songs as <code>Unique words per song / Total words per song</code> and comparing that value to that global 12%. And just for the sake of comparing old to new GnR, I also analyze the lexical diversity of the songs from Chinese Democracy!</p>
+<p>So what I'm doing now is analysing the lexical diversity for each one of those songs as <code>Unique words per song / Total words per song</code> and comparing that value to that global 12%. And just for the sake of comparing old to new GnR, I also analyse the lexical diversity of the songs from Chinese Democracy!</p>
 <p>So here are the results:</p>
-<table class="table">
+<table class="table table-condensed table-striped">
 <thead>
 <th>Album</th>
 <th>Song</th>
@@ -113,8 +113,81 @@
 </table>
 
 <p>So, what does all of this mean? You can see that the lexical diversity for each song it's actually pretty high in
-most case, that means that those songs dont't repeat words that much. But, what about that global 12% (total unique words in ALL Gnr songs / total words in ALL Gnr songs). Well, we can conclude that, even though each song lexical divesity is bigger than 12%, in the overall, words tend to repeat from song to song.</p>
+most case, that means that those songs don't repeat words that much. But, what about that global 12% (total unique words in ALL Gnr songs / total words in ALL Gnr songs). Well, we can conclude that, even though each song lexical diversity is bigger than 12%, in the overall, words tend to repeat from song to song.</p>
 <h3><a name="1"></a>Chinese Democracy</h3>
+<p>This is were controversy begins. For many die hard Guns N' Roses fans the band ended en 1993, this band that we have now is not GnR. But, Axl has been the owner of the brand for many years (since early nineties) and, in my opinion, this is not a bad album at all.</p>
+<p>So, lets see what the lexical diversity of this songs is. I'll also analyse the album lexical diversity in order to compare it with the Live Era albums.</p>
+<p><strong>Chinese Democracy Lexical Diversity: <span class="text-info">15%</span></strong> (or 1 out 6 words is unique)</p>
+<table class="table table-condensed table-striped">
+<thead>
+<th>Album</th>
+<th>Song</th>
+<th>Lexical Diversity %</th>
+</thead>
+<tbody>
+<tr><td>Chinese Democracy</td><td>Chinese Democracy</td><td>43.87</td></tr>
+<tr><td>Chinese Democracy</td><td>Shackler's Revenge</td><td>28.51</td></tr>
+<tr><td>Chinese Democracy</td><td>Better</td><td>36.87</td></tr>
+<tr><td>Chinese Democracy</td><td>Street Of Dreams</td><td>44.78</td></tr>
+<tr><td>Chinese Democracy</td><td>If The World</td><td>31.86</td></tr>
+<tr><td>Chinese Democracy</td><td>There Was A Time</td><td>31.43</td></tr>
+<tr><td>Chinese Democracy</td><td>Catcher In The Rye</td><td>46.8</td></tr>
+<tr><td>Chinese Democracy</td><td>Scraped</td><td>33.12</td></tr>
+<tr><td>Chinese Democracy</td><td>Sorry</td><td>38.93</td></tr>
+<tr><td>Chinese Democracy</td><td>I.R.S.</td><td>43.25</td></tr>
+<tr><td>Chinese Democracy</td><td>Madagascar</td><td>36.5</td></tr>
+<tr><td>Chinese Democracy</td><td>This I Love</td><td>34.35</td></tr>
+<tr><td>Chinese Democracy</td><td>Prostitute</td><td>52.07</td></tr>
+</tbody>
+</table>
+
+<p>As you can see, each song lexical diversity is also high but with a global lexical diversity of 15%, we can say again that there are a lot of words that are used in more than one song.</p>
+<p>Now, lets see which is the lexical diversity of the previous albums and compare that to Chinese Democracy.</p>
+<div class="well">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <strong>Appetite for Destruction</strong>
+            </div>
+            <div class="row">
+                <strong class="text-info">20%</strong>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="row">
+                <strong>GN'R Lies</strong>
+            </div>
+            <div class="row">
+                <strong class="text-info">28%</strong>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="row">
+                <strong>Use Your Illusion I</strong>
+            </div>
+            <div class="row">
+                <strong class="text-info">18%</strong>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="row">
+                <strong>Use Your Illusion II</strong>
+            </div>
+            <div class="row">
+                <strong class="text-info">20%</strong>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<p>Chinese Democracy is the GnR album with the lowest lexical diversity. Does it mean that is a bad album? Well, in my opinion is a really good album and music is much more than math. Its about passion and feelings and things that thankfully, we can measure. But you know, <em>we judge a book by its cover and read what we want between selected lines</em> (<a href="http://www.azlyrics.com/lyrics/gunsnroses/dontdamnme.html">Don't Damn Me</a>).</p>
+<p><center>
+    <img alt="Guns N' Roses" src="img/tgnr2.jpg">
+</center></p>
+<h3><a name="2"></a>Data and tools</h3>
+<p>The songs analysis was made using <a href="https://github.com/gabitoju/gabitoju.github.io/tree/master/datalab/scripts/gnr/process.py">this Python script</a> that uses the fantastic <a href="http://www.nltk.org">NLTK</a> natural language processing library. You can get the songs list from <a href="data/gnr_songs.json">here</a> and the Chinese Democracy songs list from <a href="data/gnr_songs_cd.json">here</a>.</p>
 		</div>
 	</div>
 	<div clas="row">
