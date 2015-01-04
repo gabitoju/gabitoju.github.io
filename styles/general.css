@@ -1,12 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,400italic|Open+Sans);
 * {
     margin: 0;
     padding: 0;
  }
 
  body {
-    border-top: 20px solid #242E35;
-    font-family: 'Ubuntu', Segoe UI Light, Segoe UI, Tahoma, sans-serif;
+	font-family: 'Open Sans', sans-serif;
  }
 
  header, footer {
@@ -22,6 +21,7 @@ header {
 h1 {
     color: #02243C;
     font-weight: lighter;
+    font-family: 'Ubuntu', Segoe UI Light, Segoe UI, Tahoma, sans-serif;
 }
 
  footer {
