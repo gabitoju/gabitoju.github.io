@@ -21,3 +21,6 @@ wl=c(3087, 3051, 2501, 1692, 1495, 802, 463, 204, 169, 66, 21, 20, 7, 1)
 names(wl) = c(3,4,2,1,5,6,7,8,9,10,12,11,13,14)
 bplt <- barplot(wl, col=rgb(31, 119, 180, maxColorValue=255), xlab="Word length (eg 3 letters)", ylab="Number of occurrences")
 text(cex=1, x=bplt-.15, y=450, wl, xpd=TRUE, srt=90)
+
+data <- read.csv('/home/gabitoju/c.csv')
+map.market(id=data$id, area=data$lexical, group=data$album, color=data$lexical, main="Guns N' Roses Lexical Diversity")
