@@ -2,9 +2,11 @@
 
 import tweepy
 import json
-from pymongo import MongoClient
 import datetime
 import sys
+from elasticsearch import Elasticsearch
+#from pymongo import MongoClient
+
 
 consumer_key = 'ZQpI2bONoEHejn2oI6CHz9Hn1'
 consumer_secret = '6kkfuwMCm7zXZpbOqL0KX3f38q5SAzlWZhgQikKpoZTNk2e6rw'
@@ -25,17 +27,19 @@ tweepy.models.Status.parse = parse
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth)
+es = Elasticsearch()
 
-client = MongoClient()
-db = client.wc
-tweets = db.tweets
+#client = MongoClient()
+#db = client.wc
+#tweets = db.tweets
 
 
 class CustomStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         dict_status = json.loads(status.json)
         dict_status['match'] = MATCH
-        tweets.insert(dict_status)
+        es.index(index="tweets", doc_type="tweet", body=dict_status)
+        #tweets.insert(dict_status)
 
     def on_error(self, status_code):
         print >> sys.stderr, 'Encountered error with status code:', status_code
@@ -48,6 +52,7 @@ class CustomStreamListener(tweepy.StreamListener):
 while 1 == 1:
     try:
         sapi = tweepy.streaming.Stream(auth, CustomStreamListener())
-        sapi.filter(track=['#URU'])
+        #sapi.filter(track=['#URU', 'sarasa'])
+        sapi.filter(track=['#LoveYourself'])
     except:
         pass
