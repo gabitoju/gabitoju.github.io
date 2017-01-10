@@ -20,7 +20,9 @@ Estas son las visualizaciones disponibles:
 <div class="col-md-1"></div>
 <div class="col-md-9" markdown="1">
 
-* [Appetite for Stats: Insights on the world's most dangerous band](gnr.html) \(En inglés\)  <span class="label label-danger">Nuevo!</span>  
+* [Multas por fiscalización electrónica de tránsito en Montevideo](multas_cgm.html)
+¿Cuál es la infracción más común? ¿Cuánto se ha recaudado? ¿Cuál es la intersección en que más infracciones se cometen? Con los datos que la Intendencia de Montevideo disponibiliza en IMPO se busca responder estas interrogantes y más.
+* [Appetite for Stats: Insights on the world's most dangerous band](gnr.html) \(En inglés\)
 Estadísticas y visualizaciones de los temas de la discografía de Guns N' Roses entre 1987 y 1993. ¿Cuánto duran las canciones? ¿Cuáles son las palabras más usadas? ¿Cuántas palabras se usan en promedio por canción?
 * [Casados vs Solteros](unions.html)  
 ¿Cómo van evolucionando las relaciones de las personas en sus 20 y 30? Con los datos de estado civil y tipo de unión del Censo 2011 se crea esta visualización para responder esta y otras preguntas.
