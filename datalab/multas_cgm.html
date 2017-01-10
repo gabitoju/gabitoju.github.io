@@ -57,7 +57,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 		<p>El 10 de Diciembre del 2016 la Intendencia de Montevideo puso operativa la <a href="http://www.montevideo.gub.uy/fiscalizacion-electronica-de-infracciones-de-transito">fiscalización electrónica de infracciones de tránsito</a>, un sistema compuesto por varias cámaras de monitoreo que permiten controlar cruces y giros con luz de semáforo en rojo y excesos de velocidad. Esto genera datos y nos permite preguntarnos: ¿cuántas infracciones se generaron? ¿a cuánto asciende el total de las multas? ¿hay alguna intersección en donde se cometan más infracciones qué otras? ¿cómo se distribuyen esas infracciones en el tiempo?</p>
-<p>En el sitio de <a href="http://www.montevideo.gub.uy/fiscalizacion-electronica-de-infracciones-de-transito">Centro de Gestión de Movilidad</a> se explica en detalle el proceso de fiscalización. Para este artículo se usarán los datos que están disponibles en el <a href="https://www.impo.com.uy/">IMPO</a> que contienen las infracciones generadas por vehículos no empadronados en Montevideo o que estando empadronados en la capital no tienen un domicilio válido. El período es entre el 10/12/216 y el 26/12/2016 y se registran 15 de 30 puntos de control. Los montos de las multas se presentan en UR (Unidades Reajustables) y los valores son: 8 UR por exceso de velocidad y 5 UR por cruzar un semáforo en rojo. En el sitio <a href="https://www.bhu.net/">BHU</a> se puede encontrar el valor de la UR en Pesos Uruguayos.</p>
+<p>En el sitio de <a href="http://www.montevideo.gub.uy/fiscalizacion-electronica-de-infracciones-de-transito">Centro de Gestión de Movilidad</a> se explica en detalle el proceso de fiscalización. Para este artículo se usarán los datos que están disponibles en el <a href="https://www.impo.com.uy/">IMPO</a> que contienen las infracciones generadas por vehículos no empadronados en Montevideo o que estando empadronados en la capital no tienen un domicilio válido. El período es entre el 10/12/216 y el 26/12/2016 y se registran 15 de 30 puntos de control. Los montos de las multas se presentan en UR (Unidades Reajustables) y los valores son 8 UR por exceso de velocidad y 5 UR por cruzar un semáforo en rojo. En el sitio <a href="https://www.bhu.net/">BHU</a> se puede encontrar el valor de la UR en Pesos Uruguayos.</p>
 <h3><a name="1"></a>Estadísticas generales</h3>
 <div class="jumbotron">
     <div class="row">
@@ -224,7 +224,7 @@
         var cant = 0;
 
         // Av. Italia y Francisco Simón
-        while (cant < 66) {
+        while (cant < 66) 
             ret.push(new google.maps.LatLng(-34.887658, -56.144560));
             cant += 1;
         }
