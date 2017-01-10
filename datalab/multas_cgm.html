@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Multas por fiscalización electrónica en Montevideo</title>		
+		
+		<meta name="twitter:card" value="summary_large_image">
+		<meta name="twitter:image" content="http://gabitoju.uy/datalab/img/multas_cgm.png">
+		<meta name="twitter:creator" content="@gabitoju"> 
+		<meta name="twitter:site" content="@gabitoju"> 
+		<meta property="og:title" content="Multas por fiscalización electrónica en Montevideo" /> 
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://gabitoju.uy/datalab/multas_cgm.html" />
+		<meta property="og:image" content="http://gabitoju.uy/datalab/img/multas_cgm.png" />
+		<meta property="og:description" content="¿En qué intersección se cometen más infracciones? ¿Cuál es la infracción más común? ¿Cuántos vehículos fueron multados más de una vez?" />		
+		<link rel="canonical" href="http://gabitoju.uy/datalab/multas_cgm.html" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<div class="container">
+					<div class="row">
+                        <div class="col-md-3">
+                            <h1 style="background:none"><span class="pull-left"><a id="bckdl" href="/datalab" style="color: #eee;">Data Lab</a></span></h1>
+                        </div>                        
+                        <h1><a href="/" style="color:#242E35;">gabitoju</a></h1>                        
+					</div>
+				</div>
+			</div>					
+			<div class="container">
+				<div class="row">
+					<div id="fb-root"></div>
+<div class="col-lg-12">
+	<div class="row">
+        <div class="col-md-6">
+             <span class="pull-left"></span>  		
+        </div>
+        <div class="col-md-6">
+            <span class="pull-right"><a class="previous" href="unions.html">Casados vs Solteros >></a></span>
+        </div>
+
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Multas por fiscalización electrónica en Montevideo</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+		<p>El 10 de Diciembre del 2016 la Intendencia de Montevideo puso operativa la <a href="http://www.montevideo.gub.uy/fiscalizacion-electronica-de-infracciones-de-transito">fiscalización electrónica de infracciones de tránsito</a>, un sistema compuesto, entre otros elementos, por varias cámaras de monitoreo que permiten controlar cruces y giros con luz de semáforo en rojo y excesos de velocidad.</p>
+<p>A la fecha de este artículo (9/01/2017) existen 30 puntos de control donde los equipos anteriormente mencionados toman fotos de las infracciones generadas; luego un operativo evalúa que efectivamente se este ante una falta. En caso positivo se dispara el siguiente proceso:</p>
+<ol>
+<li>Se emite una notificación al propietario del vehículo infractor.</li>
+<li>El propietario dispone de 10 días para apelar.</li>
+<li>Se emite resolución aplicando la multa y nuevamente el propietario tiene 10 días para apelar.</li>
+<li>La multa es cargada a <a href="http://www.sucive.gub.uy/">SUCIVE</a>.</li>
+</ol>
+<p>Si el vehículo está empadronado en Montevideo la notificación llega al domicilio del propietario. En caso de que no resida en Montevideo o el domicilio registrado sea incorrecto, las notificaciones se hacen a través del <a href="https://www.impo.com.uy/">IMPO</a>. Son estos los datos que se usarán para este estudio ya que los mismos se encuentran disponibles en el sitio web del IMPO en varios documentos PDF con un formato tabular muy conveniente. El período de tiempo de los datos es entre el 10/12/216 y el 26/12/2016 y se registran 16 de los 30 puntos de control.</p>
+<p>Con estos datos nos podemos hacer varias preguntas: ¿cuántas infracciones se generaron? ¿a cuánto asciende el total de las multas? ¿hay alguna intersección en donde se cometan más infracciones qué otras? ¿cómo se distribuyen esas infracciones en el tiempo?</p>
+<h3><a name="1"></a>Estadísticas generales</h3>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-4 text-left">
+            <h2>1.764 infracciones</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+            <h2>11.730 UR</h2>
+        </div>
+        <div class="col-lg-4 text-right">
+            <h2>1.648 vehículos</h2>
+        </div>                
+    </div>
+    <div class="row">
+        <div class="col-lg-4 text-left">            
+          <h2>55% de las infracciones son por exceso de velocidad</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+          <h2>100 vehículos fueron multados más de una vez</h2>
+        </div>
+        <div class="col-lg-4 text-right">
+          <h2>5 veces fue multado el mismo vehículo</h2>
+        </div>                
+    </div>    
+</div>
+
+<h3><a name="2"></a>Más respuestas</h3>
+<p>¿Qué intersección tiene más infracciones? ¿Y cómo se distribuyen esas infracciones por cada intersección?</p>
+<p><center>
+  <table class="pvtTable" data-numrows="0" data-numcols="16"><thead><tr><th class="pvtAxisLabel">Intersección</th><th class="pvtColLabel" colspan="1">Av Italia Y Francisco Simon</th><th class="pvtColLabel" colspan="1">Av Italia Y Lido</th><th class="pvtColLabel" colspan="1">Av Italia Y Mataojo</th><th class="pvtColLabel" colspan="1">Av Rivera Y Av Luis Ponce</th><th class="pvtColLabel" colspan="1">Av Rivera Y Maria Espinola</th><th class="pvtColLabel" colspan="1">Av. Gral. Flores Y D. Aramburu</th><th class="pvtColLabel" colspan="1">Av.Gral. Flores Y D. Aramburu</th><th class="pvtColLabel" colspan="1">Bv Artigas Y 21 De Setiembre</th><th class="pvtColLabel" colspan="1">Bv Artigas Y Campisteguy</th><th class="pvtColLabel" colspan="1">Bv Artigas Y Pedernal</th><th class="pvtColLabel" colspan="1">L A De Herrera Y Av Rivera</th><th class="pvtColLabel" colspan="1">R Rep Argentina Y Carlos M Morales</th><th class="pvtColLabel" colspan="1">R Rep De Mexico Y Costa Rica</th><th class="pvtColLabel" colspan="1">R Rep Del Peru Y L A De Herrera</th><th class="pvtColLabel" colspan="1">Rambla M. Gandhi Y Solano Garcia</th><th class="pvtColLabel" colspan="1">Rambla Ohiggins Y 18 De Diciembre</th><th class="pvtTotalLabel" rowspan="1">Totales</th></tr></thead><tbody><tr><th class="pvtTotalLabel" colspan="1">Totales</th><td class="pvtTotal colTotal" data-value="66" data-for="col0" style="background-color: rgb(255, 200, 200);">66</td><td class="pvtTotal colTotal" data-value="53" data-for="col1" style="background-color: rgb(255, 215, 215);">53</td><td class="pvtTotal colTotal" data-value="125" data-for="col2" style="background-color: rgb(255, 132, 132);">125</td><td class="pvtTotal colTotal" data-value="70" data-for="col3" style="background-color: rgb(255, 195, 195);">70</td><td class="pvtTotal colTotal" data-value="173" data-for="col4" style="background-color: rgb(255, 76, 76);">173</td><td class="pvtTotal colTotal" data-value="18" data-for="col5" style="background-color: rgb(255, 255, 255);">18</td><td class="pvtTotal colTotal" data-value="46" data-for="col6" style="background-color: rgb(255, 223, 223);">46</td><td class="pvtTotal colTotal" data-value="101" data-for="col7" style="background-color: rgb(255, 159, 159);">101</td><td class="pvtTotal colTotal" data-value="198" data-for="col8" style="background-color: rgb(255, 47, 47);">198</td><td class="pvtTotal colTotal" data-value="239" data-for="col9" style="background-color: rgb(255, 0, 0);">239</td><td class="pvtTotal colTotal" data-value="84" data-for="col10" style="background-color: rgb(255, 179, 179);">84</td><td class="pvtTotal colTotal" data-value="79" data-for="col11" style="background-color: rgb(255, 185, 185);">79</td><td class="pvtTotal colTotal" data-value="205" data-for="col12" style="background-color: rgb(255, 39, 39);">205</td><td class="pvtTotal colTotal" data-value="46" data-for="col13" style="background-color: rgb(255, 223, 223);">46</td><td class="pvtTotal colTotal" data-value="60" data-for="col14" style="background-color: rgb(255, 207, 207);">60</td><td class="pvtTotal colTotal" data-value="201" data-for="col15" style="background-color: rgb(255, 44, 44);">201</td><td class="pvtGrandTotal" data-value="1764">1 764</td></tr></tbody></table>
+</center></p>
+<p>Claramente se ve que la intersección de Bulevar Artigas y Pedernal es la que más infracciones acumula, 239. Además se puede concluir que en unas pocas cuadras, Bulevar Artigas tiene una zona "calienta" ya que acumula un total de 437 infracciones de las cuáles 313 se corresponden a cruzar o girar con luz roja y 124 a exceso de velocidad.</p>
+<p><center>
+  <table class="pvtTable" data-numrows="2" data-numcols="2"><thead><tr><th colspan="1" rowspan="1"></th><th class="pvtAxisLabel">Infracción</th><th class="pvtColLabel" colspan="1" rowspan="2">Cruzar o girar con luz roja</th><th class="pvtColLabel" colspan="1" rowspan="2">Exceso de velocidad</th><th class="pvtTotalLabel" rowspan="2">Totales</th></tr><tr><th class="pvtAxisLabel">Intersección</th><th></th></tr></thead><tbody><tr><th class="pvtRowLabel" rowspan="1" colspan="2">Bv Artigas Y Campisteguy</th><td class="pvtVal row0 col0" data-value="197" style="padding: 5px 0px 0px; text-align: center;"><div style="position: relative; height: 55px;"><div style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 71.4286%; background-color: rgb(128, 128, 128);"></div><div style="position: relative; padding-left: 5px; padding-right: 5px;">197</div></div></td><td class="pvtVal row0 col1" data-value="1" style="padding: 5px 0px 0px; text-align: center;"><div style="position: relative; height: 55px;"><div style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 0.362582%; background-color: rgb(128, 128, 128);"></div><div style="position: relative; padding-left: 5px; padding-right: 5px;">1</div></div></td><td class="pvtTotal rowTotal" data-value="198" data-for="row0">198</td></tr><tr><th class="pvtRowLabel" rowspan="1" colspan="2">Bv Artigas Y Pedernal</th><td class="pvtVal row1 col0" data-value="116" style="padding: 5px 0px 0px; text-align: center;"><div style="position: relative; height: 55px;"><div style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 67.3635%; background-color: rgb(128, 128, 128);"></div><div style="position: relative; padding-left: 5px; padding-right: 5px;">116</div></div></td><td class="pvtVal row1 col1" data-value="123" style="padding: 5px 0px 0px; text-align: center;"><div style="position: relative; height: 55px;"><div style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 71.4286%; background-color: rgb(128, 128, 128);"></div><div style="position: relative; padding-left: 5px; padding-right: 5px;">123</div></div></td><td class="pvtTotal rowTotal" data-value="239" data-for="row1">239</td></tr><tr><th class="pvtTotalLabel" colspan="2">Totales</th><td class="pvtTotal colTotal" data-value="313" data-for="col0" style="padding: 5px 0px 0px; text-align: center;"><div style="position: relative; height: 55px;"><div style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 71.4286%; background-color: rgb(128, 128, 128);"></div><div style="position: relative; padding-left: 5px; padding-right: 5px;">313</div></div></td><td class="pvtTotal colTotal" data-value="124" data-for="col1" style="padding: 5px 0px 0px; text-align: center;"><div style="position: relative; height: 55px;"><div style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 28.2976%; background-color: rgb(128, 128, 128);"></div><div style="position: relative; padding-left: 5px; padding-right: 5px;">124</div></div></td><td class="pvtGrandTotal" data-value="437">437</td></tr></tbody></table>
+</center></p>
+<p>¿Hay algún día que destaque más que otro en cuando a cantidad de infracciones?</p>
+<p><center>
+  <div class="c3" style="max-height: 434.286px; position: relative;"><svg width="975.7142857142858" height="434.28571428571433" style="overflow: hidden;"><defs><clipPath id="c3-1484020511961-clip"><rect width="923.7142857142858" height="335.24080261544003"></rect></clipPath><clipPath id="c3-1484020511961-clip-xaxis"><rect x="-51" y="-20" width="1005.7142857142858" height="115.04491167027429"></rect></clipPath><clipPath id="c3-1484020511961-clip-yaxis"><rect x="-49" y="-4" width="70" height="359.24080261544003"></rect></clipPath><clipPath id="c3-1484020511961-clip-grid"><rect width="923.7142857142858" height="335.24080261544003"></rect></clipPath><clipPath id="c3-1484020511961-clip-subchart"><rect width="923.7142857142858"></rect></clipPath></defs><g transform="translate(50.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="461.8571428571429" y="167.62040130772002" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="923.7142857142858" height="335.24080261544003" style="opacity: 0;"></rect><g clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="335.24080261544003" style="visibility: hidden;"></line></g></g><g clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="0" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-1" x="55" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-2" x="109" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-3" x="164" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-4" x="218" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-5" x="272" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-6" x="327" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-7" x="381" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-8" x="435" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-9" x="490" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-10" x="544" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-11" x="598" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-12" x="653" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-13" x="707" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-14" x="761" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-15" x="816" y="0" width="56" height="335.24080261544003"></rect><rect class=" c3-event-rect c3-event-rect-16" x="870" y="0" width="56" height="335.24080261544003"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-Cantidad" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Cantidad c3-bars c3-bars-Cantidad" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-Cantidad" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Cantidad c3-lines c3-lines-Cantidad"><path class=" c3-shape c3-shape c3-line c3-line-Cantidad" d="M28,178.0680442427034L83,277.5444735925367L137,211.22685402598114L192,307.3874023974867L246,201.27921109099782L300,277.5444735925367L355,284.17623554919226L409,98.4869007628367L463,125.01394858945895L518,71.95985293621446L572,58.696329022903356L626,78.59161489287003L681,78.59161489287003L735,134.9615915244423L789,28.85340021795335L844,181.38392522103118L898,277.5444735925367" style="stroke: rgb(51, 102, 204); opacity: 1;"></path></g><g class=" c3-shapes c3-shapes-Cantidad c3-areas c3-areas-Cantidad"><path class=" c3-shape c3-shape c3-area c3-area-Cantidad" d="M 28 178.0680442427034" style="fill: rgb(51, 102, 204); opacity: 0.2;"></path></g><g class=" c3-selected-circles c3-selected-circles-Cantidad"></g><g class=" c3-shapes c3-shapes-Cantidad c3-circles c3-circles-Cantidad" style="cursor: pointer;"><circle class="c3-shape c3-shape-0 c3-circle c3-circle-0" r="2.5" cx="28" cy="178.0680442427034" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-1 c3-circle c3-circle-1" r="2.5" cx="83" cy="277.5444735925367" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-2 c3-circle c3-circle-2" r="2.5" cx="137" cy="211.22685402598114" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-3 c3-circle c3-circle-3" r="2.5" cx="192" cy="307.3874023974867" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-4 c3-circle c3-circle-4" r="2.5" cx="246" cy="201.27921109099782" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-5 c3-circle c3-circle-5" r="2.5" cx="300" cy="277.5444735925367" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-6 c3-circle c3-circle-6" r="2.5" cx="355" cy="284.17623554919226" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-7 c3-circle c3-circle-7" r="2.5" cx="409" cy="98.4869007628367" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-8 c3-circle c3-circle-8" r="2.5" cx="463" cy="125.01394858945895" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-9 c3-circle c3-circle-9" r="2.5" cx="518" cy="71.95985293621446" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-10 c3-circle c3-circle-10" r="2.5" cx="572" cy="58.696329022903356" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-11 c3-circle c3-circle-11" r="2.5" cx="626" cy="78.59161489287003" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-12 c3-circle c3-circle-12" r="2.5" cx="681" cy="78.59161489287003" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-13 c3-circle c3-circle-13" r="2.5" cx="735" cy="134.9615915244423" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-14 c3-circle c3-circle-14" r="2.5" cx="789" cy="28.85340021795335" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-15 c3-circle c3-circle-15" r="2.5" cx="844" cy="181.38392522103118" style="fill: rgb(51, 102, 204); opacity: 1;"></circle><circle class=" c3-shape c3-shape-16 c3-circle c3-circle-16" r="2.5" cx="898" cy="277.5444735925367" style="fill: rgb(51, 102, 204); opacity: 1;"></circle></g></g></g><g class="c3-chart-arcs" transform="translate(461.8571428571429,162.62040130772002)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-Cantidad" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Cantidad"></g></g></g></g><g clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip-xaxis)" transform="translate(0,335.24080261544003)" style="visibility: visible; opacity: 1;"><text class="c3-axis-x-label" transform="" x="923.7142857142858" dx="-0.5em" dy="-0.5em" style="text-anchor: end;">Fecha</text><g class="tick" transform="translate(28, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-10</tspan></text></g><g class="tick" transform="translate(83, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-11</tspan></text></g><g class="tick" transform="translate(137, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-12</tspan></text></g><g class="tick" transform="translate(192, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-13</tspan></text></g><g class="tick" transform="translate(246, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-14</tspan></text></g><g class="tick" transform="translate(300, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-15</tspan></text></g><g class="tick" transform="translate(355, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-16</tspan></text></g><g class="tick" transform="translate(409, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-17</tspan></text></g><g class="tick" transform="translate(463, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-18</tspan></text></g><g class="tick" transform="translate(518, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-19</tspan></text></g><g class="tick" transform="translate(572, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-20</tspan></text></g><g class="tick" transform="translate(626, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-21</tspan></text></g><g class="tick" transform="translate(681, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-22</tspan></text></g><g class="tick" transform="translate(735, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-23</tspan></text></g><g class="tick" transform="translate(789, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-24</tspan></text></g><g class="tick" transform="translate(844, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-25</tspan></text></g><g class="tick" transform="translate(898, 0)" style="opacity: 1;"><line y2="0" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-26</tspan></text></g><path class="domain" d="M0,6V0H923.7142857142858V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 1;"><text class="c3-axis-y-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;">Cantidad</text><g class="tick" transform="translate(0,315)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">60</tspan></text></g><g class="tick" transform="translate(0,281)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">70</tspan></text></g><g class="tick" transform="translate(0,248)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">80</tspan></text></g><g class="tick" transform="translate(0,215)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">90</tspan></text></g><g class="tick" transform="translate(0,182)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">100</tspan></text></g><g class="tick" transform="translate(0,149)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">110</tspan></text></g><g class="tick" transform="translate(0,116)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">120</tspan></text></g><g class="tick" transform="translate(0,82)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">130</tspan></text></g><g class="tick" transform="translate(0,49)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">140</tspan></text></g><g class="tick" transform="translate(0,16)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">150</tspan></text></g><path class="domain" d="M-6,1H0V335.24080261544003H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(923.7142857142858,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,336)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,302)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,269)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,235)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,202)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,169)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,135)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,102)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,68)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,35)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V335.24080261544003H6"></path></g></g><g transform="translate(20.5,435.5)" style="visibility: hidden;"><g clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" x="0" width="953.7142857142858" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" x="0" width="0" style="cursor: move;"></rect><g class="resize e" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize w" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="url(http://localhost:8000/datalab/multas_cgm.html#c3-1484020511961-clip-xaxis)" style="visibility: hidden; opacity: 1;"><g class="tick" transform="translate(28, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-10</tspan></text></g><g class="tick" transform="translate(83, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-11</tspan></text></g><g class="tick" transform="translate(137, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-12</tspan></text></g><g class="tick" transform="translate(192, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-13</tspan></text></g><g class="tick" transform="translate(246, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-14</tspan></text></g><g class="tick" transform="translate(300, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-15</tspan></text></g><g class="tick" transform="translate(355, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-16</tspan></text></g><g class="tick" transform="translate(409, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-17</tspan></text></g><g class="tick" transform="translate(463, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-18</tspan></text></g><g class="tick" transform="translate(518, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-19</tspan></text></g><g class="tick" transform="translate(572, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-20</tspan></text></g><g class="tick" transform="translate(626, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-21</tspan></text></g><g class="tick" transform="translate(681, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-22</tspan></text></g><g class="tick" transform="translate(735, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-23</tspan></text></g><g class="tick" transform="translate(789, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-24</tspan></text></g><g class="tick" transform="translate(844, 0)" style="opacity: 1;"><line y2="6" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-25</tspan></text></g><g class="tick" transform="translate(898, 0)" style="opacity: 1;"><line y2="0" x1="28" x2="28"></line><text y="4" x="0" transform="rotate(45)" style="text-anchor: start; display: block;"><tspan x="0" dy=".71em" dx="5.65685424949238">2016-12-26</tspan></text></g><path class="domain" d="M0,6V0H923.7142857142858V6"></path></g></g><g transform="translate(0,414.28571428571433)"><g class=" c3-legend-item c3-legend-item-Cantidad" style="visibility: visible; cursor: pointer;"><text x="469.6774553571429" y="9" style="pointer-events: none;">Cantidad</text><rect class="c3-legend-item-event" x="455.6774553571429" y="-5" width="64.359375" height="18" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="453.6774553571429" y1="4" x2="463.6774553571429" y2="4" stroke-width="10" style="stroke: rgb(51, 102, 204); pointer-events: none;"></line></g></g><text class="c3-title" x="487.8571428571429" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+</center></p>
+<p>El 24/12/2016, con 146 infracciones es el día que más destaca en cuanto a cantidad.</p>
+<h3><a name="3"></a>A jugar con los datos</h3>
+<p>La siguiente herramienta permite jugar con los datos. Se pueden cruzar, filtrar, cambiar la forma de visualizar, seleccionar distintas operaciones etc. Varios de los resultados que se muestran más arriba se obtuvieron con ella. Los elementos que se encuentra en el área gris se pueden arrastrar a las zonas celestes y así obtener una nueva visualización. Por ejemplo, se puede volver <em>Intersección</em> al área gris y arrastra <em>Fecha</em> en su lugar, de esta forma se podrá ver la cantidad de infracciones por tipo y por fecha.</p>
+<p><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/pivottable/2.7.0/pivot.min.css">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pivottable/2.7.0/pivot.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pivottable/2.7.0/pivot.es.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pivottable/2.7.0/d3_renderers.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pivottable/2.7.0/c3_renderers.min.js"></script></p>
+<script type="text/javascript">
+    $(function(){
+
+        var renderers = $.extend(
+            {
+              'Tabla': $.pivotUtilities.renderers['Table'],
+              'Tabla con barras': $.pivotUtilities.renderers['Table Barchart'],
+              'Heatmap': $.pivotUtilities.renderers['Heatmap'],
+              'Heatmap por filas': $.pivotUtilities.renderers['Row Heatmap'],
+              'Heatmap por columnas': $.pivotUtilities.renderers['Col Heatmap']
+            },
+            {
+              'Líneas': $.pivotUtilities.c3_renderers['Line Chart'],
+              'Barras': $.pivotUtilities.c3_renderers['Bar Chart'],
+              'Barras apiladas': $.pivotUtilities.c3_renderers['Stacked Bar Chart'],
+              'Área': $.pivotUtilities.c3_renderers['Area Chart'],
+              'Dispersión': $.pivotUtilities.c3_renderers['Scatter Chart'],
+            }
+        );
+        var frFmt, frFmtInt, frFmtPct, nf, tpl;
+        nf = $.pivotUtilities.numberFormat;
+        tpl = $.pivotUtilities.aggregatorTemplates;
+        frFmt = nf({
+          thousandsSep: " ",
+          decimalSep: ","
+        });
+        frFmtInt = nf({
+          digitsAfterDecimal: 0,
+          thousandsSep: " ",
+          decimalSep: ","
+        });
+        frFmtPct = nf({
+          digitsAfterDecimal: 1,
+          scaler: 100,
+          suffix: "%",
+          thousandsSep: " ",
+          decimalSep: ","
+        });
+        d3.csv('/datalab/data/multas_cgm.csv', function (data) { 
+                $('#pivot').pivotUI(data, {             
+            renderers: renderers,
+                    rows: ['Intersección', ],
+                    cols: ['Infracción'],
+            rendererName: 'Barras',
+            aggregatorName: 'Cantidad',
+            aggregators: {
+              "Cantidad": tpl.count(frFmtInt),
+              "Cantidad de valores únicos": tpl.countUnique(frFmtInt),
+              "Lista de valores únicos": tpl.listUnique(", "),
+              "Suma": tpl.sum(frFmt),
+              "Promedio": tpl.average(frFmt),
+              "Mínimo": tpl.min(frFmt),
+              "Máximo": tpl.max(frFmt)  
+            }
+                 }, false, "es");
+          $('#pivot').find('h3').hide();
+        });
+     });
+</script>
+
+<style>
+    .pvtRows, .pvtCols { 
+      background: steelblue;
+    }
+    text {
+      font-size: 12px;
+    }
+</style>
+
+<div id="pivot">
+<h3><a name="4"></a>Cargando...</h3>
+</div>
+
+<h3><a name="5"></a>A futuro</h3>
+<p>Los datos que se obtienen del IMPO son interesantes pero tienen algunas limitaciones, por ejemplo, la hora no está en formato 24HS ni tiene un indicador de si es AM o PM. Contar con ese dato permitiría agregar una dimensión más al análisis y responder preguntas como ¿a qué hora se cometen más infracciones?</p>
+<p>Esa información si se encuentra en la foto que las cámaras sacan. Manualmente se podrían descargar las fotos y tomar el dato, pero es un trabajo pesado. Las opciones son que la Intendencia empiece a disponibilizar la información completa, o programar algo para que las descargue y obtenga la hora.</p>
+<p>Tener fotos también es algo interesante ya que se podrían usar técnicas de machine learning para catalogarlas y asistir a los operadores con una primera idea de si efectivamente se está ante una infracción o si el infractor es o no de Montevideo además de determinar el tipo de vehículo (auto, motocicleta, camión, transporte escolar, etc).</p>
+<h3><a name="6"></a>Tecnologías y datos</h3>
+<p>Los datos fueron descargados desde el sitio web de <a href="https://www.impo.com.uy">IMPO</a> y están disponibles como un <a href="/datalab/data/multas_cgm.csv">CSV</a>. Para la visualización se usa la fantástica librería <a href="https://github.com/nicolaskruchten/pivottable">PivotTable.js</a>.</p>
+<p>Para extraer las tablas de los PDF se usó <a href="http://tabula.technology/">Tabula</a>.</p>
+<script type="text/javascript" src='http://www.google.com/jsapi?autoload={"modules": [{"name": "visualization", "version": "1", "packages": ["corechart", "charteditor"]}]}'></script>
+		</div>
+	</div>
+	<div clas="row">
+		<div class="col-lg-1">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="es">Twittear</a>
+		</div>
+		<div class="col-lg-2">
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
+		<div class="col-lg-1">
+			<div class="g-plus" data-action="share" data-annotation="none"></div>
+		</div>
+		<div class="col-lg-2">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+			</script>
+			<script type="IN/Share" data-counter="right"></script>
+		</div>		
+	</div>
+
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'gabitoju'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
+<script>
+    $(window).bind("load", function() {
+       $.getScript('js/social.js', function() {});
+     });
+</script>
+				
+				</div>
+			</div>
+		</div>		    
+		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <script>            
+            if ($('html').attr('lang') == 'en') {
+                $('#bckdl').attr('href', 'index_en.html');
+            }
+        </script>
+
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript">
+	        
+	          var _gaq = _gaq || [];
+	          _gaq.push(['_setAccount', 'UA-33409917-1']);
+	          _gaq.push(['_trackPageview']);
+	        
+	          (function() {
+	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	          })();	        
+	    </script>        
+
+	</body>
+</html>
