@@ -26,7 +26,7 @@ footer a {
 
 #home-header {
     width: 1280px;
-    height: 250px;
+    height: 200px;
     background-image: url(../images/t.jpg);    
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +35,7 @@ footer a {
 #home-header h1 {
     font-size: 60pt;
     padding: 0 20px 0 0;
-    line-height: 250px;
+    line-height: 200px;
     color: #242E35;
     float: right;
 }
