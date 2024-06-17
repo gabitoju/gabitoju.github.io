@@ -43,16 +43,15 @@ class CustomStreamListener(tweepy.StreamListener):
 
     def on_error(self, status_code):
         print >> sys.stderr, 'Encountered error with status code:', status_code
-        return True  # Don't kill the stream
+        return True
 
     def on_timeout(self):
         print >> sys.stderr, 'Timeout...'
-        return True  # Don't kill the stream
+        return True
 
 while 1 == 1:
     try:
         sapi = tweepy.streaming.Stream(auth, CustomStreamListener())
-        #sapi.filter(track=['#URU', 'sarasa'])
-        sapi.filter(track=['#LoveYourself'])
+        sapi.filter(track=['#URU',])
     except:
         pass
