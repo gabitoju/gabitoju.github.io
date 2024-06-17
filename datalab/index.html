@@ -21,8 +21,18 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZCL90CN35"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BZCL90CN35');
+        </script>
+        <style>.github-fork-ribbon:before { background-color: #121621; }</style>
 	</head>
 	<body>
 		<div class="container">
@@ -52,8 +62,8 @@ como <a href="http://d3js.org">D3</a> para visualizar datos de una forma simple 
 <p>Esto es un trabajo en progreso, así que a medida que avance el tiempo se van a ir agregando nuevas visualizaciones.</p>
 <p>Estas son las visualizaciones disponibles:</p>
 <div class="row">
-<p><div class="col-md-1"></div>
-<div class="col-md-9" markdown="1"></p>
+<div class="col-md-1"></div>
+<div class="col-md-9">
 <ul>
 <li><a href="multas_cgm.html">Multas por fiscalización electrónica de tránsito en Montevideo</a>
 ¿Cuál es la infracción más común? ¿Cuánto se ha recaudado? ¿Cuál es la intersección en que más infracciones se cometen? Con los datos que la Intendencia de Montevideo disponibiliza en IMPO se busca responder estas interrogantes y más.</li>
@@ -62,8 +72,10 @@ Estadísticas y visualizaciones de los temas de la discografía de Guns N' Roses
 <li><a href="unions.html">Casados vs Solteros</a><br>
 ¿Cómo van evolucionando las relaciones de las personas en sus 20 y 30? Con los datos de estado civil y tipo de unión del Censo 2011 se crea esta visualización para responder esta y otras preguntas.</li>
 <li><a href="national_elections.html">Elecciones Nacionales en Uruguay 1984-2014</a><br>
-La evolución del panorama político a nivel departamental en las elecciones nacionales comprendidas entre 1984 y 2014.
-<!--* <a href="departamental_elections.html">Elecciones Departamentales uruguay 1966-2010</a> Reparto de los gobiernos departamentales entre 1966 y 2010. --></li>
+La evolución del panorama político a nivel departamental en las elecciones nacionales comprendidas entre 1984 y 2014.</li>
+</ul>
+<!--* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010. -->
+<ul>
 <li><a href="lost_years.html">Los años perdidos</a><br>
 ¿Cuántos años se perdieron entre todos los fallecimientos por accidentes de transito en Uruguay entre el 2012 y 2013?</li>
 <li><a href="uruguay_colombia.html">Tweets en Uruguay - Colombia Brasil 2014</a><br>
@@ -83,9 +95,7 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.</li>
 </ul>
 </div>
 <div class="col-md-1"></div>
-
 </div>
-
 <p><a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a></p>
 <style>
     ul {
@@ -104,7 +114,7 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.</li>
 				</div>
 			</div>
 		</div>		    
-		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <a class="github-fork-ribbon" href="https://github.com/gabitoju" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
         <script>            
             if ($('html').attr('lang') == 'en') {
                 $('#bckdl').attr('href', 'index_en.html');
@@ -112,18 +122,5 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.</li>
         </script>
 
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	    <script type="text/javascript">
-	        
-	          var _gaq = _gaq || [];
-	          _gaq.push(['_setAccount', 'UA-33409917-1']);
-	          _gaq.push(['_trackPageview']);
-	        
-	          (function() {
-	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	          })();	        
-	    </script>        
-
 	</body>
 </html>

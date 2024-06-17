@@ -21,8 +21,18 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZCL90CN35"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BZCL90CN35');
+        </script>
+        <style>.github-fork-ribbon:before { background-color: #121621; }</style>
 	</head>
 	<body>
 		<div class="container">
@@ -45,7 +55,7 @@
              <span class="pull-left"><a class="next" href="uruguay_italy.html"><< Tweets Uruguay - Italia</a></span>  		
         </div>
         <div class="col-md-6">
-            <span class="pull-right"><a class="previous" href="uruguay_england.html">Tweets Uruguay - Inglaterra >></a></span>
+            <span class="pull-right"></span>
         </div>
 
 	</div>
@@ -59,12 +69,13 @@
 		<p>¿Sabías que Rusia es el único país cuyos 23 jugadores juegan en la liga local? ¿Y qué la liga que más jugadores mundialistas tiene es la Premier League inglesa? Otro dato interesante, los dos clubes que más mundialistas tienen son el Manchester United y el Bayern Munich con 14 jugadores cada uno.</p>
 <p>Esta visualización permite explorar de forma intereactiva dónde y en qué equipos juegan las estrellas de Brasil 2014; conocer quienes juegan en sus países de orígen o en otro país... o en otro continente!</p>
 <p>Ahora estás viendo por continente la cantidad de jugadores que juegan en su país. Tu mismo puedes armar tus estadísticas arrastrando los ítems de están en el área gris (Jugador, País, Equipo, etc) al área celeste. También puedes cambiar la forma en que se muestran seleccionando una de las opciones del como que está a la izquierda. Y si das clic en las flechitas al costado de cada ítem para poder filtrar.</p>
-<p><link rel="stylesheet" type="text/css" href="/datalab/pivot/pivot.css">
+<p><link rel="stylesheet" type="text/css" href="/datalab/pivot/pivot.css"></p>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/datalab/pivot/jquery-ui-1.9.2.custom.min.js"></script>
 <script type="text/javascript" src="/datalab/pivot/pivot.js"></script>
 <script type="text/javascript" src="/datalab/pivot/d3_renderers.js"></script>
-<script type="text/javascript" src="/datalab/pivot/gchart_renderers.js"></script></p>
+<script type="text/javascript" src="/datalab/pivot/gchart_renderers.js"></script>
+
 <script type="text/javascript">
     $(function(){
         var derivers = $.pivotUtilities.derivers;
@@ -90,7 +101,6 @@
         });
      });
 </script>
-
 <style>
     .node {
       border: solid 1px white;
@@ -107,7 +117,6 @@
       font-size: 12px;
     }
 </style>
-
 <div id="pivot">
 <h3><a name="1"></a>Cargando...</h3>
 </div>
@@ -188,7 +197,7 @@
 				</div>
 			</div>
 		</div>		    
-		<a href="https://github.com/gabitoju"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <a class="github-fork-ribbon" href="https://github.com/gabitoju" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
         <script>            
             if ($('html').attr('lang') == 'en') {
                 $('#bckdl').attr('href', 'index_en.html');
@@ -196,18 +205,5 @@
         </script>
 
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	    <script type="text/javascript">
-	        
-	          var _gaq = _gaq || [];
-	          _gaq.push(['_setAccount', 'UA-33409917-1']);
-	          _gaq.push(['_trackPageview']);
-	        
-	          (function() {
-	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	          })();	        
-	    </script>        
-
 	</body>
 </html>
