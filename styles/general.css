@@ -6,6 +6,8 @@
 
  body {
 	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	line-height: 1.42857143;
  }
 
  header, footer {
@@ -13,7 +15,7 @@
  }
 
 header {
-    margin-top: 60px;
+    margin-top: 20px;
     border-top: thin solid #9EAEB3;
     border-bottom: thin solid #9EAEB3;
 }
@@ -39,3 +41,12 @@ h1 {
      font-size: 11px;
      color: #EEEEE7;
  }
+
+a {
+    text-decoration: none;
+    color: #428bca;
+}
+
+a:hover {
+	text-decoration: underline;
+}
