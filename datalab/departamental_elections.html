@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Elecciones Departamentales en Uruguay 1966-2010</title>				
+		<meta property="fb:app_id" content="1814789482105372" />
+		<meta name="twitter:card" value="summary_large_image">
+		<meta name="twitter:image" content="http://gabitoju.uy/datalab/img/${img}">
+		<meta name="twitter:creator" content="@gabitoju"> 
+		<meta name="twitter:site" content="@gabitoju"> 
+		<meta property="og:title" content="Elecciones Departamentales en Uruguay 1966-2010" /> 
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://gabitoju.uy/datalab/departamental_elections.html" />
+		<meta property="og:image" content="http://gabitoju.uy/datalab/img/${img}" />
+		<meta property="og:description" content="¿Cómo fue cambiando el panorama político en cada departamento entre 1984 y 2014?" />		
+		<link rel="canonical" href="http://gabitoju.uy/datalab/departamental_elections.html" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZCL90CN35"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BZCL90CN35');
+        </script>
+        <style>.github-fork-ribbon:before { background-color: #121621; }</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<div class="container">
+					<div class="row">
+                        <div class="col-md-3">
+                            <h1 style="background:none"><span class="pull-left"><a id="bckdl" href="/datalab" style="color: #eee;">Data Lab</a></span></h1>
+                        </div>                        
+                        <h1><a href="/" style="color:#242E35;">gabitoju</a></h1>                        
+					</div>
+				</div>
+			</div>					
+			<div class="container">
+				<div class="row">
+					<div id="fb-root"></div>
+<div class="col-lg-12">
+	<div class="row">
+        <div class="col-md-6">
+             <span class="pull-left"><a class="next" href="national_elections.html">&lt;&lt; Elecciones Nacionales en Uruguay</a></span>  		
+        </div>
+        <div class="col-md-6">
+            <span class="pull-right"><a class="previous" href="lost_years.html">Los años perdidos &gt;&gt;</a></span>
+        </div>
+
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Elecciones Departamentales en Uruguay 1966-2010</h1>
+		</div>
+	</div>
+    <div class="row">
+    <ul class="nav nav-tabs">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Ir a <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        <li>
+            <a href="#1">Distribución de las Intendencias por año/partido</a>
+        </li>
+        
+        <li>
+            <a href="#2">Evolución de los resultados por departamento</a>
+        </li>
+        
+        <li>
+            <a href="#3">Votos por partido en el departamento</a>
+        </li>
+                
+        </ul>
+    </li>
+</ul>
+    </div>
+	<div class="row">
+		<div class="col-lg-12">
+		<p>El 2014 y el 2015 son años electorales en Uruguay. En 2014 pueden llegar a existir tres elecciones:</p>
+<ul>
+<li>Elección interna de junio donde los partidos eligen la combención que determina el candidato a la Presidencia de la República</li>
+<li>Elección nacional de octubre donde se eligen Senadores, Diputados y de superar el 50% + 1 de los votos, Presidente</li>
+<li>Ballotage en noviembre solo si ningún candidato superó el 50% + 1 de los votos en octubre.</li>
+</ul>
+<p>En el año 2015 se eligen a los Intendentes Departamentales y Alcaldes.</p>
+<p>En este conjunto de visualizaciones se muestra el resultado general, la distribución de Intendencias y la
+evolución de los votos para cada partido ganador por departamento desde las elecciones de 1966 hasta las
+elecciones del 2010. Además se puede visualizar una comparativa de la composición de los votos por partido y departamento.</p>
+<p>Estos datos solo representan la elección de los Intendentes Departamentales (Municipales previo a 2010).</p>
+<p>Referencia: <span class="colorado">Partido Colorado</span> <span class="nacional">Partido Nacional</span> <span class="fa">Frente Amplio</span></p>
+<p><strong>Importante:</strong> Se tomaron solamente en cuenta los datos de los tres principales partidos políticos del Uruguay, es decir, nunca se usa el total de votos sino la suma de votos de esos tres partidos.</p>
+<h3><a name="1"></a>Distribución de las Intendencias por año/partido</h3>
+<p>El período comprendido entre 1973 y 1984 se encuentra en blanco a causa del quiebre institucional.</p>
+<div id="timeline"></div>
+
+<h3><a name="2"></a>Evolución de los resultados por departamento</h3>
+<p><select id="department"></p>
+<p></select></p>
+<div id="evo"></div>
+
+<h3><a name="3"></a>Votos por partido en el departamento</h3>
+<p><select id="department_comp"></p>
+<p></select></p>
+<div id="evo_comp"></div>
+
+<style type="text/css">
+    #timeline {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+
+    #evo, #evo_comp {
+        width: 100%;
+        margin: 0px;        
+    }
+
+    html,body {
+        height: 100%;
+    }
+
+    .chart {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .axis path,.axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .colorado {
+        fill: #CC0000;
+        color: #CC0000;
+    }
+
+    .nacional {
+        fill: #33b5e5;
+        color: #33b5e5;
+    }
+
+    .fa {
+        fill: #00008B;
+        color: #00008B;
+    }
+</style>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/gantt-chart-d3.js"></script>
+<script type="text/javascript">
+
+    var parties = {
+            "PC": "colorado",
+            "PN": "nacional",
+            "FA": "fa"
+    }
+    var departments = [
+        'Artigas',
+        'Canelones',
+        'Cerro Largo',
+        'Colonia',
+        'Durazno',
+        'Flores',
+        'Florida',
+        'Lavalleja',
+        'Maldonado',
+        'Montevideo',
+        'Paysandú',
+        'Río Negro',
+        'Rivera',
+        'Rocha',
+        'Salto',
+        'San José',
+        'Soriano',
+        'Tacuarembó',
+        'Treinta y Tres',
+    ];
+    var format = '%Y';
+
+    g_data = null;
+    d3.csv('data/departamental_elections.csv', function (data) {
+        g_data = data;
+        var timeline_data = [];
+        for (var i in data) {
+            var d = data[i];
+            var obj = {'startDate':new Date('01-01-' + d.Beginning),'endDate':new Date('01-01-' + d.End),'taskName': d.Department,'status':d.Party, 'votes': d.Votes};
+            timeline_data[timeline_data.length] = obj;
+        }
+
+        var format = '%Y';
+        var gantt = d3.gantt().taskTypes(departments).taskStatus(parties).tickFormat(format);
+        gantt(timeline_data);
+        evo_chart('Artigas');
+        evo_chart_comp('Artigas');
+    });
+
+    $(document).ready(function () {
+        var options = [];
+        for (var i in departments) {
+            var d = departments[i];
+
+            options[options.length] = '<option value="' + d + '">' + d + '</option>';
+        }
+        $('#department').html(options.join(''));
+        $('#department').change(function () {
+            evo_chart($(this).val());
+        });
+        $('#department_comp').html(options.join(''));
+        $('#department_comp').change(function () {
+            evo_chart_comp($(this).val());
+        });        
+    });
+
+    var margin = {
+        top : 20,
+        right : 40,
+        bottom : 20,
+        left : 0
+    };
+    var width = $('#evo').width() - margin.right - margin.left-5;
+    var height = 400;
+    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1); 
+    var y = d3.scale.linear().range([height, 0]);    
+    var xAxis = d3.svg.axis().scale(x).orient('bottom');
+
+    function evo_chart(deparment) {
+        var data = [];
+        for (var i in g_data) {
+            var d = g_data[i];
+            if (d.Department == deparment) {
+                d.i = d.Beginning + '-' + d.Department;
+                data[data.length] = d;
+            }
+        }
+
+        $('#evo').empty();
+
+        var svg = d3.select('#evo').append('svg').attr("width", width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom).append('g')
+
+            .attr('transform', 'translate(' + margin.left + "," + margin.top + ')');
+
+        x.domain(data.map(function(d) { return d.Beginning; }));
+        y.domain([0, d3.max(data, function(d) { return parseInt(d.Votes); })]);
+
+
+
+        svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')')
+          .call(xAxis);
+
+
+        var bar = svg.selectAll('.bar').data(data, function (d) { return d.i; });
+        bar.enter().append("rect")
+          .attr("class", function (d) { return parties[d.Party]; })
+          .attr("x", function(d) { return x(d.Beginning); })
+          .attr("width", x.rangeBand())
+          .attr("y", function(d) { return y(d.Votes); })
+          .attr("height", function(d) { return height - y(d.Votes); });
+
+        bar.enter().append('text').attr('x', function(d) { return x(d.Beginning); } ).attr('y', height - margin.top)
+            .attr('dy', '.75em').text(function(d) { return d.Votes; });
+
+        bar.exit().remove();
+    }
+
+    function evo_chart_comp(deparment) {
+        var data = [];
+        for (var i in g_data) {
+            var d = g_data[i];
+            if (d.Department == deparment) {
+                d.i = d.Beginning + '-' + d.Department;
+                data[data.length] = d;
+            }
+        }
+
+        $('#evo_comp').empty();
+
+        var svg = d3.select('#evo_comp').append('svg').attr("width", width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom).append('g')
+
+            .attr('transform', 'translate(' + margin.left + "," + margin.top + ')');
+
+        x.domain(data.map(function(d) { return d.Beginning; }));
+        y.domain([0, d3.max(data, function(d) { return parseInt(d.Votes) + parseInt(d._2nVotes) + parseInt(d._3rVotes); })]);
+
+        svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')')
+          .call(xAxis);
+
+
+        var bar = svg.selectAll('.bar').data(data, function (d) { return d.i; });
+        bar.enter().append("rect")
+          .attr("class", function (d) { return parties[d.Party]; })
+          .attr("x", function(d) { return x(d.Beginning); })
+          .attr("width", x.rangeBand())
+          .attr("y", function(d) { return y(parseInt(d.Votes) + parseInt(d._2nVotes) + parseInt(d._3rVotes)); })
+          .attr("height", function(d) { return height - y(parseInt(d.Votes) + parseInt(d._2nVotes) + parseInt(d._3rVotes)); });
+
+        bar.enter().append('text').attr('x', function(d) { return x(d.Beginning); } )
+            .attr('y', function(d) { return (height - (height - y(parseInt(d.Votes) + parseInt(d._2nVotes) + parseInt(d._3rVotes)))) - 15; })
+            .attr('dy', '.75em').text(function(d) { return d.Votes; });
+
+        bar.exit().remove();
+
+        var bar2 = svg.selectAll('.bar').data(data, function (d) { return d.i; });
+        bar2.enter().append("rect")
+          .attr("class", function (d) { return parties[d._2nParty]; })
+          .attr("x", function(d) { return x(d.Beginning); })
+          .attr("width", x.rangeBand())
+          .attr("y", function(d) { return y(parseInt(d._2nVotes) + parseInt(d._3rVotes)); })
+          .attr("height", function(d) { return height - y(parseInt(d._2nVotes) + parseInt(d._3rVotes)); });
+
+        bar2.enter().append('text').attr('x', function(d) { return x(d.Beginning); } )
+            .attr('y', function(d) { return height - (height - y(parseInt(d._2nVotes) + parseInt(d._3rVotes))) + 10; })
+            .attr('dy', '.75em').text(function(d) { return d._2nVotes; });
+
+        bar2.exit().remove();
+
+        var bar3 = svg.selectAll('.bar').data(data, function (d) { return d.i; });
+        bar3.enter().append("rect")
+          .attr("class", function (d) { return parties[d._3rParty]; })
+          .attr("x", function(d) { return x(d.Beginning); })
+          .attr("width", x.rangeBand())
+          .attr("y", function(d) { return y(d._3rVotes); })
+          .attr("height", function(d) { return height - y(d._3rVotes); });
+
+        bar3.enter().append('text').attr('x', function(d) { return x(d.Beginning); } ).attr('y', height - margin.top)
+            .attr('dy', '.75em').text(function(d) { return d._3rVotes != 0 ? d._3rVotes : ''; });
+
+        bar3.exit().remove();
+    }    
+</script>
+		</div>
+	</div>
+	<div clas="row">
+		<div class="col-lg-1">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="gabitoju" data-lang="es">Twittear</a>
+		</div>
+		<div class="col-lg-2">
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
+		<div class="col-lg-1">
+			<div class="g-plus" data-action="share" data-annotation="none"></div>
+		</div>
+		<div class="col-lg-2">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+			</script>
+			<script type="IN/Share" data-counter="right"></script>
+		</div>		
+	</div>
+
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'gabitoju'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+<script>
+    $(window).bind("load", function() {
+       $.getScript('js/social.js', function() {});
+     });
+</script>
+				
+				</div>
+			</div>
+		</div>
+        <footer>           
+            <div class="social-footer">
+                <a href="https://twitter.com/gabitoju" target="_blank" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M24 4.557a9.832 9.832 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.865 9.865 0 01-3.127 1.195 4.92 4.92 0 00-8.385 4.482A13.97 13.97 0 011.671 3.149a4.922 4.922 0 001.523 6.573 4.902 4.902 0 01-2.229-.616v.061a4.924 4.924 0 003.946 4.827 4.937 4.937 0 01-2.224.084 4.926 4.926 0 004.598 3.417 9.867 9.867 0 01-6.102 2.104c-.397 0-.79-.023-1.175-.068a13.924 13.924 0 007.548 2.212c9.056 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A10.025 10.025 0 0024 4.557z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/gabitoju" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.043-1.61-4.043-1.61-.546-1.386-1.332-1.756-1.332-1.756-1.086-.744.084-.729.084-.729 1.2.084 1.832 1.234 1.832 1.234 1.067 1.83 2.803 1.302 3.487.995.108-.773.417-1.302.76-1.602-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.47-2.382 1.235-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.485 11.485 0 013.003-.403 11.46 11.46 0 013.003.403c2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.241 2.873.118 3.176.767.838 1.235 1.91 1.235 3.22 0 4.61-2.807 5.62-5.478 5.92.43.37.813 1.1.813 2.22 0 1.606-.015 2.9-.015 3.293 0 .32.218.694.824.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/gabitoju" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M22.23 0H1.77C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.77 24h20.46c.978 0 1.77-.774 1.77-1.729V1.729C24 .774 23.208 0 22.23 0zM7.069 20.452H3.554V9.034h3.515v11.418zM5.312 7.542c-1.127 0-2.041-.913-2.041-2.04 0-1.127.913-2.04 2.041-2.04s2.04.913 2.04 2.04c0 1.127-.913 2.04-2.04 2.04zm15.14 12.91h-3.515v-5.559c0-1.326-.026-3.032-1.848-3.032-1.85 0-2.134 1.444-2.134 2.937v5.654h-3.515V9.034h3.375v1.556h.048c.47-.887 1.618-1.82 3.33-1.82 3.564 0 4.22 2.345 4.22 5.396v6.286z"/>
+                    </svg>
+                </a>
+            </div>
+        </footer>       
+        <a class="github-fork-ribbon" href="https://github.com/gabitoju" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+        <script>            
+            if ($('html').attr('lang') == 'en') {
+                $('#bckdl').attr('href', 'index_en.html');
+            }
+        </script>
+
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</body>
+</html>

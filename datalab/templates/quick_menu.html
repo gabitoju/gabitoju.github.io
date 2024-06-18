@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Ir a <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+        {% for item in items %}
+        <li>
+            <a href="#{{ loop.index  }}">{{ item }}</a>
+        </li>
+        {% endfor %}        
+        </ul>
+    </li>
+</ul>

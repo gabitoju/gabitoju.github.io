@@ -23,13 +23,6 @@ footer a {
     color: #FFF;
 }
 
-.social {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-
 #home-header {
     width: 1280px;
     height: 200px;
@@ -46,9 +39,3 @@ footer a {
     float: right;
 }
 
-#social {
-    position: absolute; 
-    top:0; 
-    bottom:0;
-    margin:auto;
-}

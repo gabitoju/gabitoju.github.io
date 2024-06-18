@@ -28,7 +28,7 @@ Estadísticas y visualizaciones de los temas de la discografía de Guns N' Roses
 ¿Cómo van evolucionando las relaciones de las personas en sus 20 y 30? Con los datos de estado civil y tipo de unión del Censo 2011 se crea esta visualización para responder esta y otras preguntas.
 * [Elecciones Nacionales en Uruguay 1984-2014](national_elections.html)  
 La evolución del panorama político a nivel departamental en las elecciones nacionales comprendidas entre 1984 y 2014.
-<!--* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010. -->
+* [Elecciones Departamentales uruguay 1966-2010](departamental_elections.html) Reparto de los gobiernos departamentales entre 1966 y 2010.
 * [Los años perdidos](lost_years.html)  
 ¿Cuántos años se perdieron entre todos los fallecimientos por accidentes de transito en Uruguay entre el 2012 y 2013?
 * [Tweets en Uruguay - Colombia Brasil 2014](uruguay_colombia.html)  
@@ -51,7 +51,6 @@ Goleadores por torneo y equipo desde el Uruguayo 2009 hasta el 2013.
 <div class="col-md-1"></div>
 </div>
 
-<a href="//plus.google.com/u/0/112455652268886475364?prsrc=3" rel="author"></a>
 
 <style>
     ul {
