@@ -6,94 +6,117 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://gabitoju.uy/</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/writings/</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/index_en.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/multas_cgm.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/index_en.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/gnr.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/writings/yeolde.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/unions.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/multas_cgm.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/national_elections.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/gnr.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/lost_years.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/unions.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/uruguay_colombia.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/national_elections.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/uruguay_italy.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/departamental_elections.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/wc2014_players.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/lost_years.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/uruguay_england.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/uruguay_colombia.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/uruguay_costarica.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/uruguay_italy.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/careers.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/wc2014_players.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/uy_top_scorers.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/uruguay_england.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/gnr2.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/uruguay_costarica.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/unions_en.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/careers.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://gabitoju.uy/datalab/lost_years_en.html</loc>
-  <lastmod>2017-01-10T04:34:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://gabitoju.uy/datalab/uy_top_scorers.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://gabitoju.uy/datalab/gnr2.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gabitoju.uy/datalab/unions_en.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gabitoju.uy/datalab/lost_years_en.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gabitoju.uy/datalab/index.html</loc>
+  <lastmod>2025-02-07T17:02:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
 </urlset>
