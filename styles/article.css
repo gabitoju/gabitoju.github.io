@@ -3,7 +3,7 @@
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  max-width: 75%;
+  width: 73rem;
 }
 
 @media (max-width: 768px) {
@@ -50,8 +50,12 @@ article {
 }
 
 h2 {
-    margin-bottom: 20px;
     font-size: clamp(1.8rem, 4vw, 2.5rem)
+}
+
+h4 {
+    margin-bottom: 20px;
+    font-weight: lighter;
 }
 
 p {
@@ -59,4 +63,9 @@ p {
     font-size: clamp(1rem, 2.5vw, 1.15rem);
     font-family: -apple-system, 'Open Sans', sans-serif;
     line-height: 1.4;
+}
+
+.back p {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
