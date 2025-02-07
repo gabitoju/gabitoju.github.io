@@ -1,0 +1,50 @@
+.page_content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 73rem;
+}
+
+header {
+  margin: 40px 0 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  background-image: url(/images/t.jpg);
+  color: #242e35;
+  font-size: 50px;
+  text-align: right;
+  width: 100%;
+  background-position: 0px -130px;
+  padding-bottom: 5px;
+  padding-top: 0px;
+}
+
+header a {
+  color: #242E35;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+p {
+    margin-bottom: 1.3rem;
+    font-size: 1.15rem;
+    font-family: -apple-system, 'Open Sans', sans-serif;
+    line-height: 1.4;
+}

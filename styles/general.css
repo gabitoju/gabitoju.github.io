@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Ubuntu:400,400italic|JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap);
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,400italic|JetBrains+Mono:ital,wght@0,100..800;1,100..800|Open+Sans&display=swaps);
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 body {
   font-family: "JetBrains Mono", monospace;
   color: #333;
-  line-height: 1.42857143;
+  #line-height: 1.42857143;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
